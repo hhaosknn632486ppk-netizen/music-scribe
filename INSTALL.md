@@ -82,3 +82,5 @@ doctor 检查环境，download_models --check 检查模型，verify_semantics �
 - 离线机器要预先准备匹配平台的依赖与校验过的模型，并遵循各文件许可。
 
 完整环境显式固定 setuptools==80.9.0，为 Basic Pitch 所依赖 resampy 0.4.2 提供 pkg_resources；仅 pip check 不足以发现这个导入兼容问题，doctor 会核对版本。本版在独立新环境完成 selftest 和真实文件复测，见 TIE_FIX_ACCEPTANCE.md；轻量 requirements-semantics.txt 不增加该依赖。
+
+1.3.2排版版沿用1.3.1全部运行依赖和六模型，完整107项、轻量44项回归通过。检查谱面时先运行 verify_output.py 对照音符区间，再运行 `verify_layout.py 结果目录/score.musicxml --check-staff-rests` 核对符杠结构和休止符显示规则。具体改善与分页代价见 LAYOUT_ACCEPTANCE.md。

@@ -136,3 +136,7 @@ Python：D:\Tools\music-scribe\.venv\Scripts\python.exe
 | 输出目录非空 | 包装器会建新子目录；直接调原 CLI 时换新的 -o |
 | 想输出 MusicXML/SVG/MIDI | 按 INSTALL.md 使用独立完整环境，再选 task=score 或 all |
 | 旧证据指纹不匹配 | 用生成它的源码版本，或用当前版本重跑；不要删校验 |
+
+## 谱面排版与检查
+
+1.3.2将同时起止的不同音高写成记谱和弦，辅助计时休止符可隐藏，真实谱表静默保留可见休止符，并重建拍内符杠。它不识别真实乐器声部；间距增加可能带来更多页。需要确认音符/时值保留，先用完整环境运行 `verify_output.py 结果目录`，再用 `verify_layout.py 结果目录/score.musicxml --check-staff-rests` 检查排版结构。验收与剩余限制见 LAYOUT_ACCEPTANCE.md。

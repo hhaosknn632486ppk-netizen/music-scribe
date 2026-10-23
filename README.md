@@ -1,6 +1,8 @@
 # music_scribe：本地转录、排谱与可选音乐语义
 
-这是转谱 1.3.1 的独立公开源码版本（github-source-3）。保留音符转录、调性/BPM/和弦、简化/完整MusicXML及SVG谱面、可选Demucs分轨、音乐门控、风格/情绪/人声倾向和连续效价/唤醒分析。没有替换模型、减少语义功能或调整分类规则。
+这是转谱 1.3.2 的独立公开源码版本（github-source-4）。保留音符转录、调性/BPM/和弦、简化/完整MusicXML及SVG谱面、可选Demucs分轨、音乐门控、风格/情绪/人声倾向和连续效价/唤醒分析。没有替换模型、减少语义功能或调整分类规则。
+
+**本版谱面更新：** 减少机械声部和辅助休止符拥挤，按实际拍内位置重建符杠；107项完整回归、44项轻量回归通过。新旧谱面、分页代价与限制见 [LAYOUT_ACCEPTANCE.md](LAYOUT_ACCEPTANCE.md)。
 
 **第一次使用：按 [QUICKSTART.md](QUICKSTART.md) 从安装、下载模型到音乐/讲话示例完整跑一遍。** 给能执行本地命令的 AI 助手使用时，参考 [LLM_INTEGRATION.md](LLM_INTEGRATION.md) 与 [可复制的助手指令](examples/assistant_prompt.txt)。无需大模型 API 密钥；这不是自动注册的 MCP 服务或聊天网页插件。
 
@@ -68,22 +70,23 @@ python download_models.py --repair --models-dir 'D:\MusicModels\music_scribe'
 # 先使用已经下载且校验通过的完整六模型目录
 $env:MUSIC_SCRIBE_MODELS='D:\MusicModels\music_scribe'
 .\.venv\Scripts\python.exe -m unittest test_gate test_download_models test_llm_tool -v
-# test_semantics 含 librosa 对照，放在完整环境中运行；另含延音回归，共99项
-.\.venv-core\Scripts\python.exe -m unittest test_correctness test_semantics test_gate test_download_models test_llm_tool test_ties -v
+# test_semantics 含 librosa 对照，放在完整环境中运行；另含延音与排版回归，共107项
+.\.venv-core\Scripts\python.exe -m unittest test_correctness test_semantics test_gate test_download_models test_llm_tool test_ties test_layout -v
 .\.venv-core\Scripts\python.exe selftest.py
 .\.venv-core\Scripts\python.exe verify_output.py 'D:\Results\new_full'
+.\.venv-core\Scripts\python.exe verify_layout.py 'D:\Results\new_full\score.musicxml' --check-staff-rests
 .\.venv\Scripts\python.exe verify_semantics.py 'D:\Results\new_semantics' --models-dir 'D:\MusicModels\music_scribe'
 ```
 
 不含权重的核心测试与受控传输测试不访问网络。原始语义测试需要完整本地模型，不会自动下载或悄悄跳过。当前新用户安装和示例验收见 [NEW_USER_ACCEPTANCE.md](NEW_USER_ACCEPTANCE.md)，历史验收见 [ACCEPTANCE.md](ACCEPTANCE.md)；其中公开数值不能当成曲目级识别准确率。
 
-schema继续为music-scribe/1.1和music-semantics/1.1；转谱tool_version为1.3.1，未改动的语义分支仍为1.3.0，源码变体和文件配对另记在SOURCE_PROVENANCE.json、POLICY_LOCK.json及输出指纹。细风格证据不足退回粗类，非音乐或不确定输入拒绝风格/情绪；局部讲话查询不会借用整曲风格。调用规则见[LLM_INTEGRATION.md](LLM_INTEGRATION.md)。
+schema继续为music-scribe/1.1和music-semantics/1.1；转谱tool_version为1.3.2，未改动的语义分支仍为1.3.0，源码变体和文件配对另记在SOURCE_PROVENANCE.json、POLICY_LOCK.json及输出指纹。细风格证据不足退回粗类，非音乐或不确定输入拒绝风格/情绪；局部讲话查询不会借用整曲风格。调用规则见[LLM_INTEGRATION.md](LLM_INTEGRATION.md)。
 
 源码整理改变了语义模块指纹；旧1.3的语义报告请继续用原副本query，新副本不绕过代码配对校验。已有HTML仍可静态查看。改动范围见[CHANGES.md](CHANGES.md)。
 
 模型分数未经概率校准，粗类/情绪会误判；弱背景音乐、氛围/噪音音乐和短独奏可能被门控误拒。情绪是听感候选，不证明作者意图。30分钟输入上限、内存解码、近似时间窗口等既有限制保留。曲名、歌手身份、歌词、续写和完整多乐器人工级总谱不在现有能力范围内。
 
-**1.3.1 已修复完整模式跨小节延音的声部编号不一致。** 原失败的 45.84 秒 Brahms 输入完整文件、另外 3 首音乐及 180 秒派生压力输入均通过严格区间校验；完整回归 99/99，轻量 44/44。旧版失败和修复后效果、耗时、内存、样本限制见 [TIE_FIX_ACCEPTANCE.md](TIE_FIX_ACCEPTANCE.md)。completed 仍不等于自动验证通过或转录准确。
+**上一版1.3.1 已修复完整模式跨小节延音的声部编号不一致。** 原失败的 45.84 秒 Brahms 输入完整文件、另外 3 首音乐及 180 秒派生压力输入均通过严格区间校验；完整回归 99/99，轻量 44/44。旧版失败和修复后效果、耗时、内存、样本限制见 [TIE_FIX_ACCEPTANCE.md](TIE_FIX_ACCEPTANCE.md)。completed 仍不等于自动验证通过或转录准确。
 
 此前许可整理的历史修改清单、回归与限制见 [LICENSE_REVIEW_ACCEPTANCE.md](LICENSE_REVIEW_ACCEPTANCE.md)。当时仅修正许可说明、两个模块文档字符串及下载提示；模块摘要因文档字符串变化而改变，旧候选的语义证据继续由旧副本查询，新候选生成的证据按新摘要配对。根 LICENSE、模型原始许可、六模型清单及数值策略未改。
 

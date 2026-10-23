@@ -89,3 +89,5 @@ analyze 的 completed 不是自动验证通过。旧版全长公开音乐的未�
 本工具不调用云端，但助手若使用云端大模型，其读取的 JSON 可能作为上下文发给服务商。普通聊天网页无法直接执行本地命令时，先由用户运行，再粘贴 JSON。许可与未决冲突继续按 README / LICENSE_STATUS.md；结果可用不代表权重可商用。
 
 Python 排谱调用请使用 `write_score_musicxml(build_score(...), path)`，完整模式不可再用默认 `score.write(...)` 触发一次第三方声部重整。旧结果继续使用生成它的源码副本查询/校验。
+
+1.3.2排版检查：先执行 verify_output.py 核对逻辑音符区间，再执行 `verify_layout.py 结果目录/score.musicxml --check-staff-rests`。新检查只核对符杠结构和项目的休止符显示规则，不证明像素无碰撞、转录准确或真实乐器声部。两种谱面模式均应通过 write_score_musicxml 导出；数据schema和命令接入契约未变。紧凑谱会隐藏辅助声部空白，独立乐器的完整休止信息不能由此推断。

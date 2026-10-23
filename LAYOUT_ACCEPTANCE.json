@@ -1,0 +1,1519 @@
+{
+  "date": "2026-10-23",
+  "version": "1.3.2",
+  "baseline_commit": "834cbd4b8ace8557e85ac0bb80de7b9bd2a08343",
+  "python": "3.10.20",
+  "platform": "Windows x64 / CPU",
+  "scope": "Six reused independent public recordings (four music, two non-music) plus one private derived repeat. Interval/engraving regression, no annotated accuracy benchmark.",
+  "resource_scope": "One sequential run per version/sample in a warm installed environment. Analysis wall time includes startup, transcription, notation, SVG and semantics, before independent checks. Memory is actual process lifetime peak working set recorded by semantic branch before final report serialization, not whole-system RAM or isolated notation/model allocation.",
+  "samples": [
+    {
+      "key": "brahms",
+      "description": "Brahms - Hungarian Dance #5",
+      "input_name": "Hungarian_Dance_number_5_-_Allegro_in_F_sharp_minor_(string_orchestra).ogg",
+      "input_sha256": "919b48aa4cc66a0357d2cd5728664c5ab8f15c4b3469460df4b59470d35d3e49",
+      "input_url": "https://librosa.org/data/audio/Hungarian_Dance_number_5_-_Allegro_in_F_sharp_minor_%28string_orchestra%29.ogg",
+      "license_and_source": "Hungarian Dance number 5 by Johannes Brahms / US Army Strings is in the Public Domain. \nFrom Musopen: https://musopen.org/music/43805-hungarian-dance-no-5-in-f-sharp-minor-woo-1-string-orchestra-arr/\nPublic Domain https://creativecommons.org/publicdomain/mark/1.0/\n",
+      "derived_stress_input": false,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 45.844875,
+          "wall_seconds": 9.506,
+          "peak_working_set_bytes": 561131520,
+          "beam_warnings": 2,
+          "notes": 537,
+          "bpm": 143.6,
+          "events_sha256": "5a488007730449950e9d6667a4c9059cb5eea6910224bf22c0e857c81aafe51a",
+          "midi_sha256": "efd79a6fb0204d352664d116bdbd384a33daf0d4604b73e5131beaa82ec8ae6d",
+          "svg_pages": 3,
+          "score_and_svg_seconds": 0.7849614000006113,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 537,
+            "chord_segments": 28,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 537,
+              "tied_continuation_segments": 60,
+              "expected_intervals": 537,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "metrics_only",
+            "metrics": {
+              "pitched_segments": 597,
+              "chord_members": 0,
+              "visible_rests": 374,
+              "hidden_rests": 0,
+              "beam_elements": 628,
+              "primary_beam_groups": 159,
+              "beam_hooks": 111,
+              "visible_rest_note_overlaps": 278,
+              "maximum_pitched_voices_per_staff_measure": 7,
+              "mean_pitched_voices_per_staff_measure": 3.2708
+            },
+            "staff_silence_rest_policy_checked": false,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "metrics_only",
+            "metrics": {
+              "pitched_segments": 537,
+              "chord_members": 171,
+              "visible_rests": 0,
+              "hidden_rests": 96,
+              "beam_elements": 575,
+              "primary_beam_groups": 113,
+              "beam_hooks": 60,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": false,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 520,
+            "tied_continuation_segments": 17,
+            "visible_rests": 0,
+            "hidden_rests": 96,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 171,
+            "beam_warnings": 0,
+            "pages": 2,
+            "seconds": 1.525
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "8be9b95c652f88abc8601dcb7e76d2c604c2bd74eb9abbad0620e7b4508f04df",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        },
+        "layout": {
+          "duration_seconds": 45.844875,
+          "wall_seconds": 9.876,
+          "peak_working_set_bytes": 558432256,
+          "beam_warnings": 0,
+          "notes": 537,
+          "bpm": 143.6,
+          "events_sha256": "5a488007730449950e9d6667a4c9059cb5eea6910224bf22c0e857c81aafe51a",
+          "midi_sha256": "efd79a6fb0204d352664d116bdbd384a33daf0d4604b73e5131beaa82ec8ae6d",
+          "svg_pages": 3,
+          "score_and_svg_seconds": 0.8222784000026877,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 537,
+            "chord_segments": 28,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 537,
+              "tied_continuation_segments": 60,
+              "expected_intervals": 537,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 597,
+              "chord_members": 78,
+              "visible_rests": 84,
+              "hidden_rests": 277,
+              "beam_elements": 282,
+              "primary_beam_groups": 76,
+              "beam_hooks": 41,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 6,
+              "mean_pitched_voices_per_staff_measure": 2.9167
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 537,
+              "chord_members": 171,
+              "visible_rests": 96,
+              "hidden_rests": 0,
+              "beam_elements": 446,
+              "primary_beam_groups": 92,
+              "beam_hooks": 35,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 520,
+            "tied_continuation_segments": 17,
+            "visible_rests": 96,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 171,
+            "beam_warnings": 0,
+            "pages": 3,
+            "seconds": 1.536
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "8be9b95c652f88abc8601dcb7e76d2c604c2bd74eb9abbad0620e7b4508f04df",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true,
+      "midi_bytes_unchanged": true,
+      "full_intervals_unchanged": true,
+      "reduction_intervals_unchanged": true
+    },
+    {
+      "key": "choice",
+      "description": "Admiral Bob - Choice (drum+bass)",
+      "input_name": "admiralbob77_-_Choice_-_Drum-bass.ogg",
+      "input_sha256": "ac644f9645e7c15174e4a4f8561e4d1448d7f6e59ff6b0556b310ebbced879bc",
+      "input_url": "https://librosa.org/data/audio/admiralbob77_-_Choice_-_Drum-bass.ogg",
+      "license_and_source": "Choice by Admiral Bob (c) copyright 2020 Licensed under a Creative Commons Attribution Noncommercial  (3.0) license. http://dig.ccmixter.org/files/admiralbob77/61638 Ft: Snowflake\nhttps://creativecommons.org/licenses/by-nc/4.0/\n\nThis excerpt has been truncated and modified to include only the drum and bass tracks by Brian McFee (2020).\n",
+      "derived_stress_input": false,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 25.026,
+          "wall_seconds": 7.759,
+          "peak_working_set_bytes": 538787840,
+          "beam_warnings": 4,
+          "notes": 97,
+          "bpm": 136.0,
+          "events_sha256": "439582a7ad88bf36283fb6cf02a3bae8aaf2396044d1ab1cb173f787e68751de",
+          "midi_sha256": "c0aed8a906a61152e14dc5e974d56d70c701933325b368d598b9c956fc5de415",
+          "svg_pages": 1,
+          "score_and_svg_seconds": 0.22641250000015134,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 97,
+            "chord_segments": 15,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 97,
+              "tied_continuation_segments": 0,
+              "expected_intervals": 97,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "metrics_only",
+            "metrics": {
+              "pitched_segments": 97,
+              "chord_members": 0,
+              "visible_rests": 97,
+              "hidden_rests": 0,
+              "beam_elements": 96,
+              "primary_beam_groups": 28,
+              "beam_hooks": 16,
+              "visible_rest_note_overlaps": 24,
+              "maximum_pitched_voices_per_staff_measure": 3,
+              "mean_pitched_voices_per_staff_measure": 1.5417
+            },
+            "staff_silence_rest_policy_checked": false,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "metrics_only",
+            "metrics": {
+              "pitched_segments": 95,
+              "chord_members": 14,
+              "visible_rests": 0,
+              "hidden_rests": 64,
+              "beam_elements": 90,
+              "primary_beam_groups": 24,
+              "beam_hooks": 11,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": false,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 95,
+            "tied_continuation_segments": 0,
+            "visible_rests": 0,
+            "hidden_rests": 64,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 14,
+            "beam_warnings": 2,
+            "pages": 1,
+            "seconds": 1.084
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "dabbe822819f400876704491e2f4667b0a8f783feb4b89eca8cd3286f291562e",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        },
+        "layout": {
+          "duration_seconds": 25.026,
+          "wall_seconds": 7.869,
+          "peak_working_set_bytes": 535576576,
+          "beam_warnings": 0,
+          "notes": 97,
+          "bpm": 136.0,
+          "events_sha256": "439582a7ad88bf36283fb6cf02a3bae8aaf2396044d1ab1cb173f787e68751de",
+          "midi_sha256": "c0aed8a906a61152e14dc5e974d56d70c701933325b368d598b9c956fc5de415",
+          "svg_pages": 2,
+          "score_and_svg_seconds": 0.224675000004936,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 97,
+            "chord_segments": 15,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 97,
+              "tied_continuation_segments": 0,
+              "expected_intervals": 97,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 97,
+              "chord_members": 7,
+              "visible_rests": 63,
+              "hidden_rests": 29,
+              "beam_elements": 40,
+              "primary_beam_groups": 14,
+              "beam_hooks": 5,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 3,
+              "mean_pitched_voices_per_staff_measure": 1.375
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 95,
+              "chord_members": 14,
+              "visible_rests": 64,
+              "hidden_rests": 0,
+              "beam_elements": 50,
+              "primary_beam_groups": 14,
+              "beam_hooks": 5,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 95,
+            "tied_continuation_segments": 0,
+            "visible_rests": 64,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 14,
+            "beam_warnings": 0,
+            "pages": 2,
+            "seconds": 1.108
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "dabbe822819f400876704491e2f4667b0a8f783feb4b89eca8cd3286f291562e",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true,
+      "midi_bytes_unchanged": true,
+      "full_intervals_unchanged": true,
+      "reduction_intervals_unchanged": true
+    },
+    {
+      "key": "fishin",
+      "description": "Karissa Hobbs - Let's Go Fishin'",
+      "input_name": "Karissa_Hobbs_-_Lets_Go_Fishin.ogg",
+      "input_sha256": "27b3667c396c1831511aa3c415fcf582b6e8be560cafb844c5b67b76b72c1cb3",
+      "input_url": "https://librosa.org/data/audio/Karissa_Hobbs_-_Lets_Go_Fishin.ogg",
+      "license_and_source": "Let's Go Fishin' by Karissa Hobbs is licensed under a Creative Commons Attribution License.\nFrom the Free Music Archive: https://freemusicarchive.org/music/Karissa_Hobbs/Age_of_Flowers/09_Lets_Go_Fishin\nCC-BY https://creativecommons.org/licenses/by/3.0/\n",
+      "derived_stress_input": false,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 132.989,
+          "wall_seconds": 18.741,
+          "peak_working_set_bytes": 625876992,
+          "beam_warnings": 8,
+          "notes": 1950,
+          "bpm": 117.5,
+          "events_sha256": "a86136ebab432a81a7a747611a59d85b30fd6dfacd4596cfd234abfc03561ee0",
+          "midi_sha256": "f2a111497e84097e632f72e0dbc361af8559b053089a31b9125de24af4ead8dc",
+          "svg_pages": 8,
+          "score_and_svg_seconds": 3.2963834000038332,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 1950,
+            "chord_segments": 66,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 1950,
+              "tied_continuation_segments": 141,
+              "expected_intervals": 1950,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "metrics_only",
+            "metrics": {
+              "pitched_segments": 2091,
+              "chord_members": 0,
+              "visible_rests": 1149,
+              "hidden_rests": 0,
+              "beam_elements": 2628,
+              "primary_beam_groups": 604,
+              "beam_hooks": 387,
+              "visible_rest_note_overlaps": 965,
+              "maximum_pitched_voices_per_staff_measure": 6,
+              "mean_pitched_voices_per_staff_measure": 3.3154
+            },
+            "staff_silence_rest_policy_checked": false,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "metrics_only",
+            "metrics": {
+              "pitched_segments": 1948,
+              "chord_members": 628,
+              "visible_rests": 0,
+              "hidden_rests": 212,
+              "beam_elements": 2251,
+              "primary_beam_groups": 410,
+              "beam_hooks": 214,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": false,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 1895,
+            "tied_continuation_segments": 53,
+            "visible_rests": 0,
+            "hidden_rests": 212,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 628,
+            "beam_warnings": 1,
+            "pages": 6,
+            "seconds": 2.801
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "c9711473074e2af40d66f3b1ebc3bee31f730da5f2ed02c1c18b51c616c2d96d",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        },
+        "layout": {
+          "duration_seconds": 132.989,
+          "wall_seconds": 18.203,
+          "peak_working_set_bytes": 625631232,
+          "beam_warnings": 0,
+          "notes": 1950,
+          "bpm": 117.5,
+          "events_sha256": "a86136ebab432a81a7a747611a59d85b30fd6dfacd4596cfd234abfc03561ee0",
+          "midi_sha256": "f2a111497e84097e632f72e0dbc361af8559b053089a31b9125de24af4ead8dc",
+          "svg_pages": 11,
+          "score_and_svg_seconds": 2.6690245999998297,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 1950,
+            "chord_segments": 66,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 1950,
+              "tied_continuation_segments": 141,
+              "expected_intervals": 1950,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 2091,
+              "chord_members": 295,
+              "visible_rests": 150,
+              "hidden_rests": 796,
+              "beam_elements": 1364,
+              "primary_beam_groups": 350,
+              "beam_hooks": 191,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 5,
+              "mean_pitched_voices_per_staff_measure": 2.8692
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 1948,
+              "chord_members": 628,
+              "visible_rests": 212,
+              "hidden_rests": 0,
+              "beam_elements": 1936,
+              "primary_beam_groups": 382,
+              "beam_hooks": 142,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 1895,
+            "tied_continuation_segments": 53,
+            "visible_rests": 212,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 628,
+            "beam_warnings": 0,
+            "pages": 9,
+            "seconds": 2.826
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "c9711473074e2af40d66f3b1ebc3bee31f730da5f2ed02c1c18b51c616c2d96d",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true,
+      "midi_bytes_unchanged": true,
+      "full_intervals_unchanged": true,
+      "reduction_intervals_unchanged": true
+    },
+    {
+      "key": "trumpet",
+      "description": "Mihai Sorohan - Trumpet loop",
+      "input_name": "sorohanro_-_solo-trumpet-06.ogg",
+      "input_sha256": "8374466fd3951d24509da6e799b132a0db0bdeda69d99c69d989a6888d3d727d",
+      "input_url": "https://librosa.org/data/audio/sorohanro_-_solo-trumpet-06.ogg",
+      "license_and_source": "Part of \"Jazz Trumpet Loops Pack in F 90 bpm\" by Mihai Sorohan\nAll parts in this pack are in F, mostly Blues and Dorian scale and all are in stereo acidized .wav format, 16 bit, 44.1 khz sample rate, 90 bpm. \nFrom Freesound.org https://freesound.org/s/77711/\nCC-BY https://creativecommons.org/licenses/by/3.0/\n",
+      "derived_stress_input": false,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 5.333375,
+          "wall_seconds": 6.501,
+          "peak_working_set_bytes": 394260480,
+          "beam_warnings": 0,
+          "notes": 13,
+          "bpm": 123.0,
+          "events_sha256": "1744e6b51e7264cdf02b8f908bec79fe8307c258157e7cefbfc36d8faf884d63",
+          "midi_sha256": "db45876d7b45e730fa0ad10febd69067db598f85e511c46250efec7e9f51c568",
+          "svg_pages": 1,
+          "score_and_svg_seconds": 0.07279019999987213,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 13,
+            "chord_segments": 3,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 13,
+              "tied_continuation_segments": 3,
+              "expected_intervals": 13,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "metrics_only",
+            "metrics": {
+              "pitched_segments": 16,
+              "chord_members": 0,
+              "visible_rests": 6,
+              "hidden_rests": 0,
+              "beam_elements": 18,
+              "primary_beam_groups": 4,
+              "beam_hooks": 3,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": false,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "metrics_only",
+            "metrics": {
+              "pitched_segments": 16,
+              "chord_members": 0,
+              "visible_rests": 0,
+              "hidden_rests": 6,
+              "beam_elements": 18,
+              "primary_beam_groups": 4,
+              "beam_hooks": 3,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": false,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 13,
+            "tied_continuation_segments": 3,
+            "visible_rests": 0,
+            "hidden_rests": 6,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 0,
+            "beam_warnings": 0,
+            "pages": 1,
+            "seconds": 1.118
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "90cda5b060519583f611f09b85b3dbb0f5269eee5ba6e953d7c1d7d1eb279387",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "mixed"
+          }
+        },
+        "layout": {
+          "duration_seconds": 5.333375,
+          "wall_seconds": 6.534,
+          "peak_working_set_bytes": 401129472,
+          "beam_warnings": 0,
+          "notes": 13,
+          "bpm": 123.0,
+          "events_sha256": "1744e6b51e7264cdf02b8f908bec79fe8307c258157e7cefbfc36d8faf884d63",
+          "midi_sha256": "db45876d7b45e730fa0ad10febd69067db598f85e511c46250efec7e9f51c568",
+          "svg_pages": 1,
+          "score_and_svg_seconds": 0.07495210000342922,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 13,
+            "chord_segments": 3,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 13,
+              "tied_continuation_segments": 3,
+              "expected_intervals": 13,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 16,
+              "chord_members": 0,
+              "visible_rests": 6,
+              "hidden_rests": 0,
+              "beam_elements": 12,
+              "primary_beam_groups": 3,
+              "beam_hooks": 2,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 16,
+              "chord_members": 0,
+              "visible_rests": 6,
+              "hidden_rests": 0,
+              "beam_elements": 12,
+              "primary_beam_groups": 3,
+              "beam_hooks": 2,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 13,
+            "tied_continuation_segments": 3,
+            "visible_rests": 6,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 0,
+            "beam_warnings": 0,
+            "pages": 1,
+            "seconds": 1.046
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "90cda5b060519583f611f09b85b3dbb0f5269eee5ba6e953d7c1d7d1eb279387",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "mixed"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true,
+      "midi_bytes_unchanged": true,
+      "full_intervals_unchanged": true,
+      "reduction_intervals_unchanged": true
+    },
+    {
+      "key": "libri1",
+      "description": "Ashiel Mystery - A Detective Story, chapter 2, narrated by Garth Comira",
+      "input_name": "5703-47212-0000.ogg",
+      "input_sha256": "a284612b46af0535f7e1873758c4387bb8369f6dbbe192ffdec1f171108f98dd",
+      "input_url": "https://librosa.org/data/audio/5703-47212-0000.ogg",
+      "license_and_source": "Ashiel Mystery - A Detective Story, chapter 2, narrated by Garth Comira\nFrom the LibriSpeech SLR12 collection: https://www.openslr.org/12/\nCC-BY 4.0 https://creativecommons.org/licenses/by/4.0/\n",
+      "derived_stress_input": false,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 14.84,
+          "wall_seconds": 1.691,
+          "peak_working_set_bytes": 130465792,
+          "beam_warnings": 0,
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "3028e927cb1f37b49501f60a2dea38712c795e33220ef081597590dbc82de514",
+          "semantic_summary": {
+            "status": "not_music",
+            "music_presence": "non_music"
+          }
+        },
+        "layout": {
+          "duration_seconds": 14.84,
+          "wall_seconds": 1.917,
+          "peak_working_set_bytes": 131354624,
+          "beam_warnings": 0,
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "3028e927cb1f37b49501f60a2dea38712c795e33220ef081597590dbc82de514",
+          "semantic_summary": {
+            "status": "not_music",
+            "music_presence": "non_music"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true
+    },
+    {
+      "key": "humpback",
+      "description": "Glacier Bay 60-second clip humpback whale song November 2020",
+      "input_name": "glacier-bay-humpback.ogg",
+      "input_sha256": "64395c617b28b5e31a03032b99b4617bc96b926f3bc5c141862cd13fb79ccd8e",
+      "input_url": "https://librosa.org/data/audio/glacier-bay-humpback.ogg",
+      "license_and_source": "Glacier Bay 60-second clip humpback whale song November 2020\nRecorded by NPS - Chris Gabriele, 2020/11/13\nhttps://www.nps.gov/glba/learn/nature/soundclips.htm\nPublic domain, https://www.nps.gov/aboutus/disclaimer.htm\n",
+      "derived_stress_input": false,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 64.809,
+          "wall_seconds": 2.046,
+          "peak_working_set_bytes": 134144000,
+          "beam_warnings": 0,
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "286e7c6883d29769c24f097f39b40015a55041402d59528a82b3c8d0c79d6249",
+          "semantic_summary": {
+            "status": "uncertain_input",
+            "music_presence": "uncertain"
+          }
+        },
+        "layout": {
+          "duration_seconds": 64.809,
+          "wall_seconds": 1.93,
+          "peak_working_set_bytes": 134344704,
+          "beam_warnings": 0,
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "286e7c6883d29769c24f097f39b40015a55041402d59528a82b3c8d0c79d6249",
+          "semantic_summary": {
+            "status": "uncertain_input",
+            "music_presence": "uncertain"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true
+    },
+    {
+      "key": "user_repeat_180",
+      "description": "Existing private user_other stem repeated to 180 seconds at 16 kHz via np.resize; not an independent music recording.",
+      "input_name": "real_repeated_180.wav",
+      "input_sha256": "e46fd524130466fa4aa3c8f820d038c744cddb83b98f66ace27d31349533ac42",
+      "input_url": null,
+      "license_and_source": "Private existing local user audio, not redistributed; no additional rights inferred.",
+      "derived_stress_input": true,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 180.0,
+          "wall_seconds": 25.686,
+          "peak_working_set_bytes": 766603264,
+          "beam_warnings": 14,
+          "notes": 2687,
+          "bpm": 123.0,
+          "events_sha256": "97224f2556e7201b30b6e1f257dabe214f4058f01a13eb49e170d86d91e0caea",
+          "midi_sha256": "b7f66e86473282776b684a4aefe8f53d2439d2d946f7e17d11d3feb4e55bc570",
+          "svg_pages": 10,
+          "score_and_svg_seconds": 5.909145999998145,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 2687,
+            "chord_segments": 93,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 2687,
+              "tied_continuation_segments": 431,
+              "expected_intervals": 2687,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "metrics_only",
+            "metrics": {
+              "pitched_segments": 3118,
+              "chord_members": 0,
+              "visible_rests": 1714,
+              "hidden_rests": 0,
+              "beam_elements": 2910,
+              "primary_beam_groups": 745,
+              "beam_hooks": 465,
+              "visible_rest_note_overlaps": 1580,
+              "maximum_pitched_voices_per_staff_measure": 7,
+              "mean_pitched_voices_per_staff_measure": 4.235
+            },
+            "staff_silence_rest_policy_checked": false,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "metrics_only",
+            "metrics": {
+              "pitched_segments": 2634,
+              "chord_members": 957,
+              "visible_rests": 0,
+              "hidden_rests": 146,
+              "beam_elements": 2461,
+              "primary_beam_groups": 530,
+              "beam_hooks": 253,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": false,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 2505,
+            "tied_continuation_segments": 129,
+            "visible_rests": 0,
+            "hidden_rests": 146,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 957,
+            "beam_warnings": 2,
+            "pages": 7,
+            "seconds": 3.583
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "6d967061dd208ad3d71483f4f6996328659141e44780f3f96b4f2e4304a60acc",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        },
+        "layout": {
+          "duration_seconds": 180.0,
+          "wall_seconds": 24.311,
+          "peak_working_set_bytes": 767025152,
+          "beam_warnings": 0,
+          "notes": 2687,
+          "bpm": 123.0,
+          "events_sha256": "97224f2556e7201b30b6e1f257dabe214f4058f01a13eb49e170d86d91e0caea",
+          "midi_sha256": "b7f66e86473282776b684a4aefe8f53d2439d2d946f7e17d11d3feb4e55bc570",
+          "svg_pages": 13,
+          "score_and_svg_seconds": 4.8407907000000705,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 2687,
+            "chord_segments": 93,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 2687,
+              "tied_continuation_segments": 431,
+              "expected_intervals": 2687,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 3118,
+              "chord_members": 399,
+              "visible_rests": 83,
+              "hidden_rests": 1403,
+              "beam_elements": 1297,
+              "primary_beam_groups": 372,
+              "beam_hooks": 201,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 6,
+              "mean_pitched_voices_per_staff_measure": 3.7978
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 2634,
+              "chord_members": 957,
+              "visible_rests": 146,
+              "hidden_rests": 0,
+              "beam_elements": 2203,
+              "primary_beam_groups": 487,
+              "beam_hooks": 185,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 2505,
+            "tied_continuation_segments": 129,
+            "visible_rests": 146,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 957,
+            "beam_warnings": 0,
+            "pages": 12,
+            "seconds": 3.591
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "6d967061dd208ad3d71483f4f6996328659141e44780f3f96b4f2e4304a60acc",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true,
+      "midi_bytes_unchanged": true,
+      "full_intervals_unchanged": true,
+      "reduction_intervals_unchanged": true
+    }
+  ],
+  "integration_checks": {
+    "pip_check": "PASS",
+    "doctor": "PASS",
+    "selftest": "PASS",
+    "assistant_full_sample": "PASS",
+    "assistant_local_query": "PASS",
+    "new_user_demo_with_score": "PASS"
+  },
+  "variant": "github-source-4",
+  "regression": {
+    "full": {
+      "python": "3.10.20",
+      "tests": 107,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lightweight": {
+      "python": "3.12.13",
+      "tests": 44,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "unchanged_files": [
+    "verify_musicxml.py",
+    "verify_output.py",
+    "verify_semantics.py",
+    "music_semantics.py",
+    "music_gate.py",
+    "semantic_frontend.py",
+    "models/manifest.json",
+    "LICENSE",
+    "requirements-core.txt",
+    "requirements-semantics.txt"
+  ],
+  "unchanged_previous_functions": [
+    "_pearson",
+    "_staff_metrics",
+    "bar_seconds",
+    "bar_spans",
+    "bass_hist",
+    "chord_segments",
+    "chroma_profile",
+    "confidence",
+    "describe_chords",
+    "detect_staves",
+    "diatonic",
+    "duration_lanes",
+    "ensure_decodable",
+    "estimate_tempo",
+    "evaluate_decision",
+    "events_to_midi",
+    "file_fingerprint",
+    "functional_scores",
+    "fuse",
+    "group_onsets",
+    "has_scores",
+    "key_conflict",
+    "key_fifths",
+    "key_grid",
+    "key_label",
+    "key_record",
+    "key_stability",
+    "key_table",
+    "load_audio",
+    "main",
+    "make_summary",
+    "merge_events",
+    "pc_hist",
+    "pitch_spellings",
+    "quantize",
+    "query_main",
+    "render_report",
+    "resolve_staves",
+    "roman",
+    "run_separation",
+    "score_counts",
+    "segments",
+    "select_key",
+    "split_voices",
+    "svg_density",
+    "svg_timeline",
+    "transcribe",
+    "window_keys",
+    "write_json",
+    "z24"
+  ],
+  "modified_previous_functions": [
+    "build_score",
+    "render_svg",
+    "write_score_musicxml"
+  ],
+  "new_runtime_dependencies": false,
+  "svg_geometry": {
+    "scope": "Chromium axis-aligned glyph bounding-box overlap proxy across all SVG pages; pair area >1 CSS pixel squared. Bounding boxes are not glyph ink or a complete collision/engraving-quality assessment. Rest-notehead and rest-rest pairs only.",
+    "all_pages": [
+      {
+        "name": "baseline_brahms_score_p1",
+        "visible_svg_rest_groups": 155,
+        "svg_notehead_groups": 228,
+        "rest_notehead_bbox_pairs": 33,
+        "rest_rest_bbox_pairs": 41
+      },
+      {
+        "name": "baseline_brahms_score_p2",
+        "visible_svg_rest_groups": 117,
+        "svg_notehead_groups": 238,
+        "rest_notehead_bbox_pairs": 48,
+        "rest_rest_bbox_pairs": 22
+      },
+      {
+        "name": "baseline_brahms_score_p3",
+        "visible_svg_rest_groups": 102,
+        "svg_notehead_groups": 131,
+        "rest_notehead_bbox_pairs": 9,
+        "rest_rest_bbox_pairs": 43
+      },
+      {
+        "name": "layout_brahms_score_p1",
+        "visible_svg_rest_groups": 30,
+        "svg_notehead_groups": 165,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_brahms_score_p2",
+        "visible_svg_rest_groups": 26,
+        "svg_notehead_groups": 247,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_brahms_score_p3",
+        "visible_svg_rest_groups": 28,
+        "svg_notehead_groups": 185,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "baseline_choice_score_p1",
+        "visible_svg_rest_groups": 92,
+        "svg_notehead_groups": 97,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 2
+      },
+      {
+        "name": "layout_choice_score_p1",
+        "visible_svg_rest_groups": 38,
+        "svg_notehead_groups": 61,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_choice_score_p2",
+        "visible_svg_rest_groups": 20,
+        "svg_notehead_groups": 36,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "baseline_fishin_score_p1",
+        "visible_svg_rest_groups": 182,
+        "svg_notehead_groups": 336,
+        "rest_notehead_bbox_pairs": 35,
+        "rest_rest_bbox_pairs": 58
+      },
+      {
+        "name": "baseline_fishin_score_p2",
+        "visible_svg_rest_groups": 143,
+        "svg_notehead_groups": 241,
+        "rest_notehead_bbox_pairs": 31,
+        "rest_rest_bbox_pairs": 50
+      },
+      {
+        "name": "baseline_fishin_score_p3",
+        "visible_svg_rest_groups": 157,
+        "svg_notehead_groups": 314,
+        "rest_notehead_bbox_pairs": 37,
+        "rest_rest_bbox_pairs": 30
+      },
+      {
+        "name": "baseline_fishin_score_p4",
+        "visible_svg_rest_groups": 130,
+        "svg_notehead_groups": 241,
+        "rest_notehead_bbox_pairs": 21,
+        "rest_rest_bbox_pairs": 28
+      },
+      {
+        "name": "baseline_fishin_score_p5",
+        "visible_svg_rest_groups": 161,
+        "svg_notehead_groups": 282,
+        "rest_notehead_bbox_pairs": 31,
+        "rest_rest_bbox_pairs": 61
+      },
+      {
+        "name": "baseline_fishin_score_p6",
+        "visible_svg_rest_groups": 175,
+        "svg_notehead_groups": 291,
+        "rest_notehead_bbox_pairs": 30,
+        "rest_rest_bbox_pairs": 34
+      },
+      {
+        "name": "baseline_fishin_score_p7",
+        "visible_svg_rest_groups": 132,
+        "svg_notehead_groups": 234,
+        "rest_notehead_bbox_pairs": 24,
+        "rest_rest_bbox_pairs": 83
+      },
+      {
+        "name": "baseline_fishin_score_p8",
+        "visible_svg_rest_groups": 69,
+        "svg_notehead_groups": 152,
+        "rest_notehead_bbox_pairs": 15,
+        "rest_rest_bbox_pairs": 14
+      },
+      {
+        "name": "layout_fishin_score_p1",
+        "visible_svg_rest_groups": 7,
+        "svg_notehead_groups": 215,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_fishin_score_p10",
+        "visible_svg_rest_groups": 8,
+        "svg_notehead_groups": 156,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_fishin_score_p11",
+        "visible_svg_rest_groups": 9,
+        "svg_notehead_groups": 152,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_fishin_score_p2",
+        "visible_svg_rest_groups": 30,
+        "svg_notehead_groups": 225,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_fishin_score_p3",
+        "visible_svg_rest_groups": 10,
+        "svg_notehead_groups": 246,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_fishin_score_p4",
+        "visible_svg_rest_groups": 14,
+        "svg_notehead_groups": 168,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_fishin_score_p5",
+        "visible_svg_rest_groups": 10,
+        "svg_notehead_groups": 170,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_fishin_score_p6",
+        "visible_svg_rest_groups": 26,
+        "svg_notehead_groups": 223,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_fishin_score_p7",
+        "visible_svg_rest_groups": 6,
+        "svg_notehead_groups": 131,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_fishin_score_p8",
+        "visible_svg_rest_groups": 20,
+        "svg_notehead_groups": 246,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_fishin_score_p9",
+        "visible_svg_rest_groups": 10,
+        "svg_notehead_groups": 159,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "baseline_trumpet_score_p1",
+        "visible_svg_rest_groups": 6,
+        "svg_notehead_groups": 16,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_trumpet_score_p1",
+        "visible_svg_rest_groups": 6,
+        "svg_notehead_groups": 16,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "baseline_user_repeat_180_score_p1",
+        "visible_svg_rest_groups": 214,
+        "svg_notehead_groups": 308,
+        "rest_notehead_bbox_pairs": 62,
+        "rest_rest_bbox_pairs": 106
+      },
+      {
+        "name": "baseline_user_repeat_180_score_p10",
+        "visible_svg_rest_groups": 215,
+        "svg_notehead_groups": 276,
+        "rest_notehead_bbox_pairs": 41,
+        "rest_rest_bbox_pairs": 96
+      },
+      {
+        "name": "baseline_user_repeat_180_score_p2",
+        "visible_svg_rest_groups": 185,
+        "svg_notehead_groups": 332,
+        "rest_notehead_bbox_pairs": 65,
+        "rest_rest_bbox_pairs": 63
+      },
+      {
+        "name": "baseline_user_repeat_180_score_p3",
+        "visible_svg_rest_groups": 203,
+        "svg_notehead_groups": 395,
+        "rest_notehead_bbox_pairs": 84,
+        "rest_rest_bbox_pairs": 101
+      },
+      {
+        "name": "baseline_user_repeat_180_score_p4",
+        "visible_svg_rest_groups": 158,
+        "svg_notehead_groups": 303,
+        "rest_notehead_bbox_pairs": 59,
+        "rest_rest_bbox_pairs": 52
+      },
+      {
+        "name": "baseline_user_repeat_180_score_p5",
+        "visible_svg_rest_groups": 116,
+        "svg_notehead_groups": 242,
+        "rest_notehead_bbox_pairs": 43,
+        "rest_rest_bbox_pairs": 52
+      },
+      {
+        "name": "baseline_user_repeat_180_score_p6",
+        "visible_svg_rest_groups": 178,
+        "svg_notehead_groups": 362,
+        "rest_notehead_bbox_pairs": 72,
+        "rest_rest_bbox_pairs": 73
+      },
+      {
+        "name": "baseline_user_repeat_180_score_p7",
+        "visible_svg_rest_groups": 129,
+        "svg_notehead_groups": 269,
+        "rest_notehead_bbox_pairs": 59,
+        "rest_rest_bbox_pairs": 60
+      },
+      {
+        "name": "baseline_user_repeat_180_score_p8",
+        "visible_svg_rest_groups": 137,
+        "svg_notehead_groups": 331,
+        "rest_notehead_bbox_pairs": 46,
+        "rest_rest_bbox_pairs": 31
+      },
+      {
+        "name": "baseline_user_repeat_180_score_p9",
+        "visible_svg_rest_groups": 178,
+        "svg_notehead_groups": 300,
+        "rest_notehead_bbox_pairs": 57,
+        "rest_rest_bbox_pairs": 72
+      },
+      {
+        "name": "layout_user_repeat_180_score_p1",
+        "visible_svg_rest_groups": 8,
+        "svg_notehead_groups": 178,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_user_repeat_180_score_p10",
+        "visible_svg_rest_groups": 9,
+        "svg_notehead_groups": 285,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_user_repeat_180_score_p11",
+        "visible_svg_rest_groups": 15,
+        "svg_notehead_groups": 189,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_user_repeat_180_score_p12",
+        "visible_svg_rest_groups": 8,
+        "svg_notehead_groups": 177,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_user_repeat_180_score_p13",
+        "visible_svg_rest_groups": 7,
+        "svg_notehead_groups": 70,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_user_repeat_180_score_p2",
+        "visible_svg_rest_groups": 19,
+        "svg_notehead_groups": 196,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_user_repeat_180_score_p3",
+        "visible_svg_rest_groups": 6,
+        "svg_notehead_groups": 308,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_user_repeat_180_score_p4",
+        "visible_svg_rest_groups": 1,
+        "svg_notehead_groups": 273,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_user_repeat_180_score_p5",
+        "visible_svg_rest_groups": 2,
+        "svg_notehead_groups": 282,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_user_repeat_180_score_p6",
+        "visible_svg_rest_groups": 1,
+        "svg_notehead_groups": 255,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_user_repeat_180_score_p7",
+        "visible_svg_rest_groups": 1,
+        "svg_notehead_groups": 348,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_user_repeat_180_score_p8",
+        "visible_svg_rest_groups": 0,
+        "svg_notehead_groups": 251,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      },
+      {
+        "name": "layout_user_repeat_180_score_p9",
+        "visible_svg_rest_groups": 5,
+        "svg_notehead_groups": 306,
+        "rest_notehead_bbox_pairs": 0,
+        "rest_rest_bbox_pairs": 0
+      }
+    ],
+    "samples": {
+      "brahms": {
+        "baseline": {
+          "visible_svg_rest_groups": 374,
+          "svg_notehead_groups": 597,
+          "rest_notehead_bbox_pairs": 90,
+          "rest_rest_bbox_pairs": 106,
+          "pages": 3
+        },
+        "layout": {
+          "visible_svg_rest_groups": 84,
+          "svg_notehead_groups": 597,
+          "rest_notehead_bbox_pairs": 0,
+          "rest_rest_bbox_pairs": 0,
+          "pages": 3
+        }
+      },
+      "choice": {
+        "baseline": {
+          "visible_svg_rest_groups": 92,
+          "svg_notehead_groups": 97,
+          "rest_notehead_bbox_pairs": 0,
+          "rest_rest_bbox_pairs": 2,
+          "pages": 1
+        },
+        "layout": {
+          "visible_svg_rest_groups": 58,
+          "svg_notehead_groups": 97,
+          "rest_notehead_bbox_pairs": 0,
+          "rest_rest_bbox_pairs": 0,
+          "pages": 2
+        }
+      },
+      "fishin": {
+        "baseline": {
+          "visible_svg_rest_groups": 1149,
+          "svg_notehead_groups": 2091,
+          "rest_notehead_bbox_pairs": 224,
+          "rest_rest_bbox_pairs": 358,
+          "pages": 8
+        },
+        "layout": {
+          "visible_svg_rest_groups": 150,
+          "svg_notehead_groups": 2091,
+          "rest_notehead_bbox_pairs": 0,
+          "rest_rest_bbox_pairs": 0,
+          "pages": 11
+        }
+      },
+      "trumpet": {
+        "baseline": {
+          "visible_svg_rest_groups": 6,
+          "svg_notehead_groups": 16,
+          "rest_notehead_bbox_pairs": 0,
+          "rest_rest_bbox_pairs": 0,
+          "pages": 1
+        },
+        "layout": {
+          "visible_svg_rest_groups": 6,
+          "svg_notehead_groups": 16,
+          "rest_notehead_bbox_pairs": 0,
+          "rest_rest_bbox_pairs": 0,
+          "pages": 1
+        }
+      },
+      "user_repeat_180": {
+        "baseline": {
+          "visible_svg_rest_groups": 1713,
+          "svg_notehead_groups": 3118,
+          "rest_notehead_bbox_pairs": 588,
+          "rest_rest_bbox_pairs": 706,
+          "pages": 10
+        },
+        "layout": {
+          "visible_svg_rest_groups": 82,
+          "svg_notehead_groups": 3118,
+          "rest_notehead_bbox_pairs": 0,
+          "rest_rest_bbox_pairs": 0,
+          "pages": 13
+        }
+      }
+    }
+  },
+  "visual_review": "Human-inspected before/after first pages of Brahms, Fishin and private derived 180-second input. Automatic geometry checks cover all 23 baseline and 30 new SVG pages; not a page-by-page human audit.",
+  "limits": [
+    "Notation partitions are mechanical, not recovered instruments, hands or independently performed musical voices.",
+    "Only equal-onset/equal-duration unique pitches share a chord; independent and duplicate intervals remain.",
+    "Invisible spacer rests remain in MusicXML for timing; true staff silence has one visible rest stream.",
+    "Reduction previously hid true pauses as well; those pauses now display, so reduction visible-rest counts can increase.",
+    "More spacing can increase page count. No complete collision, accidental, ledger-line, tie/slur or human engraving-quality guarantee.",
+    "SVG bounding-box overlap is a limited geometric proxy, not ink intersection or a music readability rating.",
+    "Four reused public music recordings and two non-music controls have no independent note-level truth; private 180-second repeat is not an independent recording.",
+    "Transcription errors, default meter, global tempo and sixteenth-note quantization are unchanged.",
+    "Windows x64 CPU only; GPU, Demucs, Linux/macOS/ARM not newly validated.",
+    "AGPL, model non-commercial conditions and unresolved SA/ND conflict remain unchanged."
+  ]
+}

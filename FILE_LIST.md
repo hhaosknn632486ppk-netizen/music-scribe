@@ -1,6 +1,6 @@
 # GitHub 源码文件清单
 
-变体 github-source-3，转谱版本 1.3.1，共 88 个文件；不含模型权重、真实音频、虚拟环境、结果或 Git 元数据。逐文件摘要见 MANIFEST.json。
+变体github-source-4，转谱1.3.2，共92个文件。不含模型权重、真实音频、生成谱面/截图、虚拟环境、结果或Git元数据。逐文件摘要见 MANIFEST.json。
 
 - `.gitattributes`
 - `.gitignore`
@@ -12,6 +12,8 @@
 - `FRONTEND_VALIDATION.json`
 - `GITHUB_PUBLICATION.md`
 - `INSTALL.md`
+- `LAYOUT_ACCEPTANCE.json`
+- `LAYOUT_ACCEPTANCE.md`
 - `LICENSE`
 - `LICENSE_REVIEW_ACCEPTANCE.json`
 - `LICENSE_REVIEW_ACCEPTANCE.md`
@@ -78,6 +80,7 @@
 - `test_correctness.py`
 - `test_download_models.py`
 - `test_gate.py`
+- `test_layout.py`
 - `test_llm_tool.py`
 - `test_semantics.py`
 - `test_ties.py`
@@ -86,6 +89,7 @@
 - `validate.py`
 - `validate_frontend_reference.py`
 - `validate_gate.py`
+- `verify_layout.py`
 - `verify_musicxml.py`
 - `verify_output.py`
 - `verify_semantics.py`

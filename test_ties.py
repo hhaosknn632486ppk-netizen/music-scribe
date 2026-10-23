@@ -8,6 +8,7 @@ import xml.etree.ElementTree as ET
 
 import music_scribe as ms
 from verify_musicxml import read_intervals
+from verify_layout import inspect_layout
 
 
 class TieExportTests(unittest.TestCase):
@@ -18,6 +19,7 @@ class TieExportTests(unittest.TestCase):
             score = ms.build_score(items, 120, 0, 'major', 'full', staves=staves, ts=ts)
             ms.write_score_musicxml(score, path)
             actual, stats = read_intervals(path)
+            inspect_layout(path, check_staff_rests=True)
             self.assertEqual(actual, Counter((p, o, d) for o, d, p in intervals))
             root = ET.parse(path)
             staff_voices = {}

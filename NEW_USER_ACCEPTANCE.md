@@ -1,3 +1,5 @@
+> 当前排版版为1.3.2，验收见 [LAYOUT_ACCEPTANCE.md](LAYOUT_ACCEPTANCE.md)；本页保留此前新用户安装记录。
+
 > 历史记录：本页描述 github-source-2 的安装验收；其中全长延音失败已在 1.3.1 修复，当前结果见 [TIE_FIX_ACCEPTANCE.md](TIE_FIX_ACCEPTANCE.md)。
 
 # 新用户安装与 AI 助手入口验收

@@ -42,7 +42,7 @@ if '--semantics' in sys.argv or '--semantics-only' in sys.argv:
 
 import numpy as np
 
-VERSION = "1.3.1"
+VERSION = "1.3.2"
 SCHEMA_VERSION = "music-scribe/1.1"
 TRANSCRIPTION_PARAMETERS = dict(onset_threshold=0.5, frame_threshold=0.3,
     minimum_note_length=90.0, minimum_frequency=27.5, maximum_frequency=4200.0,
@@ -756,6 +756,40 @@ def duration_lanes(items):
     return lanes
 
 
+def notation_lanes(items):
+    """Bundle only equal-onset/equal-end notes, then color their intervals.
+
+    Equal pitches are kept in separate bundles so duplicate events survive.
+    Compact lanes are notation partitions, not recovered instrumental voices.
+    """
+    spans = {}
+    for item in items:
+        spans.setdefault((item['o'], item['d']), []).append(item)
+    bundles = []
+    for (onset, duration), members in spans.items():
+        groups = []
+        for item in sorted(members, key=lambda n: n['p'], reverse=True):
+            group = next((g for g in groups if all(n['p'] != item['p'] for n in g)), None)
+            if group is None:
+                group = []
+                groups.append(group)
+            group.append(item)
+        bundles.extend(dict(o=onset, d=duration, members=g,
+                            center=float(np.median([n['p'] for n in g]))) for g in groups)
+    lanes, ends = [], []
+    for bundle in sorted(bundles, key=lambda b: (b['o'], -b['center'], b['d'])):
+        available = [i for i, end in enumerate(ends) if end <= bundle['o'] + 1e-9]
+        if available:
+            index = min(available)
+        else:
+            index = len(lanes)
+            lanes.append([])
+            ends.append(0.)
+        lanes[index].append(bundle)
+        ends[index] = bundle['o'] + bundle['d']
+    return sorted(lanes, key=lambda lane: -float(np.median([b['center'] for b in lane])))
+
+
 def build_score(qn, bpm, tonic_pc, mode, mode_sel="reduction", ts=(4, 4), segs=None,
                 staves="auto", origin=0.0):
     from music21 import stream, note, chord, meter, key as m21key, tempo as m21tempo, clef, layout
@@ -772,24 +806,29 @@ def build_score(qn, bpm, tonic_pc, mode, mode_sel="reduction", ts=(4, 4), segs=N
 
     sc = stream.Score()
     sc.editorial['preserve_notation_lanes'] = mode_sel == 'full'
+    sc.editorial['layout_prepared'] = True
     parts = []
     for grp, c in groups:
         p = stream.PartStaff()
         if mode_sel == 'full':
-            for index, lane in enumerate(duration_lanes(grp)):
+            for index, lane in enumerate(notation_lanes(grp)):
                 voice = stream.Voice(id=index + 1)
                 for item in lane:
-                    el = note.Note(item['p'])
+                    members = item['members']
+                    el = (note.Note(members[0]['p']) if len(members) == 1 else
+                          chord.Chord([n['p'] for n in members]))
                     # makeMeasures renumbers voices and makeTies can flatten a
                     # singleton voice. Keep the original lane on split copies.
                     el.editorial['notation_lane'] = index
                     el.duration.quarterLength = item['d']
-                    el.volume.velocity = int(min(127, 35 + 90 * item['a']))
+                    for component, member in zip(el.notes if el.isChord else [el], members):
+                        component.volume.velocity = int(min(127, 35 + 90 * member['a']))
                     voice.insert(item['o'], el)
                 p.insert(0, voice)
         else:
             for g in grp:
                 el = note.Note(g["ps"][0]) if len(g["ps"]) == 1 else chord.Chord(g["ps"])
+                el.editorial['notation_lane'] = 0
                 el.duration.quarterLength = g["d"]
                 el.volume.velocity = int(min(127, 35 + 90 * g["a"]))
                 p.insert(g["o"], el)
@@ -830,10 +869,107 @@ def build_score(qn, bpm, tonic_pc, mode, mode_sel="reduction", ts=(4, 4), segs=N
         try:
             p.makeMeasures(inPlace=True)
             p.makeTies(inPlace=True)
+            # Beam only after gaps, final voices and duration splits are known.
+            # _beam_layout_measure below builds actual balanced beam groups.
+            p.streamStatus.beams = True
             p.makeNotation(inPlace=True)
         except Exception as exc:
             raise RuntimeError(f"记谱整理失败，不能将未完成的谱面当作成功产物：{exc}") from exc
     return sc
+
+
+def _staff_silences(measure, length):
+    spans = sorted((float(n.getOffsetInHierarchy(measure)),
+                    float(n.getOffsetInHierarchy(measure) + n.quarterLength))
+                   for n in measure.recurse().notes)
+    quiet, end = [], 0.
+    for start, stop in spans:
+        if start > end:
+            quiet.append((end, start))
+        end = max(end, stop)
+    if end < length:
+        quiet.append((end, length))
+    return quiet
+
+
+def _layout_rests(voice, length, quiet, display):
+    """Keep timing rests; display one rest stream only during staff silence."""
+    from music21 import note
+    voice.makeRests(refStreamOrTimeRange=[0, length], fillGaps=True,
+                    hideRests=True, inPlace=True)
+    if not display:
+        return
+    for rest in list(voice.recurse().getElementsByClass(note.Rest)):
+        start = float(rest.getOffsetInHierarchy(voice))
+        end = start + float(rest.quarterLength)
+        cuts = sorted({start, end, *(t for gap in quiet for t in gap if start < t < end)})
+        voice.remove(rest)
+        for a, b in zip(cuts, cuts[1:]):
+            segment = note.Rest(quarterLength=b - a)
+            segment.style.hideObjectOnPrint = not any(q0 <= a and b <= q1 for q0, q1 in quiet)
+            voice.insert(a, segment)
+
+
+def _beam_layout_measure(measure):
+    """Beam contiguous pitched notes within actual metric beats, never gaps.
+
+    Rebuild every level, including inward hooks, instead of retaining beams
+    computed on a gap-compressed voice. No music21 warnings are suppressed.
+    """
+    from music21 import beam, meter
+    signature = measure.timeSignature or measure.getContextByClass(meter.TimeSignature)
+    if signature is None:
+        raise ValueError('Cannot beam notation without a time signature')
+    beats, cursor = [], 0.
+    for beat in signature.beatSequence:
+        end = cursor + float(beat.duration.quarterLength)
+        beats.append((cursor, end))
+        cursor = end
+    voices = list(measure.voices)
+    ranked = sorted((v for v in voices if v.notes),
+                    key=lambda v: -float(np.median([p.midi for n in v.notes for p in n.pitches])))
+    levels = {'eighth': 1, '16th': 2, '32nd': 3, '64th': 4, '128th': 5, '256th': 6}
+    for voice in voices:
+        for n in voice.notes:
+            n.beams = beam.Beams()
+            if len(ranked) > 1:
+                n.stemDirection = 'up' if ranked.index(voice) < (len(ranked) + 1) // 2 else 'down'
+            else:
+                n.stemDirection = 'unspecified'
+        for beat_start, beat_end in beats:
+            groups, current = [], []
+            for n in voice.notesAndRests:
+                start, end = float(n.offset), float(n.offset + n.quarterLength)
+                eligible = (not n.isRest and n.duration.type in levels
+                            and beat_start <= start < end <= beat_end)
+                if not eligible or (current and float(current[-1].offset + current[-1].quarterLength) != start):
+                    if current:
+                        groups.append(current)
+                        current = []
+                if eligible:
+                    current.append(n)
+            if current:
+                groups.append(current)
+            for group in groups:
+                if len(group) < 2:
+                    continue  # an isolated short note keeps its flag
+                for depth in range(1, max(levels[n.duration.type] for n in group) + 1):
+                    runs, run = [], []
+                    for i, n in enumerate(group):
+                        if levels[n.duration.type] >= depth:
+                            run.append(i)
+                        elif run:
+                            runs.append(run)
+                            run = []
+                    if run:
+                        runs.append(run)
+                    for run in runs:
+                        for j, i in enumerate(run):
+                            if len(run) == 1:
+                                group[i].beams.append('partial', 'left' if i else 'right')
+                            else:
+                                group[i].beams.append('start' if j == 0 else 'stop' if j == len(run) - 1 else 'continue')
+    measure.streamStatus.beams = True
 
 
 def write_score_musicxml(score, path):
@@ -845,7 +981,7 @@ def write_score_musicxml(score, path):
     Restore positive, globally distinct lane IDs after notation and duration
     splitting, then serialize without another makeNotation pass.
     """
-    if not score.editorial.get('preserve_notation_lanes', False):
+    if not score.editorial.get('layout_prepared', False):
         return score.write('musicxml', fp=str(path))
     from music21 import stream, note
 
@@ -856,6 +992,8 @@ def write_score_musicxml(score, path):
         voice_ids = {lane: next_voice_id + i for i, lane in enumerate(lane_ids)}
         next_voice_id += max(1, len(lane_ids))
         for measure in part.getElementsByClass(stream.Measure):
+            length = float(measure.barDuration.quarterLength)
+            quiet = _staff_silences(measure, length)
             lanes = {}
             # Collect offsets before detaching voices; ties retain their lane
             # even when the previous notation pass flattened a singleton.
@@ -876,11 +1014,14 @@ def write_score_musicxml(score, path):
                 voice = stream.Voice(id=voice_ids[lane])
                 for offset, n in members:
                     voice.insert(offset, n)
-                voice.makeRests(refStreamOrTimeRange=[0, measure.barDuration.quarterLength],
-                                fillGaps=True, inPlace=True)
+                _layout_rests(voice, length, quiet, display=lane == min(lanes))
                 measure.insert(0, voice)
     # Gap-filling rests can themselves have composite durations.
     prepared = prepared.splitAtDurations(recurse=True)[0]
+    for part in prepared.parts:
+        for measure in part.getElementsByClass(stream.Measure):
+            _beam_layout_measure(measure)
+        part.streamStatus.beams = True
     return prepared.write('musicxml', fp=str(path), makeNotation=False)
 
 
@@ -895,7 +1036,9 @@ def render_svg(xml_path: Path, out_dir: Path):
         pass
     tk.setOptions({"scale": 42, "adjustPageHeight": True,
                    "pageWidth": 2100, "pageHeight": 2970,
-                   "breaks": "auto", "footer": "none", "header": "none"})
+                   "breaks": "auto", "footer": "none", "header": "none",
+                   "spacingBraceGroup": 18, "spacingStaff": 16, "spacingSystem": 8,
+                   "spacingLinear": 0.32, "spacingNonLinear": 0.65, "systemMaxPerPage": 4})
     ok = tk.loadFile(str(xml_path))
     if not ok:
         return []

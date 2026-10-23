@@ -109,7 +109,7 @@ def test_modulation(out):
     import soundfile as sf
     import xml.etree.ElementTree as ET
     from music21 import key, stream
-    from music_scribe import window_keys, segments, quantize, build_score, KEY_WINDOW_SECONDS
+    from music_scribe import window_keys, segments, quantize, build_score, write_score_musicxml, KEY_WINDOW_SECONDS
 
     out.mkdir(parents=True, exist_ok=True)
     bpm, bars, ts = 80, 8, (4, 4)
@@ -135,7 +135,7 @@ def test_modulation(out):
         assert all(a[1:] != b[1:] for a, b in zip(changes, changes[1:])), changes
         part_keys.append(changes)
     xml = out / 'score.musicxml'
-    score.write('musicxml', fp=str(xml))
+    write_score_musicxml(score, xml)
     root = ET.parse(xml).getroot()
     xml_keys = [{'part': p.attrib['id'], 'measure': int(m.attrib['number']),
                  'staff': k.get('number', 'all'), 'fifths': int(k.findtext('fifths')),

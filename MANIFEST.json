@@ -1,5 +1,5 @@
 {
-  "variant": "github-source-3",
+  "variant": "github-source-4",
   "scope": "Public source/documentation allowlist; only synthetic fixture NPZ. No models, real audio, runtime environments or outputs. Root .git metadata excluded.",
   "files": [
     {
@@ -24,8 +24,8 @@
     },
     {
       "path": "CHANGES.md",
-      "bytes": 4579,
-      "sha256": "4ef1e05525532e0e2a04211a33feff939e380dbdf6b31931055514b4217f428e"
+      "bytes": 5379,
+      "sha256": "77d01d500d0b611b5d6c9ed1bb8a6a967dec4515cb06b689c2f712fbbd0c1079"
     },
     {
       "path": "DEPENDENCY_LICENSES.json",
@@ -34,8 +34,8 @@
     },
     {
       "path": "FILE_LIST.md",
-      "bytes": 2513,
-      "sha256": "f932ae8aab777ff3d3512fe975b05262c44daf7851457525eb9b484008aeca58"
+      "bytes": 2615,
+      "sha256": "1efc2801a2b51472aac103e6d6eb9eff300ca90768947b6c8157379f1d98447a"
     },
     {
       "path": "FRONTEND_VALIDATION.json",
@@ -44,13 +44,23 @@
     },
     {
       "path": "GITHUB_PUBLICATION.md",
-      "bytes": 2324,
-      "sha256": "d1a8c8edf6a0db5107433cbeac02e32f90767afc2c335a2a4032ef5870d58330"
+      "bytes": 2553,
+      "sha256": "7ce86d66d97c6b57eb0ad2e00419c836d7fafef835365104ef6611122a5ef5cf"
     },
     {
       "path": "INSTALL.md",
-      "bytes": 5981,
-      "sha256": "6d2bda75fc906d88b8602a718ef400540316d726ad49cc28cf5c11c710dd2163"
+      "bytes": 6321,
+      "sha256": "4f186aa114841423e812cc35308251bb92cd89c7da1a68729ebed10ddba5149a"
+    },
+    {
+      "path": "LAYOUT_ACCEPTANCE.json",
+      "bytes": 58867,
+      "sha256": "7742d1b702d122e9e15b86401c35dedb656166123322656b2039c1011595b596"
+    },
+    {
+      "path": "LAYOUT_ACCEPTANCE.md",
+      "bytes": 8674,
+      "sha256": "53443d55c2c21ac85f450c1030ff3b1b4b47f5a6ed35fddf877d56699d02e555"
     },
     {
       "path": "LICENSE",
@@ -79,8 +89,8 @@
     },
     {
       "path": "LLM_INTEGRATION.md",
-      "bytes": 6041,
-      "sha256": "fa35747919efddb6922fef8fe95565c4071b78a1dee0551437f8e5e1249a7616"
+      "bytes": 6521,
+      "sha256": "35041648a760712b7c1c5530b6e86821d6a07e9dd6545e06fd74d95e840e06c0"
     },
     {
       "path": "MODEL_LICENSES.md",
@@ -94,23 +104,23 @@
     },
     {
       "path": "NEW_USER_ACCEPTANCE.md",
-      "bytes": 3956,
-      "sha256": "cae817af793ceb1d298560db58f98d5ff44a76683f881af3ffc1eba643505c8f"
+      "bytes": 4085,
+      "sha256": "e91800d1f9c3bf6a3523925a6a752df2f738380056b092ef88dba19d2d929e91"
     },
     {
       "path": "POLICY_LOCK.json",
-      "bytes": 2172,
-      "sha256": "54f8ec578a8042bfd97ad963a6d5f0508235445cc6e98689a9b490a0887d6bc4"
+      "bytes": 2691,
+      "sha256": "1e36a4fcc99ed4b7b836aa1bd4505d9d4ba9aca96685a04cc48e16568ee21321"
     },
     {
       "path": "QUICKSTART.md",
-      "bytes": 8075,
-      "sha256": "400e4238b2336d84a2bba211bb672430d2a2441f1d50e216ae5335511467e1cd"
+      "bytes": 8563,
+      "sha256": "3a526f665cdca734dec4b56716ff69040650224d18fd665b55844e9a8be917d9"
     },
     {
       "path": "README.md",
-      "bytes": 10157,
-      "sha256": "4c58312e925039f3bf940ff29e3d82acfe17437d94bb61f84e64352105c30ddd"
+      "bytes": 10537,
+      "sha256": "63d79f85a35fcb247aefe9ca49ba13e7b7521566eaf21c66be1fcb5b24f2c98f"
     },
     {
       "path": "SOURCE_AUDIT.json",
@@ -124,8 +134,8 @@
     },
     {
       "path": "SOURCE_PROVENANCE.json",
-      "bytes": 12955,
-      "sha256": "5b72a34864719c77b5ca25ba74fa11ae41dbfb8e2d081523223fbdecce56bab6"
+      "bytes": 13372,
+      "sha256": "b589a7a3d61ddc60986224579b193e3309d6015ecc061f13a1a3211bb216bd02"
     },
     {
       "path": "THIRD_PARTY_LICENSES/Basic-Pitch-Apache-2.0.txt",
@@ -164,8 +174,8 @@
     },
     {
       "path": "TIE_FIX_ACCEPTANCE.md",
-      "bytes": 8996,
-      "sha256": "afddc2213613cf10c0b7abfa30dda4acd409065aeb6fe97627b4207aa63b69a6"
+      "bytes": 9143,
+      "sha256": "1a792e8722036adf4553906e37a5690a9ef22c73874c8a521828248f6a2b580f"
     },
     {
       "path": "_vendor/dora/__init__.py",
@@ -199,8 +209,8 @@
     },
     {
       "path": "examples/assistant_prompt.txt",
-      "bytes": 2892,
-      "sha256": "c08bd89014d4e396132822d505eb54bacbec548268fac8134ba5d2766475cab2"
+      "bytes": 3286,
+      "sha256": "fa1e351bd44e6bf1a42d74208085fa6bf207d4a46f3e32f9755996dfa45878fc"
     },
     {
       "path": "examples/llm_tool.py",
@@ -289,8 +299,8 @@
     },
     {
       "path": "music_scribe.py",
-      "bytes": 72758,
-      "sha256": "363fd7278c99da21a9c9d528a47814d1daa870cef9e4b308a5b7cb242e55c821"
+      "bytes": 79497,
+      "sha256": "71a2970c8ea3fe02a855f91119712246da3e5d4acb34f5a4d08ed200028f2c15"
     },
     {
       "path": "music_scribe_cli.cmd",
@@ -349,8 +359,8 @@
     },
     {
       "path": "selftest.py",
-      "bytes": 10157,
-      "sha256": "403cb713effdc7cdde3c283c624e70a3ff3020c1fc3fda85401bd71802403f86"
+      "bytes": 10175,
+      "sha256": "0b1d8a964281a91abfc6b5e4e9ef4b8f46a5615c4c412bebbfef6bb3a828aae4"
     },
     {
       "path": "semantic_frontend.py",
@@ -378,6 +388,11 @@
       "sha256": "a20cba1e55e500120202a2a42bbde5db27cfd5fc4ebc04ccc6bfec56ca2a3cde"
     },
     {
+      "path": "test_layout.py",
+      "bytes": 4641,
+      "sha256": "806f80fc6976373a80e9e7e9f6fadc3664aa14c3093352d6eea8e10df8958421"
+    },
+    {
       "path": "test_llm_tool.py",
       "bytes": 4551,
       "sha256": "f22b1ab616f2dcb013f5091289d55b0a2725c807da7058caf5641bd72c9ffb6d"
@@ -389,8 +404,8 @@
     },
     {
       "path": "test_ties.py",
-      "bytes": 4371,
-      "sha256": "2141d0ae5c2c3ff6d298b06db5296f42379ea27cb8cad66bed79ac1c3edfaabf"
+      "bytes": 4469,
+      "sha256": "f8e4893156848fdf7453cec15c63931b5c90d01595b43c5251fe7f18a71fa7ba"
     },
     {
       "path": "tests/fixtures/frontend_fixture.npz",
@@ -416,6 +431,11 @@
       "path": "validate_gate.py",
       "bytes": 3590,
       "sha256": "0036996b25efefe2f35135e4a87a4a079e1c4d308a808923fae0358e1509f6a7"
+    },
+    {
+      "path": "verify_layout.py",
+      "bytes": 7187,
+      "sha256": "09b1b2311b71440a2c968000ebe8cd29255bb9ee89decb5b7129382bb2aa673c"
     },
     {
       "path": "verify_musicxml.py",

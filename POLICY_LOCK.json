@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-23T06:35:05.826Z",
-  "scope": "Stable full-score tie voice export and full-environment pkg_resources compatibility; models, quantization and gate/semantic numerical policies unchanged.",
-  "variant": "github-source-3",
+  "scope": "Notation chord bundling, compact rest display, beat-based beam reconstruction and spacing; models, dependencies, transcription, quantization, gate and semantic policies unchanged.",
+  "variant": "github-source-4",
   "baseline_policy_lock_sha256": "bf59b257e1cd0303f8ad73e65bc63ebff224eb488c542d0c57541cb0090deb7e",
   "gate_policy": {
     "calibrated": false,
@@ -31,8 +31,8 @@
   "code": {
     "music_scribe.py": {
       "name": "music_scribe.py",
-      "bytes": 72758,
-      "sha256": "363fd7278c99da21a9c9d528a47814d1daa870cef9e4b308a5b7cb242e55c821"
+      "bytes": 79497,
+      "sha256": "71a2970c8ea3fe02a855f91119712246da3e5d4acb34f5a4d08ed200028f2c15"
     },
     "music_semantics.py": {
       "name": "music_semantics.py",
@@ -54,5 +54,18 @@
     "name": "manifest.json",
     "sha256": "0d36aba9bf663fea84b20233f5a4c0e4a2d8aebf2fe0cd96f237dee31f9176a9"
   },
-  "previous_source_policy_lock_sha256": "d965cecc7cea384e3f1ab713ec740123ba96ec024c45c5753038d04018a96c20"
+  "previous_source_policy_lock_sha256": "54f8ec578a8042bfd97ad963a6d5f0508235445cc6e98689a9b490a0887d6bc4",
+  "notation_layout": {
+    "bundle": "equal onset and duration only; unique pitches per chord; preserve duplicates",
+    "rests": "timing spacers retained; one visible stream during entire staff silence",
+    "beams": "contiguous pitched segments within metric beat; gaps/rests break groups",
+    "verovio": {
+      "spacingBraceGroup": 18,
+      "spacingStaff": 16,
+      "spacingSystem": 8,
+      "spacingLinear": 0.32,
+      "spacingNonLinear": 0.65,
+      "systemMaxPerPage": 4
+    }
+  }
 }
