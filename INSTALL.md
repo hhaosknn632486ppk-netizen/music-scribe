@@ -1,46 +1,82 @@
-# 安装步骤与已测范围
+# 安装、模型及已测范围
 
-## Windows x64 / CPython 3.10
+第一次使用请从 [QUICKSTART.md](QUICKSTART.md) 开始。命令均在项目根目录运行，无需激活环境。
 
-使用官方64位CPython 3.10，在解压后的源码目录打开PowerShell：
+| 路线 | 能力 | 已测平台 | 依赖 |
+|---|---|---|---|
+| 推荐轻量语义 | 音乐门控、风格/类型/情感候选、局部证据查询 | Windows x64，Python 3.12.13；既有 3.10.22 也保留验证 | requirements-semantics.txt |
+| 完整兼容路线 | 转录、调性/BPM/和弦、MusicXML/SVG/MIDI，可加同一语义模型 | Windows x64，Python 3.10.22；3.12 完整转录未验收 | requirements-core.txt |
+| 可选分轨 | Demucs / torch | 本轮未重新验收 GPU、权重或新环境 | requirements-separation.txt |
+
+**Python 3.10 已于 2026-10-01 结束上游维护。** 完整路线是当前依赖约束下的旧环境重现方式，不是长期支持承诺。[Python 官方说明](https://www.python.org/downloads/release/python-31011/)。本次没有升级 Basic Pitch、替换模型或安装重量级替代后端来扩展完整支持版本。
+
+## 轻量语义
+
+uv 安装见 [官方页面](https://docs.astral.sh/uv/getting-started/installation/)。已有 64 位 Python 3.12 时也可用 venv。
 
 ```powershell
-py -3.10 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-core.txt
-.\.venv\Scripts\python.exe doctor.py --mode core
-```
-
-不需要激活环境；使用完整解释器相对路径可避免PowerShell脚本执行策略问题。基础组提供转录、排谱和本地codec回退，不要求另行下载语义权重。依赖安装可能联网下载Python包及其中的Basic Pitch模型/ffmpeg构建；它不是纯源码自带模型，也不是“首次安装完全离线”。
-
-只要语义、不需要转录/排谱时，可以只安装轻量依赖组：
-
-```powershell
+uv venv --python 3.12 --seed .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-semantics.txt
+.\.venv\Scripts\python.exe -m pip check
 .\.venv\Scripts\python.exe doctor.py --mode semantics
-.\.venv\Scripts\python.exe download_models.py --models-dir 'D:\MusicModels\music_scribe'
-$env:MUSIC_SCRIBE_MODELS='D:\MusicModels\music_scribe'
-.\.venv\Scripts\python.exe music_scribe.py 'D:\Audio\clip.wav' -o 'D:\Results\new_semantics' --semantics-only
 ```
 
-基础组与语义组有共享依赖，安装两者不会创建第二份模型实现。原有六权重及其SHA固定，合计40,640,925字节；下载器不换模型也不重新训练。五份MTG权重有未解决许可文本冲突，先读LICENSE_STATUS.md。模型下载可以手动从清单URL取得，但仍需用`download_models.py --check`核验，并保留对应元数据。
+不要求 py 已注册 Python，也不安装 Basic Pitch、TensorFlow、torch、librosa、music21 或 Verovio。首次获取 Python、依赖及模型需要联网；不提供完全离线安装介质。
 
-本机测试的完整解析版本见requirements-lock-windows-py310.txt；这是本候选在Windows/Python3.10的重现锁定，其他平台不要机械套用。公开源码不包含环境或包缓存。若要无网机器安装，需要事先按对应平台准备pip wheelhouse及经校验模型，离线转移它们，并遵守各文件许可；本包没有宣称提供这种完整离线安装介质。
+## 完整兼容路线：单独环境
 
-## 可选分轨
-
-仅--separate需要额外的torch、torchaudio、Demucs和已缓存htdemucs权重。先按[PyTorch官方安装页](https://pytorch.org/get-started/locally/)选择匹配的CPU/GPU版本，再安装：
+不要将完整依赖混装进 Python 3.12 语义环境。用单独目录，模型可复用外部同一份：
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements-separation.txt
+uv venv --python 3.10 --seed .venv-core
+.\.venv-core\Scripts\python.exe -m pip install -r requirements-core.txt
+.\.venv-core\Scripts\python.exe -m pip check
+.\.venv-core\Scripts\python.exe doctor.py --mode core
 ```
 
-分轨代码保留，默认使用本环境torch；也可用MS_TORCH_PATH指向已有兼容site-packages。源码不附带开发者环境的torchpath.txt。没有已缓存Demucs权重时保持明确失败/既有降级行为，不自动下载；如另行取得权重，需要核查该权重的来源和许可。此源码整理未重新验收GPU、Demucs权重来源或其模型质量，不能把基础安装成功说成分轨新环境已通过。
+已有 64 位 3.10 可用 `py -3.10 -m venv .venv-core`，或 `& '实际Python路径' -m venv .venv-core` 替代第一条。未装该版本时 py -3.10 不会自行成功。uv 使用其提供的 Python 构建；本轮完整重现使用 3.10.22，不声称验证了所有发行来源。
 
-## Python/平台限制与排错
+Basic Pitch 0.4.0 的依赖随平台与 Python 标记变化：Windows Python<3.11 选择 ONNX Runtime，其他组合可能引入 TensorFlow、TFLite 或 CoreML。不要在 3.12 装 core 并期待保持同样轻量。旧完整环境的解析记录是 requirements-lock-windows-py310.txt，不要套到 3.12。
 
-- 当前完整验收目标为Windows x64、Python3.10；Linux/macOS/ARM和Python3.11+未完成同等验收。
-- Basic Pitch 0.4.0的官方依赖使用平台/Python标记：Windows Python<3.11会选ONNX Runtime；其他组合可能安装TensorFlow、TFLite或CoreML。不要以为任意版本都会保持同样轻量。
-- doctor.py只检查版本、平台和分组依赖，不代替音频转录或桌面拖放测试。缺依赖或版本不符会明确输出。
-- 权重路径支持中文和空格；模型摘要错误先用--check确认，再显式--repair，不手动改manifest来迁就坏文件。
-- 如果SSL、代理或模型站点不可达，下载器报错并保留既有文件；不要关闭证书验证。之后可重试显式下载或离线校验。
-- 拖放入口找不到解释器时，先检查源码目录`.venv\Scripts\python.exe`，或设置MUSIC_SCRIBE_PYTHON。无参数双击会显示拖放提示，不会自行选择文件。
+只生成谱面，无需六份语义权重：
+
+```powershell
+.\.venv-core\Scripts\python.exe examples\llm_tool.py analyze --audio 'D:\Audio\song.wav' --output-root 'D:\Results' --task score
+```
+
+联合语义则使用 `--task all --models-dir 'D:\MusicModels\music_scribe'`。MusicXML/SVG/MIDI 实际路径从返回的 artifacts 读取。谱面仍可能有音符、节奏、声部错误。
+
+## 模型下载及校验
+
+需要现成谱面演示时，先按 QUICKSTART.md 下载公开样本，再用完整环境运行 `examples\run_demo.py --with-score`。它只对音乐前 12 秒作额外排谱及验证，不把全长复杂复调的生成成功当成通过校验。
+
+先读 README 的非商业限制与未决冲突。以下以语义环境为例：
+
+```powershell
+.\.venv\Scripts\python.exe download_models.py --list
+.\.venv\Scripts\python.exe download_models.py --models-dir 'D:\MusicModels\music_scribe'
+# 阅读提示后输入 yes，明确读过的自动化才用 --yes
+.\.venv\Scripts\python.exe download_models.py --check --models-dir 'D:\MusicModels\music_scribe'
+```
+
+六份权重合计 40,640,925 字节，清单见 MODEL_LICENSES.md。下载器放置配对元数据并校验，坏文件默认保留；确认后显式 --repair。`--only gate` 不是独立的完整语义模式。
+
+分析时传 --models-dir，也可设置 MUSIC_SCRIBE_MODELS，命令行优先；终端变量不自动跨会话保存。验证输出也传同一目录：
+
+```powershell
+.\.venv\Scripts\python.exe verify_semantics.py 'D:\Results\某次分析目录' --models-dir 'D:\MusicModels\music_scribe'
+```
+
+doctor 检查环境，download_models --check 检查模型，verify_semantics 检查输出一致性；都不证明音乐判断准确。
+
+## 分轨、拖放和平台边界
+
+可选 --separate 需要匹配的 torch / torchaudio、Demucs 和已缓存 htdemucs 权重。先按 [PyTorch 官方页](https://pytorch.org/get-started/locally/)选择环境，再安装 requirements-separation.txt。无已缓存权重时明确失败或降级，不自动下载；本轮未验收 GPU。
+
+拖放脚本默认 .venv\Scripts\python.exe。如果这里是轻量语义环境，转录脚本不会因此获得完整依赖。需要完整拖放时，在同一终端设置 MUSIC_SCRIBE_PYTHON 为 .venv-core\Scripts\python.exe 的绝对路径，再从该终端启动；明确指定解释器的命令最容易核对。
+
+- Linux、macOS、ARM、其他 Python 版本未完成同等验收；示例是 Windows PowerShell 格式。
+- SSL/代理问题先查看原错误，不通过关闭证书校验绕过。
+- 中文/空格路径保持引号，不要求开发者机器上的固定目录。
+- verify_source.py --strict 面向干净源码导出，在源码内建环境、缓存或下载权重前执行；已有本地生成文件时报告额外项是防止误上传的设计。
+- 离线机器要预先准备匹配平台的依赖与校验过的模型，并遵循各文件许可。

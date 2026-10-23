@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-23T06:35:05.826Z",
-  "scope": "License/source-evidence preparation only. Existing numerical policies and models unchanged; no replacement, new calibration or new held-out claim.",
-  "variant": "public-source-license-review-1",
+  "scope": "New-user installation and local assistant bridge; numerical policies/models unchanged. Frontend reference revalidated after documentation-only hash change.",
+  "variant": "github-source-2",
   "baseline_policy_lock_sha256": "bf59b257e1cd0303f8ad73e65bc63ebff224eb488c542d0c57541cb0090deb7e",
   "gate_policy": {
     "calibrated": false,

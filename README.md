@@ -1,6 +1,8 @@
 # music_scribe：本地转录、排谱与可选音乐语义
 
-这是基于 1.3.0 整理的独立公开源码版本（github-source-1）。保留音符转录、调性/BPM/和弦、简化/完整MusicXML及SVG谱面、可选Demucs分轨、音乐门控、风格/情绪/人声倾向和连续效价/唤醒分析。没有替换模型、减少语义功能或调整分类规则。
+这是基于 1.3.0 整理的独立公开源码版本（github-source-2）。保留音符转录、调性/BPM/和弦、简化/完整MusicXML及SVG谱面、可选Demucs分轨、音乐门控、风格/情绪/人声倾向和连续效价/唤醒分析。没有替换模型、减少语义功能或调整分类规则。
+
+**第一次使用：按 [QUICKSTART.md](QUICKSTART.md) 从安装、下载模型到音乐/讲话示例完整跑一遍。** 给能执行本地命令的 AI 助手使用时，参考 [LLM_INTEGRATION.md](LLM_INTEGRATION.md) 与 [可复制的助手指令](examples/assistant_prompt.txt)。无需大模型 API 密钥；这不是自动注册的 MCP 服务或聊天网页插件。
 
 本源码包不附带语义权重、Python环境、原始录音、用户谱面或私人历史。基本转录所用Basic Pitch模型随其官方Python依赖提供；不属于这里六份可选语义权重。首次安装依赖/显式下载模型需要网络；后续语义推理读取本地文件，不调用云端大模型或下载器。可选分轨仍只使用已缓存Demucs权重。
 
@@ -21,26 +23,26 @@
 
 ## 安装与运行
 
-已验证目标是Windows x64、CPython 3.10。先按[INSTALL.md](INSTALL.md)创建独立环境。其他OS/Python版本的依赖选择不同，不在本候选的完整验收范围内。
+轻量语义版已验证 Windows x64 / Python 3.12.13；完整转录排谱保留单独的 Python 3.10 兼容环境。3.10 已结束上游维护，不是轻量版的新用户默认选择。先按 [INSTALL.md](INSTALL.md) 选路线，其他 OS/ARM 未完成同等验收。
 
 ```powershell
-# 在源码目录中；只做转录/排谱，无需六份语义权重
-.\.venv\Scripts\python.exe music_scribe.py 'D:\Audio\song.wav' -o 'D:\Results\new_score' --mode full
+# 在源码目录中；完整兼容环境只做转录/排谱，无需六份语义权重
+.\.venv-core\Scripts\python.exe examples\llm_tool.py analyze --audio 'D:\Audio\song.wav' --output-root 'D:\Results' --task score
 
 # 阅读许可和冲突提示，显式下载完整语义权重到独立本地目录
 .\.venv\Scripts\python.exe download_models.py --models-dir 'D:\MusicModels\music_scribe'
 
-# 同一模型、同一功能；只运行本地语义
-.\.venv\Scripts\python.exe music_scribe.py 'D:\Audio\song.wav' -o 'D:\Results\new_semantics' --semantics-only --models-dir 'D:\MusicModels\music_scribe'
+# 轻量环境只运行本地语义；stdout 为单个 JSON，每次自动创建结果子目录
+.\.venv\Scripts\python.exe examples\llm_tool.py analyze --audio 'D:\Audio\song.wav' --output-root 'D:\Results' --task semantics --models-dir 'D:\MusicModels\music_scribe'
 
-# 联合转录、完整谱面和语义
-.\.venv\Scripts\python.exe music_scribe.py 'D:\Audio\song.wav' -o 'D:\Results\new_full' --mode full --semantics --models-dir 'D:\MusicModels\music_scribe'
+# 完整兼容环境联合转录、完整谱面和语义
+.\.venv-core\Scripts\python.exe examples\llm_tool.py analyze --audio 'D:\Audio\song.wav' --output-root 'D:\Results' --task all --models-dir 'D:\MusicModels\music_scribe'
 
-# 只读已有证据，按原音频时间查询；不重新推理
-.\.venv\Scripts\python.exe music_scribe.py query 'D:\Results\new_semantics\semantics.json' --start 2 --end 8
+# 只读返回的 query_report 路径，按原音频时间查询；不重新推理
+.\.venv\Scripts\python.exe examples\llm_tool.py query --report 'D:\Results\run-实际目录\semantics.json' --start 2 --end 8
 ```
 
-输出目录必须不存在或为空。`music_scribe.cmd`、`music_semantics.cmd`、`music_scribe_sep.cmd`为Windows拖放入口；默认使用源码目录的`.venv\Scripts\python.exe`，其次PATH中的python，也可用MUSIC_SCRIBE_PYTHON指定解释器。没有绑定开发者机器路径。可用MUSIC_SCRIBE_MODELS设置外部权重目录，命令行--models-dir优先。
+包装器在 output-root 下创建新目录；直接调用原 music_scribe.py 时，-o 目录仍须不存在或为空。拖放入口默认 .venv；要用完整环境排谱，需按 INSTALL.md 指定 MUSIC_SCRIBE_PYTHON。模型可通过 MUSIC_SCRIBE_MODELS 或 --models-dir 设置，命令行优先。
 
 可选公开数据下载/本地评测工具及外部前端复核入口也保留，见[samples/README.md](samples/README.md)。只提供去除私人路径的三份公开样本引用，不附带录音或历史私人数据清单。
 
@@ -63,16 +65,17 @@ python download_models.py --repair --models-dir 'D:\MusicModels\music_scribe'
 ## 测试与解释边界
 
 ```powershell
-python -m unittest test_correctness test_download_models -v
-# 完整模型放在外部目录后，运行原63项契约及20项新增下载测试
+# 先使用已经下载且校验通过的完整六模型目录
 $env:MUSIC_SCRIBE_MODELS='D:\MusicModels\music_scribe'
-python -m unittest test_correctness test_semantics test_gate test_download_models -v
-python selftest.py
-python verify_output.py 'D:\Results\new_full'
-python verify_semantics.py 'D:\Results\new_semantics'
+.\.venv\Scripts\python.exe -m unittest test_gate test_download_models test_llm_tool -v
+# test_semantics 含 librosa 对照，放在完整环境中运行；共原83项加8项助手桥接测试
+.\.venv-core\Scripts\python.exe -m unittest test_correctness test_semantics test_gate test_download_models test_llm_tool -v
+.\.venv-core\Scripts\python.exe selftest.py
+.\.venv-core\Scripts\python.exe verify_output.py 'D:\Results\new_full'
+.\.venv\Scripts\python.exe verify_semantics.py 'D:\Results\new_semantics' --models-dir 'D:\MusicModels\music_scribe'
 ```
 
-不含权重的核心测试与受控传输测试不访问网络。原始语义测试需要完整本地模型，不会自动下载或悄悄跳过。本次源码整理验收结果见[ACCEPTANCE.md](ACCEPTANCE.md)；其中公开数值不能当成曲目级识别准确率。
+不含权重的核心测试与受控传输测试不访问网络。原始语义测试需要完整本地模型，不会自动下载或悄悄跳过。当前新用户安装和示例验收见 [NEW_USER_ACCEPTANCE.md](NEW_USER_ACCEPTANCE.md)，历史验收见 [ACCEPTANCE.md](ACCEPTANCE.md)；其中公开数值不能当成曲目级识别准确率。
 
 schema继续为music-scribe/1.1和music-semantics/1.1；运行时tool_version为1.3.0，源码变体和文件配对另记在SOURCE_PROVENANCE.json、POLICY_LOCK.json及输出指纹。细风格证据不足退回粗类，非音乐或不确定输入拒绝风格/情绪；局部讲话查询不会借用整曲风格。调用规则见[LLM_INTEGRATION.md](LLM_INTEGRATION.md)。
 
@@ -80,6 +83,10 @@ schema继续为music-scribe/1.1和music-semantics/1.1；运行时tool_version为
 
 模型分数未经概率校准，粗类/情绪会误判；弱背景音乐、氛围/噪音音乐和短独奏可能被门控误拒。情绪是听感候选，不证明作者意图。30分钟输入上限、内存解码、近似时间窗口等既有限制保留。曲名、歌手身份、歌词、续写和完整多乐器人工级总谱不在现有能力范围内。
 
-本次许可整理的修改清单、回归与限制见 [LICENSE_REVIEW_ACCEPTANCE.md](LICENSE_REVIEW_ACCEPTANCE.md)。仅修正许可说明、两个模块文档字符串及下载提示；模块摘要因文档字符串变化而改变，旧候选的语义证据继续由旧副本查询，新候选生成的证据按新摘要配对。根 LICENSE、模型原始许可、六模型清单及数值策略未改。
+本轮真实全曲测试还发现：XML/SVG 生成成功不代表连音一致性校验通过。可复现短片段及全曲未通过项见 [NEW_USER_ACCEPTANCE.md](NEW_USER_ACCEPTANCE.md)，不能将 completed 状态当成谱面质量保证。
+
+此前许可整理的历史修改清单、回归与限制见 [LICENSE_REVIEW_ACCEPTANCE.md](LICENSE_REVIEW_ACCEPTANCE.md)。当时仅修正许可说明、两个模块文档字符串及下载提示；模块摘要因文档字符串变化而改变，旧候选的语义证据继续由旧副本查询，新候选生成的证据按新摘要配对。根 LICENSE、模型原始许可、六模型清单及数值策略未改。
 
 本次 GitHub 源码整理的文件边界与校验方法见 [GITHUB_PUBLICATION.md](GITHUB_PUBLICATION.md)。历史验收文件保留各自日期与当时的发布状态；当前文件完整性以本版本 MANIFEST.json 为准。
+
+本轮增加新手指南、本地 JSON 助手入口、演示和验证器显式模型目录；音乐推理代码及权重未改。已重新运行官方前端参考验证并刷新此前因注释改动失配的摘要，详见 NEW_USER_ACCEPTANCE.md。

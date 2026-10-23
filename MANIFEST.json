@@ -1,6 +1,6 @@
 {
-  "variant": "github-source-1",
-  "scope": "Public source allowlist. Root .git metadata excluded from strict checks. No weights or real audio.",
+  "variant": "github-source-2",
+  "scope": "Public source/documentation allowlist; only synthetic fixture NPZ. No models, real audio, runtime environments or outputs. Root .git metadata excluded.",
   "files": [
     {
       "path": ".gitattributes",
@@ -9,8 +9,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 554,
-      "sha256": "23f369ba5a025dea717f742c95a18f2a6a7af4f0de7bc771bb3b77d9e84680b2"
+      "bytes": 608,
+      "sha256": "42866c14bb3285ec41a3e62907dcf2110c1a43a350a087fff6e2c45ecc938ce8"
     },
     {
       "path": "ACCEPTANCE.md",
@@ -24,8 +24,8 @@
     },
     {
       "path": "CHANGES.md",
-      "bytes": 3028,
-      "sha256": "1d6502d19bd1e59ae7a8e7c55817e6bc3bad5e82f56ee4e3f854fa7f8da43e7f"
+      "bytes": 3845,
+      "sha256": "8a039039c46b9264410f2c7710052e6e132c047cb501f95a02e3ab371358f67a"
     },
     {
       "path": "DEPENDENCY_LICENSES.json",
@@ -34,13 +34,13 @@
     },
     {
       "path": "FILE_LIST.md",
-      "bytes": 2347,
-      "sha256": "0ee40f487d7ee0c8a86b8a55b3105cfd694b6727b1b2fde1e057fdac40f6a711"
+      "bytes": 2510,
+      "sha256": "c2419033aa312a57208ae640e6688967b2269cf23df62c6779ba8a977e5aba52"
     },
     {
       "path": "FRONTEND_VALIDATION.json",
-      "bytes": 5759,
-      "sha256": "36664a0121aa23c3f7521aee1b3594897cc4c73ee6413e16288729167efe0455"
+      "bytes": 6954,
+      "sha256": "04330cb783b11e6ad051bfcf234e33ba1a43e6942bf5422db2f5aeffd1253abf"
     },
     {
       "path": "GITHUB_PUBLICATION.md",
@@ -49,8 +49,8 @@
     },
     {
       "path": "INSTALL.md",
-      "bytes": 3653,
-      "sha256": "2d2e579e3cb4737073638c5291ce8d91c03d64236ccc02cdb564236e21516b02"
+      "bytes": 5588,
+      "sha256": "e2cf72512dd229feed0bd09c86c072d7520a633ce32fc256269a0d69fdfb6eaa"
     },
     {
       "path": "LICENSE",
@@ -69,18 +69,18 @@
     },
     {
       "path": "LICENSE_SCOPE.md",
-      "bytes": 3405,
-      "sha256": "b2f56c6b5ba5e0a7f3ad7194a8926a5bbde7668904359c99f3d6b4b9279df0eb"
+      "bytes": 3668,
+      "sha256": "3760a9a0aea67e1ce52b4ec198927ffe6d75b63f4483cbea93fe4a1843c99067"
     },
     {
       "path": "LICENSE_STATUS.md",
-      "bytes": 4121,
-      "sha256": "fe6c6029448dc5199762876bdfa803e87fd3e9aa70dd86bd20c41f725f57f905"
+      "bytes": 4157,
+      "sha256": "32a4ae6f2e9f23e07754e5590ec3a9d8de2df5e0a05bc977c3d81fd7fdfb0b32"
     },
     {
       "path": "LLM_INTEGRATION.md",
-      "bytes": 1400,
-      "sha256": "be43d86806abcd1d6cbfcf41b13cc01a70cf6115218a002ffca777b7e050e190"
+      "bytes": 5875,
+      "sha256": "44046b346258dbcb7cd29c3dd569ae63f2ef9e2a373b3e5f807e90ebb05cac3e"
     },
     {
       "path": "MODEL_LICENSES.md",
@@ -88,14 +88,29 @@
       "sha256": "b4535c8984cd632b0b6dd71c682c376331ca799a32a78c05215de613dea44f60"
     },
     {
+      "path": "NEW_USER_ACCEPTANCE.json",
+      "bytes": 2921,
+      "sha256": "6287897b76e1121bab451840ef5a9a1bcb1d4e87d9eb59071af43e2fa9596094"
+    },
+    {
+      "path": "NEW_USER_ACCEPTANCE.md",
+      "bytes": 3814,
+      "sha256": "071b5c19e5c4729629f98dfb15b9ec94a981a67d7852c532e2228b3503eb1a42"
+    },
+    {
       "path": "POLICY_LOCK.json",
-      "bytes": 2180,
-      "sha256": "14de8c38c6b7d75a049c9e9d201b4188251e1183ff26eca7b8a172145b263967"
+      "bytes": 2232,
+      "sha256": "d965cecc7cea384e3f1ab713ec740123ba96ec024c45c5753038d04018a96c20"
+    },
+    {
+      "path": "QUICKSTART.md",
+      "bytes": 8160,
+      "sha256": "8400176c2b96ed218a15aa855f51f72d994a6c744d89d9edac8da36c6e6a30bc"
     },
     {
       "path": "README.md",
-      "bytes": 8335,
-      "sha256": "295e9ea06aac4fd9d267aabc8e243f6c51cf7847fff526f44975a3a538fd69c3"
+      "bytes": 9740,
+      "sha256": "0c025628e3c722548da4b16dcbea5e68834d33e0f4b8b92d7e0a49bfb40de73b"
     },
     {
       "path": "SOURCE_AUDIT.json",
@@ -109,8 +124,8 @@
     },
     {
       "path": "SOURCE_PROVENANCE.json",
-      "bytes": 12387,
-      "sha256": "938f9ec57f92d908c08478c93bfcaa429d4c2fae57a2586c9c43190eedcfb33f"
+      "bytes": 12890,
+      "sha256": "d340da9931a82d28bdedafe5741d51cb8d970a7c596d8641de65459589b10f3b"
     },
     {
       "path": "THIRD_PARTY_LICENSES/Basic-Pitch-Apache-2.0.txt",
@@ -159,8 +174,8 @@
     },
     {
       "path": "doctor.py",
-      "bytes": 1534,
-      "sha256": "b802db61075f5af7b3197a07ddbb06d91c71a139a2143daf869f1bd42b57f414"
+      "bytes": 1852,
+      "sha256": "d51d8fb7564d3a11807d0dc1dfd3e71bcf53f6a536c64467fc59cd8e7de7dc90"
     },
     {
       "path": "download_models.py",
@@ -171,6 +186,21 @@
       "path": "evaluate_samples.py",
       "bytes": 2938,
       "sha256": "ac1f1ab3834694c73fe5566dc3f92c8ce37408c2f181a355ce4418afa4fd0dc0"
+    },
+    {
+      "path": "examples/assistant_prompt.txt",
+      "bytes": 2892,
+      "sha256": "c08bd89014d4e396132822d505eb54bacbec548268fac8134ba5d2766475cab2"
+    },
+    {
+      "path": "examples/llm_tool.py",
+      "bytes": 7042,
+      "sha256": "7984f4877a9be28255e7b8b161793d7e640f08cf322a25138381213718087bc4"
+    },
+    {
+      "path": "examples/run_demo.py",
+      "bytes": 6752,
+      "sha256": "602f754e3cf3252e8701c1c1cf67d84f952ad14452e54cb36a775b63c0adb69c"
     },
     {
       "path": "fetch_test_samples.py",
@@ -338,6 +368,11 @@
       "sha256": "a20cba1e55e500120202a2a42bbde5db27cfd5fc4ebc04ccc6bfec56ca2a3cde"
     },
     {
+      "path": "test_llm_tool.py",
+      "bytes": 4551,
+      "sha256": "f22b1ab616f2dcb013f5091289d55b0a2725c807da7058caf5641bd72c9ffb6d"
+    },
+    {
       "path": "test_semantics.py",
       "bytes": 11069,
       "sha256": "c74533e005165abe923b51e0504c15325adc012ea73b7de62261a3cf0361646f"
@@ -379,8 +414,8 @@
     },
     {
       "path": "verify_semantics.py",
-      "bytes": 5375,
-      "sha256": "dc948eccca16b70baa5e47269fea2b817e14c6446ffa89766ad9a34c69664209"
+      "bytes": 5597,
+      "sha256": "387291e39ce024a645b68cc92254b9cfcaf3ce90921aceb009ee007433bc4432"
     },
     {
       "path": "verify_source.py",

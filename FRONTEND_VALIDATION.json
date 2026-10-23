@@ -7,11 +7,10 @@
   },
   "comparisons": [
     {
-      "name": "frames",
+      "name": "fixture",
       "reference_frames": 39,
       "candidate_frames": 39,
       "max_abs": 1.2159347534179688e-05,
-      "mean_abs": 2.310371058911187e-07,
       "passed": true
     },
     {
@@ -19,7 +18,6 @@
       "reference_frames": 2,
       "candidate_frames": 2,
       "max_abs": 9.5367431640625e-07,
-      "mean_abs": 4.8118334206037616e-08,
       "passed": true
     },
     {
@@ -27,7 +25,6 @@
       "reference_frames": 2,
       "candidate_frames": 2,
       "max_abs": 1.430511474609375e-06,
-      "mean_abs": 2.1746382117271423e-07,
       "passed": true
     },
     {
@@ -35,7 +32,6 @@
       "reference_frames": 2,
       "candidate_frames": 2,
       "max_abs": 1.5497207641601562e-06,
-      "mean_abs": 1.8269444979068794e-07,
       "passed": true
     },
     {
@@ -43,7 +39,6 @@
       "reference_frames": 3,
       "candidate_frames": 3,
       "max_abs": 1.3113021850585938e-06,
-      "mean_abs": 1.43009756925494e-07,
       "passed": true
     },
     {
@@ -51,7 +46,6 @@
       "reference_frames": 3,
       "candidate_frames": 3,
       "max_abs": 1.1920928955078125e-06,
-      "mean_abs": 1.3199390025420144e-07,
       "passed": true
     },
     {
@@ -59,7 +53,6 @@
       "reference_frames": 3,
       "candidate_frames": 3,
       "max_abs": 1.1920928955078125e-06,
-      "mean_abs": 1.4543374504683015e-07,
       "passed": true
     },
     {
@@ -67,7 +60,6 @@
       "reference_frames": 4,
       "candidate_frames": 4,
       "max_abs": 1.0728836059570312e-06,
-      "mean_abs": 1.0391674010179486e-07,
       "passed": true
     },
     {
@@ -75,7 +67,6 @@
       "reference_frames": 4,
       "candidate_frames": 4,
       "max_abs": 1.1920928955078125e-06,
-      "mean_abs": 9.968351122324748e-08,
       "passed": true
     },
     {
@@ -83,7 +74,6 @@
       "reference_frames": 4,
       "candidate_frames": 4,
       "max_abs": 1.430511474609375e-06,
-      "mean_abs": 1.0109664572155452e-07,
       "passed": true
     },
     {
@@ -91,7 +81,6 @@
       "reference_frames": 5,
       "candidate_frames": 5,
       "max_abs": 1.5497207641601562e-06,
-      "mean_abs": 7.591925310634906e-08,
       "passed": true
     },
     {
@@ -99,91 +88,88 @@
       "reference_frames": 64,
       "candidate_frames": 64,
       "max_abs": 1.6689300537109375e-06,
-      "mean_abs": 1.3336418192011479e-08,
       "passed": true
     },
     {
       "name": "real_0",
       "reference_frames": 751,
       "candidate_frames": 751,
-      "max_abs": 1.2636184692382812e-05,
-      "mean_abs": 2.99461191843875e-07,
+      "max_abs": 4.7087669372558594e-05,
       "passed": true
     },
     {
       "name": "real_1",
-      "reference_frames": 751,
-      "candidate_frames": 751,
-      "max_abs": 2.0265579223632812e-05,
-      "mean_abs": 5.186499265619204e-07,
+      "reference_frames": 491,
+      "candidate_frames": 491,
+      "max_abs": 1.049041748046875e-05,
       "passed": true
     }
   ],
   "model_output_comparisons": [
     {
       "audio": "real_0",
-      "model": "discogs",
-      "max_abs": 1.5497207641601562e-06,
+      "model": "effnet",
+      "max_abs": 8.642673492431641e-07,
       "passed": true
     },
     {
       "audio": "real_0",
-      "model": "mtg_jamendo",
+      "model": "moodtheme",
       "max_abs": 2.980232238769531e-07,
       "passed": true
     },
     {
       "audio": "real_0",
-      "model": "voice_instrumental",
-      "max_abs": 6.183981895446777e-07,
+      "model": "voice",
+      "max_abs": 1.1920928955078125e-07,
       "passed": true
     },
     {
       "audio": "real_0",
-      "model": "msd",
+      "model": "musicnn",
+      "max_abs": 7.748603820800781e-07,
+      "passed": true
+    },
+    {
+      "audio": "real_0",
+      "model": "deam",
+      "max_abs": 4.291534423828125e-06,
+      "passed": true
+    },
+    {
+      "audio": "real_1",
+      "model": "effnet",
+      "max_abs": 5.960464477539062e-07,
+      "passed": true
+    },
+    {
+      "audio": "real_1",
+      "model": "moodtheme",
+      "max_abs": 1.4901161193847656e-07,
+      "passed": true
+    },
+    {
+      "audio": "real_1",
+      "model": "voice",
+      "max_abs": 9.238719940185547e-07,
+      "passed": true
+    },
+    {
+      "audio": "real_1",
+      "model": "musicnn",
       "max_abs": 2.980232238769531e-07,
       "passed": true
     },
     {
-      "audio": "real_0",
-      "model": "deam",
-      "max_abs": 2.384185791015625e-06,
-      "passed": true
-    },
-    {
-      "audio": "real_1",
-      "model": "discogs",
-      "max_abs": 9.834766387939453e-07,
-      "passed": true
-    },
-    {
-      "audio": "real_1",
-      "model": "mtg_jamendo",
-      "max_abs": 4.172325134277344e-07,
-      "passed": true
-    },
-    {
-      "audio": "real_1",
-      "model": "voice_instrumental",
-      "max_abs": 5.364418029785156e-07,
-      "passed": true
-    },
-    {
-      "audio": "real_1",
-      "model": "msd",
-      "max_abs": 2.384185791015625e-07,
-      "passed": true
-    },
-    {
       "audio": "real_1",
       "model": "deam",
-      "max_abs": 2.384185791015625e-06,
+      "max_abs": 1.9073486328125e-06,
       "passed": true
     }
   ],
   "passed": true,
   "fixture_sha256": "83b65c858c0cc4ba447babf8ef27b49697f17d6202dcba0b097f34fd030cd916",
-  "candidate_frontend_sha256": "60c530d15f0b12194187f9dfa401241819241209966fdbff798f364186f47b15",
+  "candidate_frontend_sha256": "7216f234dc8e18dacea90bc3e64ae17dc44029d084a5031bfd3d6949268f4a1f",
   "real_pcm_sha256": [
     "85b236af38fe22ec57bf6c3b8d1236619d3f91712b3654f4b9be1f17b60dfc5a",
     "aba4c4dcb59a97bf2dd2d60b376eb449fd9de5ebcc93cf3881d9d0be0cb028ac"
@@ -198,5 +184,47 @@
     "Silent frames retained instead of skipped/noised; prevents timeline compression.",
     "Tail patches explicitly cover remaining frames; full-song aggregation duration-weights patch centers to avoid overlapping-window double count.",
     "Codec and resampling use explicit local ffmpeg/soxr settings, not claimed equivalent to Essentia MonoLoader."
-  ]
+  ],
+  "previous_validation_sha256": "36664a0121aa23c3f7521aee1b3594897cc4c73ee6413e16288729167efe0455",
+  "previous_candidate_frontend_sha256": "60c530d15f0b12194187f9dfa401241819241209966fdbff798f364186f47b15",
+  "revalidation": {
+    "date": "2026-10-23",
+    "reason": "Re-executed official reference after a documentation-only change altered the frontend file digest.",
+    "reference": "Existing official Essentia.js 0.1.3 package; no runtime dependency added.",
+    "samples": [
+      {
+        "input": {
+          "name": "Hungarian_Dance_number_5_-_Allegro_in_F_sharp_minor_(string_orchestra).ogg",
+          "bytes": 242853,
+          "sha256": "919b48aa4cc66a0357d2cd5728664c5ab8f15c4b3469460df4b59470d35d3e49"
+        },
+        "decode": {
+          "decoder": "soundfile",
+          "native_sample_rate": 22050,
+          "channels": 1,
+          "channel_mix": "arithmetic_mean",
+          "resample": "soxr_HQ",
+          "normalization": "none",
+          "pcm_sha256": "429fde68dee7a3c3f3411eb23508ba9e3a90bc86f8211c8984d0498cddb86357"
+        }
+      },
+      {
+        "input": {
+          "name": "5703-47212-0000.ogg",
+          "bytes": 82670,
+          "sha256": "a284612b46af0535f7e1873758c4387bb8369f6dbbe192ffdec1f171108f98dd"
+        },
+        "decode": {
+          "decoder": "soundfile",
+          "native_sample_rate": 22050,
+          "channels": 1,
+          "channel_mix": "arithmetic_mean",
+          "resample": "soxr_HQ",
+          "normalization": "none",
+          "pcm_sha256": "bbbad2f00157ddc26a020ba7c22c2712bdc6ffd8b2c30163619b51a0a42fafa2"
+        }
+      }
+    ],
+    "scope": "Shared canonical PCM, deterministic silence retained, custom tail coverage. Not official codec/resampling equivalence or recognition accuracy."
+  }
 }

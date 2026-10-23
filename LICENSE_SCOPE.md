@@ -13,6 +13,7 @@
 | music_scribe.py 调性模板 | Krumhansl 与 Temperley 公开算法模板；可在 Essentia Key / music21 对照到相应数值，不能宣传成自研模型。来源见 SOURCE_AUDIT.md |
 | _vendor/dora/*.py | 项目本地最小接口替身；与上游完整日志实现不同。接口来源及上游 MIT 通知见 THIRD_PARTY_NOTICES.md / THIRD_PARTY_LICENSES/dora-MIT.txt |
 | tools/reference_frontend.cjs | 项目编写的验证调用脚本；其加载的官方 Essentia.js 不在源码包内，官方参考包适用自身 AGPL 声明 |
+| examples/llm_tool.py、examples/run_demo.py、examples/assistant_prompt.txt、test_llm_tool.py、新手文档 | 项目新增的本地助手调用桥接、演示、指令和测试，适用 AGPL-3.0-or-later；没有大模型 SDK 或自动下载器隐藏调用 |
 | 根目录 Markdown、requirements*.txt、项目配置及来源记录 | 项目撰写的内容适用 AGPL；其中引用的第三方通知和法律文本保留自身条款 |
 | tests/fixtures/frontend_fixture.npz | 合成输入帧与 Essentia.js 参考输出，按项目 AGPL 路线提供并保留上游说明；不含真实音乐或讲话波形，不代表真实识别准确率 |
 | samples/README.md、SAMPLES.json | 项目编写的运行说明和来源清单；清单中的第三方录音各自适用其来源条款，录音不随包分发 |

@@ -19,8 +19,11 @@ def main():
         try:actual=importlib.metadata.version(name)
         except importlib.metadata.PackageNotFoundError:actual=None
         rows.append({'package':name,'expected':version,'actual':actual,'matches':actual==version})
-    supported=sys.platform=='win32' and sys.version_info[:2]==(3,10) and platform.architecture()[0]=='64bit'
+    versions=((3,10),(3,12)) if args.mode=='semantics' else ((3,10),)
+    supported=sys.platform=='win32' and sys.version_info[:2] in versions and platform.architecture()[0]=='64bit'
     print(json.dumps({'python':platform.python_version(),'platform':sys.platform,'tested_target_matches':supported,
+                      'tested_python_profiles':['3.10','3.12'] if args.mode=='semantics' else ['3.10'],
+                      'profile_note':'Python 3.10 is a legacy compatibility profile and has reached upstream end-of-life; see INSTALL.md.',
                       'dependencies':rows,'models':'Not loaded or downloaded; use download_models.py --check separately.'},ensure_ascii=False,indent=2))
     return 0 if supported and all(row['matches'] for row in rows) else 1
 if __name__=='__main__':raise SystemExit(main())

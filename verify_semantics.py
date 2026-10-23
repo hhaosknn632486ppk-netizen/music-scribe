@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 import music_semantics as ms
 
-def verify(folder):
+def verify(folder, models_dir=None):
     folder=Path(folder).resolve()
     doc=json.loads((folder/'semantics.json').read_text(encoding='utf-8'))
     if doc['schema_version']!=ms.SCHEMA: raise ValueError('Unsupported schema')
@@ -23,7 +23,8 @@ def verify(folder):
     validation=json.loads((ms.ROOT/'FRONTEND_VALIDATION.json').read_text(encoding='utf-8'))
     if not validation['passed'] or validation['candidate_frontend_sha256']!=ms.sha(ms.ROOT/'semantic_frontend.py'):
         raise ValueError('Frontend validation does not match candidate code')
-    manifest,manifest_id=ms.verify_models(ms.default_models_dir())
+    models_dir=Path(models_dir) if models_dir is not None else ms.default_models_dir()
+    manifest,manifest_id=ms.verify_models(models_dir)
     if manifest_id!=doc['provenance']['model_manifest'] or manifest['models']!=doc['provenance']['models']:
         raise ValueError('Model provenance differs')
     if doc['policy']!=ms.POLICY or doc['settings']!=ms.SETTINGS: raise ValueError('Policy/settings differ')
@@ -40,7 +41,7 @@ def verify(folder):
     if path.parent!=folder or ms.fingerprint(path)!=info: raise ValueError('Raw evidence pairing differs')
     with np.load(path,allow_pickle=False) as data: arrays={key:data[key] for key in data.files}
     ms.validate_arrays(arrays,duration)
-    engine=ms.Engine()
+    engine=ms.Engine(models_dir)
     for key,labels in doc['labels'].items():
         if labels!=engine.labels(key): raise ValueError('Wrong label order: '+key)
     if ms.describe(arrays,doc['labels'],0.,duration)!=doc['global']:
@@ -74,6 +75,8 @@ def verify(folder):
     return result
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser(description=__doc__); parser.add_argument('folder',type=Path); args=parser.parse_args()
-    try: print(json.dumps(verify(args.folder),ensure_ascii=False))
+    parser=argparse.ArgumentParser(description=__doc__); parser.add_argument('folder',type=Path)
+    parser.add_argument('--models-dir',type=Path,help='Same local model directory used for analysis')
+    args=parser.parse_args()
+    try: print(json.dumps(verify(args.folder,args.models_dir),ensure_ascii=False))
     except (OSError,ValueError,KeyError) as exc: parser.exit(1,'Verification failed: '+str(exc)+'\n')

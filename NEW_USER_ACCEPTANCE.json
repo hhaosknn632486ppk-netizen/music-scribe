@@ -1,0 +1,91 @@
+{
+  "variant": "github-source-2",
+  "date": "2026-10-23",
+  "semantics_profile": {
+    "python": "3.12.13",
+    "platform": "Windows x64",
+    "venv_isolated": true,
+    "tests": {
+      "tests": 44,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.8254677000004449
+    },
+    "pip_check": "PASS",
+    "doctor": "PASS",
+    "absent_modules": {
+      "tensorflow": true,
+      "torch": true,
+      "basic_pitch": true,
+      "librosa": true,
+      "music21": true,
+      "verovio": true
+    },
+    "environment_directory_bytes": 420870512,
+    "size_scope": "Virtual environment files only; excludes base Python, models and download caches; not RAM.",
+    "demo_samples": {
+      "brahms": {
+        "status": "ambiguous",
+        "music_presence": "music",
+        "evidence_consistency": "PASS"
+      },
+      "libri1": {
+        "status": "not_music",
+        "music_presence": "non_music",
+        "evidence_consistency": "PASS"
+      }
+    },
+    "missing_models_exit_code": 4,
+    "missing_models_explicit": true
+  },
+  "full_profile": {
+    "python": "3.10.22",
+    "platform": "Windows x64",
+    "pip_check": "PASS",
+    "doctor": "PASS",
+    "tests": {
+      "tests": 91,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "short_real_music": {
+      "description": "First 12 seconds of public Brahms sample, converted locally to PCM16 WAV.",
+      "events": 135,
+      "logical_note_intervals": 135,
+      "missing_or_changed": 0,
+      "extra_or_changed": 0,
+      "semantic_consistency": "PASS"
+    },
+    "full_length_real_music": {
+      "analysis_executed": true,
+      "xml_and_svg_created": true,
+      "score_integrity": "FAIL",
+      "failure": "Unmatched/noncontiguous tie stop in generated MusicXML.",
+      "limitation": "No scoring algorithm change in this onboarding work. Generation/completed is not validation success."
+    }
+  },
+  "frontend_reference": {
+    "reference": "Official Essentia.js 0.1.3, retained validation-only package",
+    "feature_cases": 14,
+    "model_cases": 10,
+    "max_feature_abs": 4.7087669372558594e-05,
+    "max_model_output_abs": 4.291534423828125e-06,
+    "passed": true,
+    "scope": "Shared 16kHz mono PCM. Decoder/resampler equality with Essentia MonoLoader is not claimed."
+  },
+  "models": {
+    "six_weights_bytes": 40640925,
+    "fresh_download_and_check": "PASS",
+    "weights_bundled": false
+  },
+  "limits": [
+    "Not a newly annotated accuracy evaluation",
+    "Windows x64 only; no equivalent Linux/macOS/ARM acceptance",
+    "uv already installed; no fresh OS/installer GUI simulation",
+    "No vendor-specific MCP/plugin registration or cloud LLM API integration tested",
+    "Python 3.10 full profile is legacy and upstream EOL",
+    "MTG non-commercial conditions and SA/ND conflict remain unchanged"
+  ]
+}

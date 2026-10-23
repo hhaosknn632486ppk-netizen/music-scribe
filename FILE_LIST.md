@@ -1,6 +1,6 @@
 # GitHub 源码文件清单
 
-变体：github-source-1。共 78 个源码/文档/许可及合成 fixture 文件；不含 Git 元数据、模型权重或真实音频。逐文件摘要以 MANIFEST.json 为准。
+变体 github-source-2，共 85 个文件；不含模型权重、真实音频、虚拟环境、结果或 Git 元数据。逐文件摘要见 MANIFEST.json。
 
 - `.gitattributes`
 - `.gitignore`
@@ -20,7 +20,10 @@
 - `LLM_INTEGRATION.md`
 - `MANIFEST.json`
 - `MODEL_LICENSES.md`
+- `NEW_USER_ACCEPTANCE.json`
+- `NEW_USER_ACCEPTANCE.md`
 - `POLICY_LOCK.json`
+- `QUICKSTART.md`
 - `README.md`
 - `SOURCE_AUDIT.json`
 - `SOURCE_AUDIT.md`
@@ -37,6 +40,9 @@
 - `doctor.py`
 - `download_models.py`
 - `evaluate_samples.py`
+- `examples/assistant_prompt.txt`
+- `examples/llm_tool.py`
+- `examples/run_demo.py`
 - `fetch_test_samples.py`
 - `models/LICENSE-RKNN.txt`
 - `models/LICENSE-YAMNET.txt`
@@ -70,6 +76,7 @@
 - `test_correctness.py`
 - `test_download_models.py`
 - `test_gate.py`
+- `test_llm_tool.py`
 - `test_semantics.py`
 - `tests/fixtures/frontend_fixture.npz`
 - `tools/reference_frontend.cjs`

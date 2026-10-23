@@ -25,6 +25,9 @@ _stems_*/
 _backup_*/
 .cache/
 .venv/
+.venv*/
+*.npz
+!tests/fixtures/frontend_fixture.npz
 .conda*/
 .env
 .env.*

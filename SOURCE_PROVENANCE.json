@@ -1,6 +1,6 @@
 {
   "baseline_version": "1.3.0",
-  "variant": "github-source-1",
+  "variant": "github-source-2",
   "scope": "Explicit source/metadata/synthetic-fixture allowlist. No weights, recordings, user scores, history or environment copied.",
   "baseline_files": [
     {
@@ -78,7 +78,7 @@
     {
       "path": "verify_semantics.py",
       "baseline_sha256": "c503b71e8b7c50ea750d1d6fd54af48298d22c9b781bd35bb68814439119894e",
-      "candidate_sha256": "dc948eccca16b70baa5e47269fea2b817e14c6446ffa89766ad9a34c69664209",
+      "candidate_sha256": "387291e39ce024a645b68cc92254b9cfcaf3ce90921aceb009ee007433bc4432",
       "changed_from_baseline": true
     },
     {
@@ -96,8 +96,8 @@
     {
       "path": "FRONTEND_VALIDATION.json",
       "baseline_sha256": "36664a0121aa23c3f7521aee1b3594897cc4c73ee6413e16288729167efe0455",
-      "candidate_sha256": "36664a0121aa23c3f7521aee1b3594897cc4c73ee6413e16288729167efe0455",
-      "changed_from_baseline": false
+      "candidate_sha256": "04330cb783b11e6ad051bfcf234e33ba1a43e6942bf5422db2f5aeffd1253abf",
+      "changed_from_baseline": true
     },
     {
       "path": "music_scribe.cmd",
@@ -240,7 +240,7 @@
     "Fixture/reference helper path relocation; sample manifest excludes private data",
     "Publication/install/license documents; no numerical policy/model change"
   ],
-  "previous_source_variant": "public-source-license-review-1",
+  "previous_source_variant": "github-source-1",
   "previous_source_provenance_sha256": "cfe6b467fe4c412578c682eba4754f0729333e133d9c076e8ab6b05861951dea",
   "license_review": {
     "date": "2026-10-23",
@@ -259,5 +259,18 @@
     ],
     "analysis_code_unchanged": true,
     "weights_and_real_audio_excluded": true
+  },
+  "new_user_guide": {
+    "date": "2026-10-23",
+    "base_commit": "de8e7e273a8ed06ac297910a045e74f3763948cf",
+    "changes": [
+      "Windows 3.12 lightweight semantics profile",
+      "Legacy 3.10 full profile retained",
+      "Local JSON command bridge and demo",
+      "Explicit verifier model directory",
+      "Re-executed official frontend reference and refreshed its digest record",
+      "Installation and assistant documentation"
+    ],
+    "analysis_algorithms_and_weights_unchanged": true
   }
 }
