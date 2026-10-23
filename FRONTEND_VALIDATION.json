@@ -1,0 +1,202 @@
+{
+  "reference": "Official essentia.js 0.1.3 compiled WASM; TensorflowInputMusiCNN",
+  "scope": "Shared 16kHz mono PCM. Decoder/resampler equality with Essentia MonoLoader is not claimed.",
+  "thresholds": {
+    "mel_max_abs": 0.0005,
+    "head_max_abs": 0.002
+  },
+  "comparisons": [
+    {
+      "name": "frames",
+      "reference_frames": 39,
+      "candidate_frames": 39,
+      "max_abs": 1.2159347534179688e-05,
+      "mean_abs": 2.310371058911187e-07,
+      "passed": true
+    },
+    {
+      "name": "layout_1",
+      "reference_frames": 2,
+      "candidate_frames": 2,
+      "max_abs": 9.5367431640625e-07,
+      "mean_abs": 4.8118334206037616e-08,
+      "passed": true
+    },
+    {
+      "name": "layout_255",
+      "reference_frames": 2,
+      "candidate_frames": 2,
+      "max_abs": 1.430511474609375e-06,
+      "mean_abs": 2.1746382117271423e-07,
+      "passed": true
+    },
+    {
+      "name": "layout_256",
+      "reference_frames": 2,
+      "candidate_frames": 2,
+      "max_abs": 1.5497207641601562e-06,
+      "mean_abs": 1.8269444979068794e-07,
+      "passed": true
+    },
+    {
+      "name": "layout_257",
+      "reference_frames": 3,
+      "candidate_frames": 3,
+      "max_abs": 1.3113021850585938e-06,
+      "mean_abs": 1.43009756925494e-07,
+      "passed": true
+    },
+    {
+      "name": "layout_511",
+      "reference_frames": 3,
+      "candidate_frames": 3,
+      "max_abs": 1.1920928955078125e-06,
+      "mean_abs": 1.3199390025420144e-07,
+      "passed": true
+    },
+    {
+      "name": "layout_512",
+      "reference_frames": 3,
+      "candidate_frames": 3,
+      "max_abs": 1.1920928955078125e-06,
+      "mean_abs": 1.4543374504683015e-07,
+      "passed": true
+    },
+    {
+      "name": "layout_513",
+      "reference_frames": 4,
+      "candidate_frames": 4,
+      "max_abs": 1.0728836059570312e-06,
+      "mean_abs": 1.0391674010179486e-07,
+      "passed": true
+    },
+    {
+      "name": "layout_767",
+      "reference_frames": 4,
+      "candidate_frames": 4,
+      "max_abs": 1.1920928955078125e-06,
+      "mean_abs": 9.968351122324748e-08,
+      "passed": true
+    },
+    {
+      "name": "layout_768",
+      "reference_frames": 4,
+      "candidate_frames": 4,
+      "max_abs": 1.430511474609375e-06,
+      "mean_abs": 1.0109664572155452e-07,
+      "passed": true
+    },
+    {
+      "name": "layout_769",
+      "reference_frames": 5,
+      "candidate_frames": 5,
+      "max_abs": 1.5497207641601562e-06,
+      "mean_abs": 7.591925310634906e-08,
+      "passed": true
+    },
+    {
+      "name": "layout_16001",
+      "reference_frames": 64,
+      "candidate_frames": 64,
+      "max_abs": 1.6689300537109375e-06,
+      "mean_abs": 1.3336418192011479e-08,
+      "passed": true
+    },
+    {
+      "name": "real_0",
+      "reference_frames": 751,
+      "candidate_frames": 751,
+      "max_abs": 1.2636184692382812e-05,
+      "mean_abs": 2.99461191843875e-07,
+      "passed": true
+    },
+    {
+      "name": "real_1",
+      "reference_frames": 751,
+      "candidate_frames": 751,
+      "max_abs": 2.0265579223632812e-05,
+      "mean_abs": 5.186499265619204e-07,
+      "passed": true
+    }
+  ],
+  "model_output_comparisons": [
+    {
+      "audio": "real_0",
+      "model": "discogs",
+      "max_abs": 1.5497207641601562e-06,
+      "passed": true
+    },
+    {
+      "audio": "real_0",
+      "model": "mtg_jamendo",
+      "max_abs": 2.980232238769531e-07,
+      "passed": true
+    },
+    {
+      "audio": "real_0",
+      "model": "voice_instrumental",
+      "max_abs": 6.183981895446777e-07,
+      "passed": true
+    },
+    {
+      "audio": "real_0",
+      "model": "msd",
+      "max_abs": 2.980232238769531e-07,
+      "passed": true
+    },
+    {
+      "audio": "real_0",
+      "model": "deam",
+      "max_abs": 2.384185791015625e-06,
+      "passed": true
+    },
+    {
+      "audio": "real_1",
+      "model": "discogs",
+      "max_abs": 9.834766387939453e-07,
+      "passed": true
+    },
+    {
+      "audio": "real_1",
+      "model": "mtg_jamendo",
+      "max_abs": 4.172325134277344e-07,
+      "passed": true
+    },
+    {
+      "audio": "real_1",
+      "model": "voice_instrumental",
+      "max_abs": 5.364418029785156e-07,
+      "passed": true
+    },
+    {
+      "audio": "real_1",
+      "model": "msd",
+      "max_abs": 2.384185791015625e-07,
+      "passed": true
+    },
+    {
+      "audio": "real_1",
+      "model": "deam",
+      "max_abs": 2.384185791015625e-06,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "fixture_sha256": "83b65c858c0cc4ba447babf8ef27b49697f17d6202dcba0b097f34fd030cd916",
+  "candidate_frontend_sha256": "60c530d15f0b12194187f9dfa401241819241209966fdbff798f364186f47b15",
+  "real_pcm_sha256": [
+    "85b236af38fe22ec57bf6c3b8d1236619d3f91712b3654f4b9be1f17b60dfc5a",
+    "aba4c4dcb59a97bf2dd2d60b376eb449fd9de5ebcc93cf3881d9d0be0cb028ac"
+  ],
+  "reference_sources": [
+    "https://registry.npmjs.org/essentia.js/-/essentia.js-0.1.3.tgz",
+    "https://github.com/MTG/essentia/blob/master/src/algorithms/spectral/tensorflowinputmusicnn.cpp",
+    "https://github.com/MTG/essentia.js/blob/master/src/cpp/includes/essentiajs.cpp"
+  ],
+  "reference_package_sha256": "161c53527a45b5de6ca21199084f7d92d6a2a5551cbd031e23ae8e461686bfdf",
+  "deviations": [
+    "Silent frames retained instead of skipped/noised; prevents timeline compression.",
+    "Tail patches explicitly cover remaining frames; full-song aggregation duration-weights patch centers to avoid overlapping-window double count.",
+    "Codec and resampling use explicit local ffmpeg/soxr settings, not claimed equivalent to Essentia MonoLoader."
+  ]
+}

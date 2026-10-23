@@ -1,0 +1,155 @@
+{
+  "schema": "music-scribe-license-review-acceptance/1",
+  "variant": "public-source-license-review-1",
+  "date": "2026-10-23",
+  "regression": {
+    "tests": 83,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "seconds": 23.66499290000138,
+    "scope": "Local regression with existing six models; no model downloads or replacement."
+  },
+  "real_samples": {
+    "passed": true,
+    "samples": [
+      {
+        "key": "brahms",
+        "status": "ambiguous",
+        "music_presence": "music",
+        "comparison": {
+          "global": true,
+          "windows": true,
+          "music_presence": true,
+          "summary_zh": true,
+          "status": true,
+          "duration": true,
+          "labels": true
+        },
+        "all_raw_arrays_identical": true
+      },
+      {
+        "key": "libri1",
+        "status": "not_music",
+        "music_presence": "non_music",
+        "comparison": {
+          "global": true,
+          "windows": true,
+          "music_presence": true,
+          "summary_zh": true,
+          "status": true,
+          "duration": true,
+          "labels": true
+        },
+        "all_raw_arrays_identical": true
+      },
+      {
+        "key": "humpback",
+        "status": "uncertain_input",
+        "music_presence": "uncertain",
+        "comparison": {
+          "global": true,
+          "windows": true,
+          "music_presence": true,
+          "summary_zh": true,
+          "status": true,
+          "duration": true,
+          "labels": true
+        },
+        "all_raw_arrays_identical": true
+      }
+    ],
+    "python_network_attempts": [],
+    "scope": "Three previously cached public examples. Numerical/behavioral equality only, not new accuracy evaluation or native OS network tracing.",
+    "comparison_and_query_seconds": 0.6486352000029001,
+    "actual_inference_execution": "Completed before comparison; see EVALUATION.json and real_samples.log. Comparison timing is not inference timing."
+  },
+  "cli_checks": {
+    "passed": true,
+    "checks": [
+      {
+        "check": "license_list",
+        "exit_code": 0
+      },
+      {
+        "check": "local_models_check",
+        "exit_code": 0
+      },
+      {
+        "check": "main_help",
+        "exit_code": 0
+      },
+      {
+        "check": "query_brahms",
+        "exit_code": 0
+      },
+      {
+        "check": "query_libri1",
+        "exit_code": 0
+      },
+      {
+        "check": "query_humpback",
+        "exit_code": 0
+      }
+    ]
+  },
+  "code_comparison": {
+    "python_files": 24,
+    "byte_identical": 21,
+    "normalized_ast_identical": 24,
+    "normalization": "Ignore docstrings and downloader CONFLICT string; no algorithm changes."
+  },
+  "model_directory": {
+    "files": 12,
+    "all_bytes_identical": true
+  },
+  "license_texts": {
+    "root_license_unchanged": true,
+    "model_original_licenses_unchanged": true
+  },
+  "preservation": {
+    "music_scribe_v1_2": {
+      "checked_files": 238,
+      "failures": []
+    },
+    "music_scribe_v1_3": {
+      "checked_files": 425,
+      "failures": []
+    },
+    "previous_public_source": {
+      "checked_files": 65,
+      "unchanged": true
+    },
+    "archives": [
+      {
+        "file": "music_scribe_public_source.zip",
+        "bytes": 244613,
+        "sha256": "e6dcec7098681c580aea076192fe02b39d6a7dbd41edf73c871e96e366fc1ffc",
+        "unchanged": true
+      },
+      {
+        "file": "music_scribe_v1_2.zip",
+        "bytes": 29584759,
+        "sha256": "c36cd3c53e43faac452bb689a14595fbf2c047d07e22020c8e04a326d5418b6f",
+        "unchanged": true
+      },
+      {
+        "file": "music_scribe_v1_3.zip",
+        "bytes": 48123451,
+        "sha256": "f339c1b420f290e9f14fd88e57e6937ff585b42180d2eeb3dbdddafa494d5e67",
+        "unchanged": true
+      }
+    ],
+    "original_main": {
+      "sha256": "fcb22a3c3b14939557ca68b7df9ffced1d7c3aadd283058b2846132226e1ad16",
+      "expected_sha256": "fcb22a3c3b14939557ca68b7df9ffced1d7c3aadd283058b2846132226e1ad16"
+    }
+  },
+  "environment_issue": {
+    "initial_run": "System assigned temporary directory denied file creation; abandoned the affected run and reran with workspace TMP/TEMP.",
+    "resolution": "83/83 passed with writable workspace temporary directory; no product-code workaround.",
+    "warning": "music21 emitted an existing beam-pair warning on synthetic score; tests passed. Not a new score-accuracy claim."
+  },
+  "scope": "Local source/license preparation and regression only; no upstream permission request, GitHub upload, model replacement or commercial authorization guarantee."
+}

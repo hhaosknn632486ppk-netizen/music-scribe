@@ -1,0 +1,27 @@
+# 许可整理补充：public-source-license-review-1
+
+- 依据维护者个人项目、无其他真人贡献者及沿用 AGPL 的明确确认，补齐项目代码与文档授权范围，保留第三方例外。
+- 更正“官方 JSON 声明模型许可”的错误；五份 JSON 没有独立 license 字段，NC-SA 依据是官方模型概览。下载提示和语义模块说明同步修正。
+- 补充 Essentia / 调性模板 / dora 来源对照、第三方通知及 57 项锁定依赖许可元数据。
+- 明确 music21 代码与曲库、imageio-ffmpeg 包装与 GPL ffmpeg、Verovio LGPL-3.0-only 的范围区别；不要求就现有公开许可逐个联系作者。
+- 根 LICENSE、模型原始许可、权重/元数据及分类规则均不改。两个模块仅改文档字符串，下载器只改许可提示；数值逻辑由 AST 对比及回归验证。
+- 旧候选、旧压缩包及本地完整版保留。新增文件和验收见 LICENSE_REVIEW_ACCEPTANCE.md、FILE_LIST.md。
+
+---
+
+# 从完整1.3到源码候选的改动
+
+这是分发/安装准备，不是新的音乐模型或数值优化版本。原有本地完整包和工作区不替换。
+
+|范围|具体变化|
+|---|---|
+|音乐算法|music_scribe.py、music_gate.py、semantic_frontend.py、selftest.py等核心文件保持原字节；分轨函数AST相同，数值规则和模型摘要不变|
+|模型路径与错误提示|music_semantics.py新增外部MUSIC_SCRIBE_MODELS默认路径，--models-dir优先；缺失/损坏时提示显式下载命令、NC声明与ND冲突。verify_semantics.py支持相同外部模型目录|
+|下载器|新增stdlib download_models.py、20项故障/恢复测试；支持仅gate、全部原六模型、本地检查、显式修复和许可展示；推理不导入或调用它|
+|安装与启动|新增分组requirements、已测Windows/Python3.10依赖锁定及doctor；启动器不携带开发者绝对路径；补可选分轨拖放入口。torchpath.txt不导出|
+|检查资源|合成fixture移到tests/fixtures，原SHA不变；测试只改fixture路径，不改判据。保留Node参考复核入口和本地评测工具，修正可迁移路径；缺示例输入返回非零|
+|公开示例|用三份带来源/署名的公共领域或CC BY引用替代私人历史清单；未包含音频。历史34样本/用户回归的原件和产物留在本地，不把三例冒称相同测试集|
+|许可与文档|补LICENSE_STATUS、LICENSE_SCOPE、MODEL_LICENSES、INSTALL、THIRD_PARTY_NOTICES；保留原模型许可文件，不擅自修正冲突，不重新授予未知原作者权利|
+|源码导出|只导出源码、元数据、许可、文档及合成数值fixture；不附权重、原始录音、用户谱面/MIDI、历史报告或环境。FILE_LIST与MANIFEST记录最终文件|
+
+语义模块源码指纹改变，因此新报告正确记录本变体的代码配对；旧语义报告保留在原副本，不绕过指纹兼容检查。此候选没有新的风格/情绪准确率证明，性能/音乐时间覆盖等原限制保留。

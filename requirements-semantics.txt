@@ -1,0 +1,7 @@
+# Local semantics alone; no Basic Pitch, TensorFlow or torch required.
+numpy==2.2.6
+scipy==1.15.3
+soundfile==0.14.0
+soxr==1.1.0
+onnxruntime==1.23.2
+imageio-ffmpeg==0.6.0

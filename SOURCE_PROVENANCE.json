@@ -1,0 +1,263 @@
+{
+  "baseline_version": "1.3.0",
+  "variant": "github-source-1",
+  "scope": "Explicit source/metadata/synthetic-fixture allowlist. No weights, recordings, user scores, history or environment copied.",
+  "baseline_files": [
+    {
+      "path": "music_scribe.py",
+      "baseline_sha256": "f47d46d61a79514dd836b70507aafbdef52196f655d251c3ef0aecb323709bb8",
+      "candidate_sha256": "f47d46d61a79514dd836b70507aafbdef52196f655d251c3ef0aecb323709bb8",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "music_semantics.py",
+      "baseline_sha256": "dd4b4f3225f46563acd6a5f4fb5df3cb4787afb489937aa05603374b26630d3d",
+      "candidate_sha256": "e7c1e3fae164e97b7e9af73db61b76656b41795484ba2d25cf31aa1a47bde9e2",
+      "changed_from_baseline": true
+    },
+    {
+      "path": "music_gate.py",
+      "baseline_sha256": "b5ea671e0544420ea68c1aeeeda394c4574202b26bd9f1bc0046035025f5a787",
+      "candidate_sha256": "b5ea671e0544420ea68c1aeeeda394c4574202b26bd9f1bc0046035025f5a787",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "semantic_frontend.py",
+      "baseline_sha256": "60c530d15f0b12194187f9dfa401241819241209966fdbff798f364186f47b15",
+      "candidate_sha256": "7216f234dc8e18dacea90bc3e64ae17dc44029d084a5031bfd3d6949268f4a1f",
+      "changed_from_baseline": true
+    },
+    {
+      "path": "split_stems.py",
+      "baseline_sha256": "c8a3a9774998f68850960f442ad27ebb9aa77379d3a18f7ed79a4d8cc5b5f16e",
+      "candidate_sha256": "132192501a3d1f22da52675534bc73dbb3913ae7befa9936f37b394554ae008f",
+      "changed_from_baseline": true
+    },
+    {
+      "path": "selftest.py",
+      "baseline_sha256": "403cb713effdc7cdde3c283c624e70a3ff3020c1fc3fda85401bd71802403f86",
+      "candidate_sha256": "403cb713effdc7cdde3c283c624e70a3ff3020c1fc3fda85401bd71802403f86",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "validate.py",
+      "baseline_sha256": "42aedecb21fce0d80db2b52de3dcc289f2eaba8e248922303aabc06f6c42d83d",
+      "candidate_sha256": "42aedecb21fce0d80db2b52de3dcc289f2eaba8e248922303aabc06f6c42d83d",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "test_correctness.py",
+      "baseline_sha256": "6433a1177a389990a83315a7708f479cac2296f7eb6abcd5a074df84a7dfdcd5",
+      "candidate_sha256": "6433a1177a389990a83315a7708f479cac2296f7eb6abcd5a074df84a7dfdcd5",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "test_semantics.py",
+      "baseline_sha256": "2ee882af5bf1beaf03183e7debc31468703d33992464febc722b5bfba2645d64",
+      "candidate_sha256": "c74533e005165abe923b51e0504c15325adc012ea73b7de62261a3cf0361646f",
+      "changed_from_baseline": true
+    },
+    {
+      "path": "test_gate.py",
+      "baseline_sha256": "a20cba1e55e500120202a2a42bbde5db27cfd5fc4ebc04ccc6bfec56ca2a3cde",
+      "candidate_sha256": "a20cba1e55e500120202a2a42bbde5db27cfd5fc4ebc04ccc6bfec56ca2a3cde",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "verify_musicxml.py",
+      "baseline_sha256": "30b6e26e740eb8c55ad02fd76f9840e888c5ea7124b4082bbf04d2f800e36e92",
+      "candidate_sha256": "30b6e26e740eb8c55ad02fd76f9840e888c5ea7124b4082bbf04d2f800e36e92",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "verify_output.py",
+      "baseline_sha256": "3d063fbd100ec8e3819b64ffd36db2e253d0e0e8433b2173e2fc862ea1c10eb4",
+      "candidate_sha256": "3d063fbd100ec8e3819b64ffd36db2e253d0e0e8433b2173e2fc862ea1c10eb4",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "verify_semantics.py",
+      "baseline_sha256": "c503b71e8b7c50ea750d1d6fd54af48298d22c9b781bd35bb68814439119894e",
+      "candidate_sha256": "dc948eccca16b70baa5e47269fea2b817e14c6446ffa89766ad9a34c69664209",
+      "changed_from_baseline": true
+    },
+    {
+      "path": "benchmark_semantics.py",
+      "baseline_sha256": "7a0032eaff1dd55acebcadc449c502f6d95450f1b01c18e6614dec517d27913c",
+      "candidate_sha256": "7a0032eaff1dd55acebcadc449c502f6d95450f1b01c18e6614dec517d27913c",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "validate_gate.py",
+      "baseline_sha256": "0036996b25efefe2f35135e4a87a4a079e1c4d308a808923fae0358e1509f6a7",
+      "candidate_sha256": "0036996b25efefe2f35135e4a87a4a079e1c4d308a808923fae0358e1509f6a7",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "FRONTEND_VALIDATION.json",
+      "baseline_sha256": "36664a0121aa23c3f7521aee1b3594897cc4c73ee6413e16288729167efe0455",
+      "candidate_sha256": "36664a0121aa23c3f7521aee1b3594897cc4c73ee6413e16288729167efe0455",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "music_scribe.cmd",
+      "baseline_sha256": "b6a18da75fdc70a2a778d1375e456d21b96f8d963a5551961589c9d9e9bf349b",
+      "candidate_sha256": "b6a18da75fdc70a2a778d1375e456d21b96f8d963a5551961589c9d9e9bf349b",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "music_semantics.cmd",
+      "baseline_sha256": "17cf9b38c061e5b01aa70f57a32ac7760af9735c10263eb2a48c46ac872ebfc3",
+      "candidate_sha256": "17cf9b38c061e5b01aa70f57a32ac7760af9735c10263eb2a48c46ac872ebfc3",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "_vendor/dora/log.py",
+      "baseline_sha256": "1655d8223df11a7e81fd9ff2ea60dd3d06e582d6f6c9b20b19718e4a3ac43721",
+      "candidate_sha256": "1655d8223df11a7e81fd9ff2ea60dd3d06e582d6f6c9b20b19718e4a3ac43721",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "_vendor/dora/__init__.py",
+      "baseline_sha256": "0c69e4b6bcce125d8145d63af552a29931576efd3b8ce06f7c1c317bd22d4f28",
+      "candidate_sha256": "0c69e4b6bcce125d8145d63af552a29931576efd3b8ce06f7c1c317bd22d4f28",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "models/deam-msd-musicnn-2.json",
+      "baseline_sha256": "079df8d538d093ba35c34b7fbee01ff2773c4469be5281520f55d585295a3c58",
+      "candidate_sha256": "079df8d538d093ba35c34b7fbee01ff2773c4469be5281520f55d585295a3c58",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "models/discogs-effnet-bsdynamic-1.json",
+      "baseline_sha256": "a2e85b2e7372d5f8e0f35bdd6aeae1139f101087d183d0b2fb60b0ea0f01a0ff",
+      "candidate_sha256": "a2e85b2e7372d5f8e0f35bdd6aeae1139f101087d183d0b2fb60b0ea0f01a0ff",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "models/LICENSE-RKNN.txt",
+      "baseline_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "candidate_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "models/LICENSE-YAMNET.txt",
+      "baseline_sha256": "5b17814bf0de8cf65069bc6d7cc38cff19fcaa864d243423ad3ef3db01b52385",
+      "candidate_sha256": "5b17814bf0de8cf65069bc6d7cc38cff19fcaa864d243423ad3ef3db01b52385",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "models/LICENSE.txt",
+      "baseline_sha256": "f0c076094cc08acb265ea3304ec522cf331917d19bdd271ed69f10ef174f3ea4",
+      "candidate_sha256": "f0c076094cc08acb265ea3304ec522cf331917d19bdd271ed69f10ef174f3ea4",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "models/manifest.json",
+      "baseline_sha256": "0d36aba9bf663fea84b20233f5a4c0e4a2d8aebf2fe0cd96f237dee31f9176a9",
+      "candidate_sha256": "0d36aba9bf663fea84b20233f5a4c0e4a2d8aebf2fe0cd96f237dee31f9176a9",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "models/msd-musicnn-1.json",
+      "baseline_sha256": "24842b068b5c09dce033a0bcb41d450e4e469352b799e831ac7728c93bbfb6be",
+      "candidate_sha256": "24842b068b5c09dce033a0bcb41d450e4e469352b799e831ac7728c93bbfb6be",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "models/mtg_jamendo_moodtheme-discogs-effnet-1.json",
+      "baseline_sha256": "d62cd90263e4d613fa7fcce7a831e339450394794af63685f96e065c1a896ab0",
+      "candidate_sha256": "d62cd90263e4d613fa7fcce7a831e339450394794af63685f96e065c1a896ab0",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "models/voice_instrumental-discogs-effnet-1.json",
+      "baseline_sha256": "43ac2c3b055dfaed20f6232e0f10636c287f1c5a6e5bd02c5585860031964c8f",
+      "candidate_sha256": "43ac2c3b055dfaed20f6232e0f10636c287f1c5a6e5bd02c5585860031964c8f",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "models/yamnet_3s.json",
+      "baseline_sha256": "66e553cb71c7c4bf6fe04241e4b5d6bb4a47d48580d17871cad9e29e91e73094",
+      "candidate_sha256": "66e553cb71c7c4bf6fe04241e4b5d6bb4a47d48580d17871cad9e29e91e73094",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "models/yamnet_class_map.csv",
+      "baseline_sha256": "cdf24d193e196d9e95912a2667051ae203e92a2ba09449218ccb40ef787c6df2",
+      "candidate_sha256": "cdf24d193e196d9e95912a2667051ae203e92a2ba09449218ccb40ef787c6df2",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "models/yamnet_class_map.txt",
+      "baseline_sha256": "108826ee87f1c9ef2c907e73dadfb9444141fda2069f742b568bd3a93c71da1d",
+      "candidate_sha256": "108826ee87f1c9ef2c907e73dadfb9444141fda2069f742b568bd3a93c71da1d",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "tests/fixtures/frontend_fixture.npz",
+      "baseline_sha256": "83b65c858c0cc4ba447babf8ef27b49697f17d6202dcba0b097f34fd030cd916",
+      "candidate_sha256": "83b65c858c0cc4ba447babf8ef27b49697f17d6202dcba0b097f34fd030cd916",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "LICENSE",
+      "baseline_sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "candidate_sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "changed_from_baseline": false
+    },
+    {
+      "path": "fetch_test_samples.py",
+      "baseline_sha256": "32e84c9461dd9bec24d5085b546d90c0313259a4bdc21c526bb778fdec241937",
+      "candidate_sha256": "d21c4c7ab83ae578882e27afda5b2784d8feba6a7a5b2473295b126a4c0646ba",
+      "changed_from_baseline": true
+    },
+    {
+      "path": "evaluate_samples.py",
+      "baseline_sha256": "c2da48078df047cd9839423213162a3d7aa6538833c8f7c8c5b4683e7451bfb3",
+      "candidate_sha256": "ac1f1ab3834694c73fe5566dc3f92c8ce37408c2f181a355ce4418afa4fd0dc0",
+      "changed_from_baseline": true
+    },
+    {
+      "path": "validate_frontend_reference.py",
+      "baseline_sha256": "6b9cecefdd0bd842517a0e6db4632b8bbd3952ba32f3e086d9ded3a9b2222d03",
+      "candidate_sha256": "7f5b410a31bd1d00c4812e0e3ae6004a712432c746e3f1dfc9b0864304cab925",
+      "changed_from_baseline": true
+    },
+    {
+      "path": "tools/reference_frontend.cjs",
+      "baseline_sha256": "8b42653667e9b503fa9cee921bac8a138fe08bbd872d81d5e9758fba8e3f440c",
+      "origin": "preserved 1.2 validation harness",
+      "candidate_sha256": "8b42653667e9b503fa9cee921bac8a138fe08bbd872d81d5e9758fba8e3f440c",
+      "changed_from_baseline": false
+    }
+  ],
+  "changes": [
+    "External semantic model directory and explicit missing-model acquisition hint",
+    "Portable launchers; no developer-specific interpreter/torch path shipped",
+    "Explicit standard-library downloader and fault/recovery tests",
+    "Fixture/reference helper path relocation; sample manifest excludes private data",
+    "Publication/install/license documents; no numerical policy/model change"
+  ],
+  "previous_source_variant": "public-source-license-review-1",
+  "previous_source_provenance_sha256": "cfe6b467fe4c412578c682eba4754f0729333e133d9c076e8ab6b05861951dea",
+  "license_review": {
+    "date": "2026-10-23",
+    "maintainer_authorization": "AUTHORIZATION.md",
+    "source_audit": "SOURCE_AUDIT.json",
+    "scope": "License scope, source evidence and notices only; docstring/message edits; no model or algorithm replacement."
+  },
+  "github_preparation": {
+    "date": "2026-10-23",
+    "source_manifest_sha256": "d8ae5d0addf46498d7256285315db42273e2750cccb1fbd6b40ea5e00e897d7d",
+    "changes": [
+      "README license table",
+      "Git byte preservation/ignore rules",
+      "Exclude root .git metadata from strict source export check",
+      "Publication documentation and refreshed integrity manifest"
+    ],
+    "analysis_code_unchanged": true,
+    "weights_and_real_audio_excluded": true
+  }
+}

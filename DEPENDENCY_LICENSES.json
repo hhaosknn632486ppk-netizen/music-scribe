@@ -1,0 +1,1366 @@
+{
+  "schema": "music-scribe-dependency-license-inventory/1",
+  "checked_date": "2026-10-23",
+  "environment": "Existing clean acceptance environment, Windows x64 CPython 3.10.22",
+  "lock_file": "requirements-lock-windows-py310.txt",
+  "distribution": "Source-only; dependencies and binaries absent",
+  "count": 57,
+  "scope": "License metadata inventory, not full transitive/embedded-component compliance approval; optional Demucs/torch/torchaudio absent from this environment.",
+  "observations": [
+    {
+      "name": "basic-pitch",
+      "basis": "Installed LICENSE and NOTICE identify Apache-2.0 although metadata lacks License/License-Expression.",
+      "notice": "THIRD_PARTY_LICENSES/Basic-Pitch-Apache-2.0.txt"
+    },
+    {
+      "name": "pretty_midi",
+      "basis": "Installed metadata declares MIT; RECORD lists a missing LICENSE.txt at site-packages root; upstream MIT text checked through official repository.",
+      "upstream": "https://raw.githubusercontent.com/craffel/pretty-midi/main/LICENSE.txt",
+      "limitation": "Do not claim wheel notice completeness or exact tag byte identity."
+    },
+    {
+      "name": "onnxruntime",
+      "basis": "MIT license and ThirdPartyNotices exist under onnxruntime/, not only dist-info.",
+      "upstream": "https://github.com/microsoft/onnxruntime"
+    },
+    {
+      "name": "music21",
+      "basis": "BSD-3-Clause applies to code; corpus/Scala data have separate terms and are not included or used as project samples."
+    },
+    {
+      "name": "verovio",
+      "basis": "Observed SPDX License-Expression LGPL-3.0-only; fonts and other embedded resources require their own checks for future bundled distribution."
+    },
+    {
+      "name": "imageio-ffmpeg",
+      "basis": "Wrapper BSD-2-Clause; actual installed ffmpeg -L declares GPL v3 or later; version 7.1-essentials_build-www.gyan.dev; flags include --enable-gpl --enable-version3 --enable-static.",
+      "scope": "Binary not included; this is not a complete audit of binary linked components."
+    }
+  ],
+  "packages": [
+    {
+      "name": "audioread",
+      "requested_version": "3.1.0",
+      "observed_version": "3.1.0",
+      "version_matches": true,
+      "license_expression": "MIT",
+      "license_header": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Bug Tracker, https://github.com/beetbox/audioread/issues",
+        "Homepage, https://github.com/beetbox/audioread",
+        "Repository, https://github.com/beetbox/audioread"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "audioread-3.1.0.dist-info/licenses/LICENSE",
+          "bytes": 1063,
+          "sha256": "e00fff68a75a582132842e33426730699255986f1dec362252f7423db027019d"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "basic-pitch",
+      "requested_version": "0.4.0",
+      "observed_version": "0.4.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "basic_pitch-0.4.0.dist-info/LICENSE",
+          "bytes": 11384,
+          "sha256": "929c910bae2152fa87199a5d0660e09263419b7eee6d4b301d05ee2aaf211c37"
+        },
+        {
+          "path": "basic_pitch-0.4.0.dist-info/NOTICE",
+          "bytes": 1034,
+          "sha256": "b810e55c0e3b520fabb45fc2ccc74880187bf84e309971968541cc812dcde905"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "certifi",
+      "requested_version": "2026.10.19",
+      "observed_version": "2026.10.19",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "MPL-2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+      ],
+      "project_urls": [
+        "Source, https://github.com/certifi/python-certifi"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "certifi-2026.10.19.dist-info/licenses/LICENSE",
+          "bytes": 989,
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "cffi",
+      "requested_version": "2.1.1",
+      "observed_version": "2.1.1",
+      "version_matches": true,
+      "license_expression": "MIT-0",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Documentation, https://cffi.readthedocs.io/",
+        "Changelog, https://cffi.readthedocs.io/en/latest/whatsnew.html",
+        "Download, https://github.com/python-cffi/cffi/releases",
+        "Contact, https://groups.google.com/forum/#!forum/python-cffi",
+        "Source Code, https://github.com/python-cffi/cffi",
+        "Issue Tracker, https://github.com/python-cffi/cffi/issues"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "cffi-2.1.1.dist-info/licenses/LICENSE",
+          "bytes": 1123,
+          "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "chardet",
+      "requested_version": "7.7.0",
+      "observed_version": "7.7.0",
+      "version_matches": true,
+      "license_expression": "0BSD",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/chardet/chardet",
+        "Repository, https://github.com/chardet/chardet",
+        "Bug Tracker, https://github.com/chardet/chardet/issues",
+        "Documentation, https://chardet.readthedocs.io",
+        "Changelog, https://chardet.readthedocs.io/en/latest/changelog.html"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "chardet-7.7.0.dist-info/licenses/LICENSE",
+          "bytes": 653,
+          "sha256": "0517f574b0183d991eb7a9ec5dbf0add8d8ade5ac00341bd28ca0c18914d52e5"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "charset-normalizer",
+      "requested_version": "3.5.2",
+      "observed_version": "3.5.2",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "MIT",
+      "license_classifiers": [],
+      "project_urls": [
+        "Changelog, https://github.com/jawah/charset_normalizer/blob/master/CHANGELOG.md",
+        "Documentation, https://charset-normalizer.readthedocs.io/",
+        "Code, https://github.com/jawah/charset_normalizer",
+        "Issue tracker, https://github.com/jawah/charset_normalizer/issues"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "charset_normalizer-3.5.2.dist-info/licenses/LICENSE",
+          "bytes": 1092,
+          "sha256": "18577485d3704f1a479ded8e573c0976cfed315fd2fd17983fa988da4c2f70d1"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "cloudpickle",
+      "requested_version": "3.1.2",
+      "observed_version": "3.1.2",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "BSD-3-Clause",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "cloudpickle-3.1.2.dist-info/licenses/LICENSE",
+          "bytes": 1754,
+          "sha256": "3029ea34173e9fdc233ad315dc6b100bd1ea71f529b1c1af97664a272fdc55f5"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "coloredlogs",
+      "requested_version": "15.0.1",
+      "observed_version": "15.0.1",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "coloredlogs-15.0.1.dist-info/LICENSE.txt",
+          "bytes": 1056,
+          "sha256": "0bef4ffb1855b65570304f2018c6d44e4bab97bd5df8716ecd7800014d717267"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "contourpy",
+      "requested_version": "1.3.2",
+      "observed_version": "1.3.2",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "BSD 3-Clause License\n\n Copyright (c) 2021-2025, ContourPy Developers.\n All rights reserved.\n\n Redistribution and use in source and binary forms, with or without\n modification, are ",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/contourpy/contourpy",
+        "Changelog, https://contourpy.readthedocs.io/en/latest/changelog.html",
+        "Documentation, https://contourpy.readthedocs.io",
+        "Repository, https://github.com/contourpy/contourpy"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "contourpy-1.3.2.dist-info/LICENSE",
+          "bytes": 1563,
+          "sha256": "8553102e03001dd966278098cc027d0683c412b34ea141351b060be4330f39a9"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "cycler",
+      "requested_version": "0.12.1",
+      "observed_version": "0.12.1",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "Copyright (c) 2015, matplotlib project\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the follow",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "homepage, https://matplotlib.org/cycler/",
+        "repository, https://github.com/matplotlib/cycler"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "cycler-0.12.1.dist-info/LICENSE",
+          "bytes": 1497,
+          "sha256": "f1218143d766da3fea66f13396b7f15df46a83303f29bf96ba6e98eb4d42f408"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "decorator",
+      "requested_version": "5.3.1",
+      "observed_version": "5.3.1",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "BSD-2-Clause",
+      "license_classifiers": [],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "decorator-5.3.1.dist-info/licenses/LICENSE.txt",
+          "bytes": 1308,
+          "sha256": "bd12cc51405c10872497c10ca21601f1d4abc50496595cc89e89ab5dad24fb62"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "flatbuffers",
+      "requested_version": "25.12.19",
+      "observed_version": "25.12.19",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "Apache 2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": [
+        "Documentation, https://google.github.io/flatbuffers/",
+        "Source, https://github.com/google/flatbuffers"
+      ],
+      "observed_notice_files": [],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "fonttools",
+      "requested_version": "4.65.0",
+      "observed_version": "4.65.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "MIT",
+      "license_classifiers": [],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "fonttools-4.65.0.dist-info/licenses/LICENSE",
+          "bytes": 1093,
+          "sha256": "22bef80697ecfaa17f97e62b9a26dfa12820be05583e8dd12ad169b241274c99"
+        },
+        {
+          "path": "fonttools-4.65.0.dist-info/licenses/LICENSE.external",
+          "bytes": 20410,
+          "sha256": "b082a5f86775b2641f01bccb8b9c82908481de5f502bb254b1e13bfc2a9f303d"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "humanfriendly",
+      "requested_version": "10.0",
+      "observed_version": "10.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "humanfriendly-10.0.dist-info/LICENSE.txt",
+          "bytes": 1056,
+          "sha256": "4ac48f4117809f2734066150450f120b3bb110ac1d3b32170795e0560dbbc1f5"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "idna",
+      "requested_version": "3.20",
+      "observed_version": "3.20",
+      "version_matches": true,
+      "license_expression": "BSD-3-Clause",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Changelog, https://github.com/kjd/idna/blob/master/HISTORY.md",
+        "Issue tracker, https://github.com/kjd/idna/issues",
+        "Source, https://github.com/kjd/idna"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "idna-3.20.dist-info/licenses/LICENSE.md",
+          "bytes": 1541,
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "imageio-ffmpeg",
+      "requested_version": "0.6.0",
+      "observed_version": "0.6.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "BSD-2-Clause",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "imageio_ffmpeg-0.6.0.dist-info/LICENSE",
+          "bytes": 1317,
+          "sha256": "eca73421d0c905a92e952a553d4d58919c5a507c2c2c76e3c0cf9ba408c299e4"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "importlib_resources",
+      "requested_version": "7.1.0",
+      "observed_version": "7.1.0",
+      "version_matches": true,
+      "license_expression": "Apache-2.0",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Source, https://github.com/python/importlib_resources"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "importlib_resources-7.1.0.dist-info/licenses/LICENSE",
+          "bytes": 10278,
+          "sha256": "e2f7bb0557e7a381499f15baa7c1d776d83d6616599179d71d3109b8e39f7b25"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "joblib",
+      "requested_version": "1.6.0",
+      "observed_version": "1.6.0",
+      "version_matches": true,
+      "license_expression": "BSD-3-Clause",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://joblib.readthedocs.io",
+        "Source, https://github.com/joblib/joblib"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "joblib-1.6.0.dist-info/licenses/LICENSE.txt",
+          "bytes": 1527,
+          "sha256": "42612911c1872c5e4b43f6ae0e8ee59467cd350332241cf72ce90640264fae6a"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "jsonpickle",
+      "requested_version": "4.1.4",
+      "observed_version": "4.1.4",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "BSD-3-Clause",
+      "license_classifiers": [],
+      "project_urls": [
+        "Documentation, https://jsonpickle.readthedocs.io/",
+        "Homepage, https://jsonpickle.readthedocs.io/",
+        "Source, https://github.com/jsonpickle/jsonpickle"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "jsonpickle-4.1.4.dist-info/licenses/LICENSE",
+          "bytes": 1547,
+          "sha256": "da4d740e7bfe1e9777baeda3cf6534f568ecb2abb27b80e7e2c2f9f2864d839d"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "kiwisolver",
+      "requested_version": "1.5.1",
+      "observed_version": "1.5.1",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "=========================\n The Kiwi licensing terms\n=========================\nKiwi is licensed under the terms of the Modified BSD License (also known as\nNew or Revised BSD), as fo",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "homepage, https://github.com/nucleic/kiwi",
+        "documentation, https://kiwisolver.readthedocs.io/en/latest/",
+        "repository, https://github.com/nucleic/kiwi",
+        "changelog, https://github.com/nucleic/kiwi/blob/main/releasenotes.rst"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "kiwisolver-1.5.1.dist-info/licenses/LICENSE",
+          "bytes": 3360,
+          "sha256": "b24c2bf6185f31a124ad6bacccae3071bdc7ad7882de00b00110aa62abb76a15"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "lazy-loader",
+      "requested_version": "0.6",
+      "observed_version": "0.6",
+      "version_matches": true,
+      "license_expression": "BSD-3-Clause",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Home, https://scientific-python.org/specs/spec-0001/",
+        "Source, https://github.com/scientific-python/lazy-loader"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "lazy_loader-0.6.dist-info/licenses/LICENSE.md",
+          "bytes": 1539,
+          "sha256": "797b6937a4f976836efbbbb3ae333d7866ddc3eb3cb152972b2be348d3529372"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "librosa",
+      "requested_version": "0.11.0",
+      "observed_version": "0.11.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "ISC",
+      "license_classifiers": [
+        "License :: OSI Approved :: ISC License (ISCL)"
+      ],
+      "project_urls": [
+        "Documentation, https://librosa.org/doc",
+        "Download, https://github.com/librosa/librosa/releases",
+        "Source, https://github.com/librosa/librosa",
+        "Tracker, https://github.com/librosa/librosa/issues",
+        "Discussion forum, https://groups.google.com/g/librosa"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "librosa-0.11.0.dist-info/LICENSE.md",
+          "bytes": 766,
+          "sha256": "1746ca32b53fa31941c38b63a986e4126ab998e81a2f73a566000847a588e2a3"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "llvmlite",
+      "requested_version": "0.50.0",
+      "observed_version": "0.50.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Source, https://github.com/numba/llvmlite"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "llvmlite-0.50.0.dist-info/LICENSE",
+          "bytes": 1309,
+          "sha256": "7d6aa93e52a7ae9a995ff6a40c0ea5628311cdf1bd8dcd29c8ce9181f4af3a81"
+        },
+        {
+          "path": "llvmlite-0.50.0.dist-info/LICENSE.thirdparty",
+          "bytes": 12786,
+          "sha256": "7b564c7af9ab446d245ba66adc8cda2f61d1d162f842899557499e80b715993a"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "matplotlib",
+      "requested_version": "3.10.9",
+      "observed_version": "3.10.9",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "License agreement for matplotlib versions 1.3.0 and later\n =========================================================\n\n 1. This LICENSE AGREEMENT is between the Matplotlib Developme",
+      "license_classifiers": [
+        "License :: OSI Approved :: Python Software Foundation License"
+      ],
+      "project_urls": [
+        "Homepage, https://matplotlib.org",
+        "Download, https://matplotlib.org/stable/install/index.html",
+        "Documentation, https://matplotlib.org",
+        "Source Code, https://github.com/matplotlib/matplotlib",
+        "Bug Tracker, https://github.com/matplotlib/matplotlib/issues",
+        "Forum, https://discourse.matplotlib.org/",
+        "Donate, https://numfocus.org/donate-to-matplotlib"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "matplotlib-3.10.9.dist-info/LICENSE",
+          "bytes": 40129,
+          "sha256": "dbb9ad7495a83b0f2f48c94b06e23020587d82f8d1492dcb717fb1ebc2f86c18"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "mido",
+      "requested_version": "1.3.3",
+      "observed_version": "1.3.3",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "documentation, https://mido.readthedocs.io",
+        "source, https://github.com/mido/mido"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "mido-1.3.3.dist-info/LICENSE",
+          "bytes": 1078,
+          "sha256": "bd038e5ad24b8d703970b51c070669e8ab0d06f4efb008665261b0183af7eb1c"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "mir_eval",
+      "requested_version": "0.8.2",
+      "observed_version": "0.8.2",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "mir_eval-0.8.2.dist-info/LICENSE.txt",
+          "bytes": 1079,
+          "sha256": "220f461a41157a81832520a84d95bfa5c4616f553dbf3ef8ac1fb9562244c069"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "more-itertools",
+      "requested_version": "11.1.0",
+      "observed_version": "11.1.0",
+      "version_matches": true,
+      "license_expression": "MIT",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Documentation, https://more-itertools.readthedocs.io/en/stable/",
+        "Homepage, https://github.com/more-itertools/more-itertools"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "more_itertools-11.1.0.dist-info/licenses/LICENSE",
+          "bytes": 1053,
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "mpmath",
+      "requested_version": "1.3.0",
+      "observed_version": "1.3.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "BSD",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Source, https://github.com/fredrik-johansson/mpmath",
+        "Tracker, https://github.com/fredrik-johansson/mpmath/issues",
+        "Documentation, http://mpmath.org/doc/current/"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "mpmath-1.3.0.dist-info/LICENSE",
+          "bytes": 1537,
+          "sha256": "c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "msgpack",
+      "requested_version": "1.2.3",
+      "observed_version": "1.2.3",
+      "version_matches": true,
+      "license_expression": "Apache-2.0",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://msgpack.org/",
+        "Documentation, https://msgpack-python.readthedocs.io/",
+        "Repository, https://github.com/msgpack/msgpack-python/",
+        "Tracker, https://github.com/msgpack/msgpack-python/issues",
+        "Changelog, https://github.com/msgpack/msgpack-python/blob/main/CHANGELOG.md"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "msgpack-1.2.3.dist-info/licenses/COPYING",
+          "bytes": 628,
+          "sha256": "4fbdff42eba4593c16f7a7ea7078883b2b734870a1e2b636284ce2dce62bf4f7"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "music21",
+      "requested_version": "9.9.2",
+      "observed_version": "9.9.2",
+      "version_matches": true,
+      "license_expression": "BSD-3-Clause",
+      "license_header": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Download, https://github.com/cuthbertLab/music21/releases/",
+        "Homepage, https://github.com/cuthbertLab/music21",
+        "Documentation, https://www.music21.org/music21docs/"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "music21-9.9.2.dist-info/licenses/LICENSE",
+          "bytes": 2625,
+          "sha256": "8237252231dcfc495feccc28ba106161e434cfbe257235b1467f26a5e158c781"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "numba",
+      "requested_version": "0.68.0",
+      "observed_version": "0.68.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "BSD",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "numba-0.68.0.dist-info/licenses/LICENSE",
+          "bytes": 1310,
+          "sha256": "5f7ae5e48a0a107a9d86a9ef6c18dcce68e55959855d39380050deaea366631c"
+        },
+        {
+          "path": "numba-0.68.0.dist-info/licenses/LICENSES.third-party",
+          "bytes": 26891,
+          "sha256": "e5ea3f50f1c1aa518a86903b85dfd40c4765589998eb683b9382d111d91bb9ee"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "numpy",
+      "requested_version": "2.2.6",
+      "observed_version": "2.2.6",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "Copyright (c) 2005-2024, NumPy Developers.\n All rights reserved.\n\n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that the",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "homepage, https://numpy.org",
+        "documentation, https://numpy.org/doc/",
+        "source, https://github.com/numpy/numpy",
+        "download, https://pypi.org/project/numpy/#files",
+        "tracker, https://github.com/numpy/numpy/issues",
+        "release notes, https://numpy.org/doc/stable/release"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "numpy-2.2.6.dist-info/LICENSE.txt",
+          "bytes": 47709,
+          "sha256": "14256cc3a2c9d32ac284da96b937feb44f72dd90bee2317ac3020166846ad99d"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "onnxruntime",
+      "requested_version": "1.23.2",
+      "observed_version": "1.23.2",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "MIT License",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "observed_notice_files": [],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "packaging",
+      "requested_version": "26.3",
+      "observed_version": "26.3",
+      "version_matches": true,
+      "license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Documentation, https://packaging.pypa.io/",
+        "Source, https://github.com/pypa/packaging"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "packaging-26.3.dist-info/licenses/LICENSE",
+          "bytes": 197,
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "path": "packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "packaging-26.3.dist-info/licenses/LICENSE.BSD",
+          "bytes": 1344,
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "pillow",
+      "requested_version": "12.3.0",
+      "observed_version": "12.3.0",
+      "version_matches": true,
+      "license_expression": "MIT-CMU",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Release notes, https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+        "Changelog, https://github.com/python-pillow/Pillow/releases",
+        "Documentation, https://pillow.readthedocs.io",
+        "Funding, https://tidelift.com/subscription/pkg/pypi-pillow?utm_source=pypi-pillow&utm_medium=pypi",
+        "Homepage, https://python-pillow.github.io",
+        "Mastodon, https://fosstodon.org/@pillow",
+        "Source, https://github.com/python-pillow/Pillow"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "pillow-12.3.0.dist-info/licenses/LICENSE",
+          "bytes": 78016,
+          "sha256": "4f7866a74802c6326f81faff59a56546b6aec2b10b91973e0e9308de95e79857"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "platformdirs",
+      "requested_version": "4.12.4",
+      "observed_version": "4.12.4",
+      "version_matches": true,
+      "license_expression": "MIT",
+      "license_header": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Changelog, https://platformdirs.readthedocs.io/en/latest/changelog.html",
+        "Documentation, https://platformdirs.readthedocs.io",
+        "Homepage, https://github.com/tox-dev/platformdirs",
+        "Source, https://github.com/tox-dev/platformdirs",
+        "Tracker, https://github.com/tox-dev/platformdirs/issues"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "platformdirs-4.12.4.dist-info/licenses/LICENSE",
+          "bytes": 1089,
+          "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "pooch",
+      "requested_version": "1.9.0",
+      "observed_version": "1.9.0",
+      "version_matches": true,
+      "license_expression": "BSD-3-Clause",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Documentation, https://www.fatiando.org/pooch",
+        "Changelog, https://www.fatiando.org/pooch/latest/changes.html",
+        "Bug Tracker, https://github.com/fatiando/pooch/issues",
+        "Source Code, https://github.com/fatiando/pooch"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "pooch-1.9.0.dist-info/licenses/AUTHORS.md",
+          "bytes": 3225,
+          "sha256": "6400dc5b23d3c56c955ab82c44fe49db242d4d9a6d9b80f5575d8b9ccdbc4631"
+        },
+        {
+          "path": "pooch-1.9.0.dist-info/licenses/LICENSE.txt",
+          "bytes": 1496,
+          "sha256": "af0482d59fc7a9d68d9f64682c74ce6e8a4684406bb3a21a191ae329950916b4"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "pretty_midi",
+      "requested_version": "0.2.11",
+      "observed_version": "0.2.11",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "observed_notice_files": [],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "protobuf",
+      "requested_version": "7.36.2",
+      "observed_version": "7.36.2",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "3-Clause BSD License",
+      "license_classifiers": [],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "protobuf-7.36.2.dist-info/LICENSE",
+          "bytes": 1732,
+          "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "pycparser",
+      "requested_version": "3.11",
+      "observed_version": "3.11",
+      "version_matches": true,
+      "license_expression": "BSD-3-Clause",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/eliben/pycparser"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "pycparser-3.11.dist-info/licenses/LICENSE",
+          "bytes": 1543,
+          "sha256": "0a9e78156ae8b96caf1b4f11ac2df424b83de29736f9e757630548a6272fdf90"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "pyparsing",
+      "requested_version": "3.3.3",
+      "observed_version": "3.3.3",
+      "version_matches": true,
+      "license_expression": "MIT",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Documentation, https://pyparsing-docs.readthedocs.io/en/latest/",
+        "Homepage, https://github.com/pyparsing/pyparsing/",
+        "Source, https://github.com/pyparsing/pyparsing.git"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "pyparsing-3.3.3.dist-info/licenses/LICENSE",
+          "bytes": 1062,
+          "sha256": "a5425f9dc14ac74d4c5f0b679e941f2442e32cca7452a4418d5b1a49893ebe4e"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "pyreadline3",
+      "requested_version": "3.5.6",
+      "observed_version": "3.5.6",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "BSD",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/pyreadline3/pyreadline3",
+        "Documentation, https://github.com/pyreadline3/pyreadline3",
+        "Repository, https://github.com/pyreadline3/pyreadline3.git",
+        "Issues, https://github.com/pyreadline3/pyreadline3/issues",
+        "Changelog, https://github.com/pyreadline3/pyreadline3/blob/master/doc/ChangeLog"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "pyreadline3-3.5.6.dist-info/licenses/LICENSE.md",
+          "bytes": 2250,
+          "sha256": "8fc4d8de61b40533023b16e64528d13371a2e9c68677df79ed5e93ba570471bd"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "python-dateutil",
+      "requested_version": "3.0.0",
+      "observed_version": "3.0.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "Dual License",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License",
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": [
+        "Documentation, https://dateutil.readthedocs.io/en/stable/",
+        "Source, https://github.com/dateutil/dateutil"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "python_dateutil-3.0.0.dist-info/licenses/LICENSE",
+          "bytes": 2889,
+          "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "requests",
+      "requested_version": "2.34.2",
+      "observed_version": "2.34.2",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "Apache-2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": [
+        "Documentation, https://requests.readthedocs.io",
+        "Source, https://github.com/psf/requests"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "requests-2.34.2.dist-info/licenses/LICENSE",
+          "bytes": 10142,
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+        },
+        {
+          "path": "requests-2.34.2.dist-info/licenses/NOTICE",
+          "bytes": 38,
+          "sha256": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "resampy",
+      "requested_version": "0.4.2",
+      "observed_version": "0.4.2",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "ISC",
+      "license_classifiers": [
+        "License :: OSI Approved :: ISC License (ISCL)"
+      ],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "resampy-0.4.2.dist-info/LICENSE.md",
+          "bytes": 743,
+          "sha256": "9c21cf3da6675e5b28ba7bda19c7b1a8da9772a5244c59648435f412a6738886"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "scikit-learn",
+      "requested_version": "1.7.2",
+      "observed_version": "1.7.2",
+      "version_matches": true,
+      "license_expression": "BSD-3-Clause",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "homepage, https://scikit-learn.org",
+        "source, https://github.com/scikit-learn/scikit-learn",
+        "download, https://pypi.org/project/scikit-learn/#files",
+        "tracker, https://github.com/scikit-learn/scikit-learn/issues",
+        "release notes, https://scikit-learn.org/stable/whats_new"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "scikit_learn-1.7.2.dist-info/licenses/COPYING",
+          "bytes": 2628,
+          "sha256": "1b74e02d0cb8e6502091124787fc91695b9dd92c9cb146d9d34830f9a300ab3c"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "scipy",
+      "requested_version": "1.15.3",
+      "observed_version": "1.15.3",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "Copyright (c) 2001-2002 Enthought, Inc. 2003-2024, SciPy Developers.\n All rights reserved.\n\n Redistribution and use in source and binary forms, with or without\n modification, are p",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "homepage, https://scipy.org/",
+        "documentation, https://docs.scipy.org/doc/scipy/",
+        "source, https://github.com/scipy/scipy",
+        "download, https://github.com/scipy/scipy/releases",
+        "tracker, https://github.com/scipy/scipy/issues"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "scipy-1.15.3.dist-info/LICENSE.txt",
+          "bytes": 46763,
+          "sha256": "f250e7cef15fbd99e8680093d112d7aa7579535b99995268df6c89ac926eb607"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "six",
+      "requested_version": "1.17.0",
+      "observed_version": "1.17.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "six-1.17.0.dist-info/LICENSE",
+          "bytes": 1066,
+          "sha256": "4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "soundfile",
+      "requested_version": "0.14.0",
+      "observed_version": "0.14.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "BSD 3-Clause License",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [],
+      "observed_notice_files": [
+        {
+          "path": "soundfile-0.14.0.dist-info/LICENSE",
+          "bytes": 1512,
+          "sha256": "0dd2e411fed553ba891845077e5a32c5b726d1bbc46ff31a2118ae1ccf816752"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "soxr",
+      "requested_version": "1.1.0",
+      "observed_version": "1.1.0",
+      "version_matches": true,
+      "license_expression": "LGPL-2.1-or-later",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/dofuuz/python-soxr",
+        "Documentation, https://python-soxr.readthedocs.io",
+        "Release Notes, https://github.com/dofuuz/python-soxr/releases",
+        "Source, https://github.com/dofuuz/python-soxr",
+        "Bug Tracker, https://github.com/dofuuz/python-soxr/issues"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "soxr-1.1.0.dist-info/licenses/COPYING.LGPL",
+          "bytes": 26934,
+          "sha256": "317dfba8116739654c8c2d8acbc9c7edfcf34e3932e7a4b15307435228f98c3a"
+        },
+        {
+          "path": "soxr-1.1.0.dist-info/licenses/LICENSE-PFFFT.txt",
+          "bytes": 2174,
+          "sha256": "7847a2f45a0da613240a7e542980677c16613b1c8258190c15f8bf275032bb2d"
+        },
+        {
+          "path": "soxr-1.1.0.dist-info/licenses/LICENSE-libsoxr.txt",
+          "bytes": 1047,
+          "sha256": "73b946c198ad27fc2ae7bea2de6ec6d1b6c0733340d1759a450150271347e5af"
+        },
+        {
+          "path": "soxr-1.1.0.dist-info/licenses/LICENSE.txt",
+          "bytes": 728,
+          "sha256": "16ce7f03077f25fac6a9b89fdf6136927595f6b85db9197381ee99c1ecba357b"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "sympy",
+      "requested_version": "1.14.0",
+      "observed_version": "1.14.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "BSD",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Source, https://github.com/sympy/sympy"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "sympy-1.14.0.dist-info/licenses/AUTHORS",
+          "bytes": 55779,
+          "sha256": "82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d"
+        },
+        {
+          "path": "sympy-1.14.0.dist-info/licenses/LICENSE",
+          "bytes": 7885,
+          "sha256": "07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "threadpoolctl",
+      "requested_version": "3.7.0",
+      "observed_version": "3.7.0",
+      "version_matches": true,
+      "license_expression": "BSD-3-Clause",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "homepage, https://github.com/joblib/threadpoolctl"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "threadpoolctl-3.7.0.dist-info/licenses/LICENSE",
+          "bytes": 1507,
+          "sha256": "81ac619075248b06e53660b652d10e485f4675f5d0ae0f97ea22370da1f7e23b"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "typing_extensions",
+      "requested_version": "4.16.0",
+      "observed_version": "4.16.0",
+      "version_matches": true,
+      "license_expression": "PSF-2.0",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Bug Tracker, https://github.com/python/typing_extensions/issues",
+        "Changes, https://github.com/python/typing_extensions/blob/main/CHANGELOG.md",
+        "Documentation, https://typing-extensions.readthedocs.io/",
+        "Home, https://github.com/python/typing_extensions",
+        "Q & A, https://github.com/python/typing/discussions",
+        "Repository, https://github.com/python/typing_extensions"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+          "bytes": 13936,
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "tzdata",
+      "requested_version": "2026.5",
+      "observed_version": "2026.5",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "Apache-2.0",
+      "license_classifiers": [],
+      "project_urls": [
+        "Bug Reports, https://github.com/python/tzdata/issues",
+        "Source, https://github.com/python/tzdata",
+        "Documentation, https://tzdata.python.org"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "tzdata-2026.5.dist-info/licenses/LICENSE",
+          "bytes": 625,
+          "sha256": "df58f69ea88683035d720b5375bcef0cf5aeaa98a1d098d572e0992c378deb46"
+        },
+        {
+          "path": "tzdata-2026.5.dist-info/licenses/licenses/LICENSE_APACHE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "urllib3",
+      "requested_version": "2.8.0",
+      "observed_version": "2.8.0",
+      "version_matches": true,
+      "license_expression": "MIT",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Changelog, https://github.com/urllib3/urllib3/blob/main/CHANGES.rst",
+        "Documentation, https://urllib3.readthedocs.io",
+        "Code, https://github.com/urllib3/urllib3",
+        "Issue tracker, https://github.com/urllib3/urllib3/issues",
+        "Security policy, https://urllib3.readthedocs.io/en/latest/security.html"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "urllib3-2.8.0.dist-info/licenses/LICENSE.txt",
+          "bytes": 1093,
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "verovio",
+      "requested_version": "6.3.0",
+      "observed_version": "6.3.0",
+      "version_matches": true,
+      "license_expression": "LGPL-3.0-only",
+      "license_header": null,
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://www.verovio.org",
+        "Bug Reports, https://github.com/rism-digital/verovio/issues",
+        "Source, https://github.com/rism-digital/verovio"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "verovio-6.3.0.dist-info/licenses/COPYING",
+          "bytes": 35821,
+          "sha256": "81cbae84a29ce7e770bf2bc7b178e50bda0ce8de6067aba661b0bc7b05b562f8"
+        },
+        {
+          "path": "verovio-6.3.0.dist-info/licenses/COPYING.LESSER",
+          "bytes": 7815,
+          "sha256": "f831e7eed577481687a9bc0b48024e5e40b6f655fcde073ede964b50be5d55d9"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    },
+    {
+      "name": "webcolors",
+      "requested_version": "25.10.0",
+      "observed_version": "25.10.0",
+      "version_matches": true,
+      "license_expression": null,
+      "license_header": "BSD-3-Clause",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Documentation, https://webcolors.readthedocs.io",
+        "Source Code, https://github.com/ubernostrum/webcolors"
+      ],
+      "observed_notice_files": [
+        {
+          "path": "webcolors-25.10.0.dist-info/licenses/LICENSE",
+          "bytes": 1531,
+          "sha256": "224bb9063d1204f687477a680fab945debff8cf717c629510c1d7083d9a7969a"
+        }
+      ],
+      "scope": "Metadata and listed license files only; internal components not fully audited."
+    }
+  ]
+}

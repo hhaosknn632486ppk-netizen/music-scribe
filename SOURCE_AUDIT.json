@@ -1,0 +1,1056 @@
+{
+  "schema": "music-scribe-source-license-review/1",
+  "date": "2026-10-23",
+  "variant": "public-source-license-review-1",
+  "authorization": "AUTHORIZATION.md",
+  "project_license": "AGPL-3.0-or-later",
+  "distribution": "Source-only candidate; no GitHub upload or rights-holder contact",
+  "review_scope": {
+    "python_files": 24,
+    "python_lines": 3956,
+    "checks": [
+      "AST/import and provenance-clue inventory of every Python script",
+      "Focused local and official upstream comparison of Essentia frontend, tonal templates and dora shim",
+      "Installed license metadata for all 57 locked packages",
+      "Original notices and model JSON license-field verification",
+      "Manifest checks of prior and current source copies"
+    ],
+    "proof_limit": "This is not an exhaustive global source similarity search, tool-service-terms review or full audit of all dependencies, weights, training data, fonts or native components."
+  },
+  "findings": [
+    {
+      "id": "maintainer-scope",
+      "status": "confirmed_by_maintainer",
+      "basis": "Personal project, no other human contributors, AGPL accepted; no assertion that all material is original."
+    },
+    {
+      "id": "essentia-reference",
+      "status": "public_license_available",
+      "license": "AGPL-3.0-or-later",
+      "urls": [
+        "https://github.com/MTG/essentia/blob/master/src/algorithms/spectral/tensorflowinputmusicnn.cpp",
+        "https://github.com/MTG/essentia/blob/master/src/algorithms/spectral/triangularbands.cpp",
+        "https://github.com/MTG/essentia/blob/master/src/algorithms/tonal/key.cpp"
+      ],
+      "resolution": "Retain copyright, license, disclaimer and documented local differences. No individual permission request planned."
+    },
+    {
+      "id": "dora-shim",
+      "status": "local_compatibility_implementation_with_public_MIT_reference",
+      "urls": [
+        "https://github.com/facebookresearch/dora/blob/main/dora/log.py",
+        "https://github.com/facebookresearch/dora/blob/main/LICENSE"
+      ],
+      "basis": "Focused manual interface/body comparison through official web source; upstream uses colorize/logger/iteration, local code uses ANSI/print/no-op. This does not independently establish every historical source.",
+      "retained_notice": "THIRD_PARTY_LICENSES/dora-MIT.txt"
+    },
+    {
+      "id": "mtg-models",
+      "status": "unresolved_SA_ND_conflict_scope_limited",
+      "license_declaration_source": "https://essentia.upf.edu/models.html",
+      "raw_license": "models/LICENSE.txt",
+      "raw_license_sha256": "f0c076094cc08acb265ea3304ec522cf331917d19bdd271ed69f10ef174f3ea4",
+      "resolution": "Original official weights, local non-commercial use; do not redistribute weights or adapted weights; preserve conflict without choosing an authoritative license. No commercial permission or downstream guarantee."
+    },
+    {
+      "id": "dependencies",
+      "status": "metadata_inventory",
+      "count": 57,
+      "inventory": "DEPENDENCY_LICENSES.json",
+      "notable_boundaries": [
+        {
+          "name": "basic-pitch",
+          "basis": "Installed LICENSE and NOTICE identify Apache-2.0 although metadata lacks License/License-Expression.",
+          "notice": "THIRD_PARTY_LICENSES/Basic-Pitch-Apache-2.0.txt"
+        },
+        {
+          "name": "pretty_midi",
+          "basis": "Installed metadata declares MIT; RECORD lists a missing LICENSE.txt at site-packages root; upstream MIT text checked through official repository.",
+          "upstream": "https://raw.githubusercontent.com/craffel/pretty-midi/main/LICENSE.txt",
+          "limitation": "Do not claim wheel notice completeness or exact tag byte identity."
+        },
+        {
+          "name": "onnxruntime",
+          "basis": "MIT license and ThirdPartyNotices exist under onnxruntime/, not only dist-info.",
+          "upstream": "https://github.com/microsoft/onnxruntime"
+        },
+        {
+          "name": "music21",
+          "basis": "BSD-3-Clause applies to code; corpus/Scala data have separate terms and are not included or used as project samples."
+        },
+        {
+          "name": "verovio",
+          "basis": "Observed SPDX License-Expression LGPL-3.0-only; fonts and other embedded resources require their own checks for future bundled distribution."
+        },
+        {
+          "name": "imageio-ffmpeg",
+          "basis": "Wrapper BSD-2-Clause; actual installed ffmpeg -L declares GPL v3 or later; version 7.1-essentials_build-www.gyan.dev; flags include --enable-gpl --enable-version3 --enable-static.",
+          "scope": "Binary not included; this is not a complete audit of binary linked components."
+        }
+      ]
+    },
+    {
+      "id": "no_additional_individual_permission_identified",
+      "status": "bounded_review_conclusion",
+      "meaning": "No specific fragment requiring new individual authorization was identified in the checked material. Public-license compliance and preserving notices remain necessary; this is not a proof that undisclosed provenance issues do not exist."
+    }
+  ],
+  "metadata_checks": [
+    {
+      "key": "effnet",
+      "file": "models/discogs-effnet-bsdynamic-1.json",
+      "bytes": 14986,
+      "sha256": "a2e85b2e7372d5f8e0f35bdd6aeae1139f101087d183d0b2fb60b0ea0f01a0ff",
+      "matches_manifest": true,
+      "has_license_field": false,
+      "metadata_url": "https://essentia.upf.edu/models/feature-extractors/discogs-effnet/discogs-effnet-bsdynamic-1.json",
+      "license_basis": "Official MTG model overview, not this JSON."
+    },
+    {
+      "key": "moodtheme",
+      "file": "models/mtg_jamendo_moodtheme-discogs-effnet-1.json",
+      "bytes": 3646,
+      "sha256": "d62cd90263e4d613fa7fcce7a831e339450394794af63685f96e065c1a896ab0",
+      "matches_manifest": true,
+      "has_license_field": false,
+      "metadata_url": "https://essentia.upf.edu/models/classification-heads/mtg_jamendo_moodtheme/mtg_jamendo_moodtheme-discogs-effnet-1.json",
+      "license_basis": "Official MTG model overview, not this JSON."
+    },
+    {
+      "key": "voice",
+      "file": "models/voice_instrumental-discogs-effnet-1.json",
+      "bytes": 2013,
+      "sha256": "43ac2c3b055dfaed20f6232e0f10636c287f1c5a6e5bd02c5585860031964c8f",
+      "matches_manifest": true,
+      "has_license_field": false,
+      "metadata_url": "https://essentia.upf.edu/models/classification-heads/voice_instrumental/voice_instrumental-discogs-effnet-1.json",
+      "license_basis": "Official MTG model overview, not this JSON."
+    },
+    {
+      "key": "musicnn",
+      "file": "models/msd-musicnn-1.json",
+      "bytes": 3298,
+      "sha256": "24842b068b5c09dce033a0bcb41d450e4e469352b799e831ac7728c93bbfb6be",
+      "matches_manifest": true,
+      "has_license_field": false,
+      "metadata_url": "https://essentia.upf.edu/models/autotagging/msd/msd-musicnn-1.json",
+      "license_basis": "Official MTG model overview, not this JSON."
+    },
+    {
+      "key": "deam",
+      "file": "models/deam-msd-musicnn-2.json",
+      "bytes": 2698,
+      "sha256": "079df8d538d093ba35c34b7fbee01ff2773c4469be5281520f55d585295a3c58",
+      "matches_manifest": true,
+      "has_license_field": false,
+      "metadata_url": "https://essentia.upf.edu/models/classification-heads/deam/deam-msd-musicnn-2.json",
+      "license_basis": "Official MTG model overview, not this JSON."
+    }
+  ],
+  "code_comparison": {
+    "code_comparison": [
+      {
+        "path": "_vendor/dora/__init__.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "0c69e4b6bcce125d8145d63af552a29931576efd3b8ce06f7c1c317bd22d4f28",
+        "current_sha256": "0c69e4b6bcce125d8145d63af552a29931576efd3b8ce06f7c1c317bd22d4f28"
+      },
+      {
+        "path": "_vendor/dora/log.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "1655d8223df11a7e81fd9ff2ea60dd3d06e582d6f6c9b20b19718e4a3ac43721",
+        "current_sha256": "1655d8223df11a7e81fd9ff2ea60dd3d06e582d6f6c9b20b19718e4a3ac43721"
+      },
+      {
+        "path": "benchmark_semantics.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "7a0032eaff1dd55acebcadc449c502f6d95450f1b01c18e6614dec517d27913c",
+        "current_sha256": "7a0032eaff1dd55acebcadc449c502f6d95450f1b01c18e6614dec517d27913c"
+      },
+      {
+        "path": "doctor.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "b802db61075f5af7b3197a07ddbb06d91c71a139a2143daf869f1bd42b57f414",
+        "current_sha256": "b802db61075f5af7b3197a07ddbb06d91c71a139a2143daf869f1bd42b57f414"
+      },
+      {
+        "path": "download_models.py",
+        "bytes_identical": false,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "db5194c5949925cf3879c75fff3cc1b4e7b2b77e25615a0a97bf9d39c6fca1cf",
+        "current_sha256": "2af109523173a73523f107f46e7720f48414cb8a872c9b3d95fe3b66b9a5590b"
+      },
+      {
+        "path": "evaluate_samples.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "ac1f1ab3834694c73fe5566dc3f92c8ce37408c2f181a355ce4418afa4fd0dc0",
+        "current_sha256": "ac1f1ab3834694c73fe5566dc3f92c8ce37408c2f181a355ce4418afa4fd0dc0"
+      },
+      {
+        "path": "fetch_test_samples.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "d21c4c7ab83ae578882e27afda5b2784d8feba6a7a5b2473295b126a4c0646ba",
+        "current_sha256": "d21c4c7ab83ae578882e27afda5b2784d8feba6a7a5b2473295b126a4c0646ba"
+      },
+      {
+        "path": "music_gate.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "b5ea671e0544420ea68c1aeeeda394c4574202b26bd9f1bc0046035025f5a787",
+        "current_sha256": "b5ea671e0544420ea68c1aeeeda394c4574202b26bd9f1bc0046035025f5a787"
+      },
+      {
+        "path": "music_scribe.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "f47d46d61a79514dd836b70507aafbdef52196f655d251c3ef0aecb323709bb8",
+        "current_sha256": "f47d46d61a79514dd836b70507aafbdef52196f655d251c3ef0aecb323709bb8"
+      },
+      {
+        "path": "music_semantics.py",
+        "bytes_identical": false,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "e048d739c1fab84086c22f41a996e554c939d473c7b525ca89628ae1c9c6923a",
+        "current_sha256": "e7c1e3fae164e97b7e9af73db61b76656b41795484ba2d25cf31aa1a47bde9e2"
+      },
+      {
+        "path": "selftest.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "403cb713effdc7cdde3c283c624e70a3ff3020c1fc3fda85401bd71802403f86",
+        "current_sha256": "403cb713effdc7cdde3c283c624e70a3ff3020c1fc3fda85401bd71802403f86"
+      },
+      {
+        "path": "semantic_frontend.py",
+        "bytes_identical": false,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "60c530d15f0b12194187f9dfa401241819241209966fdbff798f364186f47b15",
+        "current_sha256": "7216f234dc8e18dacea90bc3e64ae17dc44029d084a5031bfd3d6949268f4a1f"
+      },
+      {
+        "path": "split_stems.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "132192501a3d1f22da52675534bc73dbb3913ae7befa9936f37b394554ae008f",
+        "current_sha256": "132192501a3d1f22da52675534bc73dbb3913ae7befa9936f37b394554ae008f"
+      },
+      {
+        "path": "test_correctness.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "6433a1177a389990a83315a7708f479cac2296f7eb6abcd5a074df84a7dfdcd5",
+        "current_sha256": "6433a1177a389990a83315a7708f479cac2296f7eb6abcd5a074df84a7dfdcd5"
+      },
+      {
+        "path": "test_download_models.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "a3efab603c2b38fff225554b1918d799cd8484f8d1644cfb69a44e2b9e256a25",
+        "current_sha256": "a3efab603c2b38fff225554b1918d799cd8484f8d1644cfb69a44e2b9e256a25"
+      },
+      {
+        "path": "test_gate.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "a20cba1e55e500120202a2a42bbde5db27cfd5fc4ebc04ccc6bfec56ca2a3cde",
+        "current_sha256": "a20cba1e55e500120202a2a42bbde5db27cfd5fc4ebc04ccc6bfec56ca2a3cde"
+      },
+      {
+        "path": "test_semantics.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "c74533e005165abe923b51e0504c15325adc012ea73b7de62261a3cf0361646f",
+        "current_sha256": "c74533e005165abe923b51e0504c15325adc012ea73b7de62261a3cf0361646f"
+      },
+      {
+        "path": "validate.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "42aedecb21fce0d80db2b52de3dcc289f2eaba8e248922303aabc06f6c42d83d",
+        "current_sha256": "42aedecb21fce0d80db2b52de3dcc289f2eaba8e248922303aabc06f6c42d83d"
+      },
+      {
+        "path": "validate_frontend_reference.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "7f5b410a31bd1d00c4812e0e3ae6004a712432c746e3f1dfc9b0864304cab925",
+        "current_sha256": "7f5b410a31bd1d00c4812e0e3ae6004a712432c746e3f1dfc9b0864304cab925"
+      },
+      {
+        "path": "validate_gate.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "0036996b25efefe2f35135e4a87a4a079e1c4d308a808923fae0358e1509f6a7",
+        "current_sha256": "0036996b25efefe2f35135e4a87a4a079e1c4d308a808923fae0358e1509f6a7"
+      },
+      {
+        "path": "verify_musicxml.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "30b6e26e740eb8c55ad02fd76f9840e888c5ea7124b4082bbf04d2f800e36e92",
+        "current_sha256": "30b6e26e740eb8c55ad02fd76f9840e888c5ea7124b4082bbf04d2f800e36e92"
+      },
+      {
+        "path": "verify_output.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "3d063fbd100ec8e3819b64ffd36db2e253d0e0e8433b2173e2fc862ea1c10eb4",
+        "current_sha256": "3d063fbd100ec8e3819b64ffd36db2e253d0e0e8433b2173e2fc862ea1c10eb4"
+      },
+      {
+        "path": "verify_semantics.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "dc948eccca16b70baa5e47269fea2b817e14c6446ffa89766ad9a34c69664209",
+        "current_sha256": "dc948eccca16b70baa5e47269fea2b817e14c6446ffa89766ad9a34c69664209"
+      },
+      {
+        "path": "verify_source.py",
+        "bytes_identical": true,
+        "normalized_ast_identical": true,
+        "normalization": "Ignore docstrings; ignore downloader CONFLICT assignment only.",
+        "previous_sha256": "d1d07ba4defd980cc4506f3b73c862dbf6decc737ec5d8635032cc2cc86768aa",
+        "current_sha256": "d1d07ba4defd980cc4506f3b73c862dbf6decc737ec5d8635032cc2cc86768aa"
+      }
+    ],
+    "selected_upstream_ast_check": {
+      "method": "Exact function AST match after docstring removal, at least 30 AST nodes. Not a global plagiarism or provenance proof; different names or modified code can evade this check.",
+      "sources": [
+        {
+          "package": "basic-pitch",
+          "version": "0.4.0",
+          "path": "basic_pitch/inference.py",
+          "sha256": "b2dd343a318b85ee91c6d660eae2f48d7e39a8678d82575ab606c1c3617a6269",
+          "functions_checked": 12
+        },
+        {
+          "package": "basic-pitch",
+          "version": "0.4.0",
+          "path": "basic_pitch/note_creation.py",
+          "sha256": "9c813509acf57ed9b902d2b9fcd9f8118b2c5ffe568a06df9cfa60f5c5ee2572",
+          "functions_checked": 11
+        },
+        {
+          "package": "librosa",
+          "version": "0.11.0",
+          "path": "librosa/feature/spectral.py",
+          "sha256": "cd6f6a0304eab5697f78677daa456684c85f0f31fb80eac9d76c434c26a6c314",
+          "functions_checked": 15
+        },
+        {
+          "package": "music21",
+          "version": "9.9.2",
+          "path": "music21/analysis/discrete.py",
+          "sha256": "a57826a11317ab0b322f98fda6287611f03442f0161f44bd9960fc526e585cb3",
+          "functions_checked": 41
+        }
+      ],
+      "exact_matches": []
+    }
+  },
+  "retained_notice_copies": [
+    {
+      "file": "THIRD_PARTY_LICENSES/music21-BSD.txt",
+      "package": "music21",
+      "package_version": "9.9.2",
+      "package_relative_path": "music21/LICENSE",
+      "bytes": 2625,
+      "sha256": "8237252231dcfc495feccc28ba106161e434cfbe257235b1467f26a5e158c781",
+      "method": "verbatim bytes from installed official package; not source/binary redistribution"
+    },
+    {
+      "file": "THIRD_PARTY_LICENSES/Basic-Pitch-Apache-2.0.txt",
+      "package": "basic-pitch",
+      "package_version": "0.4.0",
+      "package_relative_path": "basic_pitch-0.4.0.dist-info/LICENSE",
+      "bytes": 11384,
+      "sha256": "929c910bae2152fa87199a5d0660e09263419b7eee6d4b301d05ee2aaf211c37",
+      "method": "verbatim bytes from installed official package; not source/binary redistribution"
+    },
+    {
+      "file": "THIRD_PARTY_LICENSES/Basic-Pitch-NOTICE.txt",
+      "package": "basic-pitch",
+      "package_version": "0.4.0",
+      "package_relative_path": "basic_pitch-0.4.0.dist-info/NOTICE",
+      "bytes": 1034,
+      "sha256": "b810e55c0e3b520fabb45fc2ccc74880187bf84e309971968541cc812dcde905",
+      "method": "verbatim bytes from installed official package; not source/binary redistribution"
+    }
+  ],
+  "baseline_code_inventory": [
+    {
+      "path": "_vendor/dora/__init__.py",
+      "lines": 11,
+      "sha256": "0c69e4b6bcce125d8145d63af552a29931576efd3b8ce06f7c1c317bd22d4f28",
+      "imports": [],
+      "functions": []
+    },
+    {
+      "path": "_vendor/dora/log.py",
+      "lines": 29,
+      "sha256": "1655d8223df11a7e81fd9ff2ea60dd3d06e582d6f6c9b20b19718e4a3ac43721",
+      "imports": [
+        "sys"
+      ],
+      "functions": [
+        "bold",
+        "fatal",
+        "__init__",
+        "__call__",
+        "update",
+        "close"
+      ]
+    },
+    {
+      "path": "benchmark_semantics.py",
+      "lines": 68,
+      "sha256": "7a0032eaff1dd55acebcadc449c502f6d95450f1b01c18e6614dec517d27913c",
+      "imports": [
+        "argparse",
+        "importlib.metadata",
+        "json",
+        "music_semantics",
+        "os",
+        "pathlib",
+        "socket",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "functions": [
+        "main",
+        "denied"
+      ]
+    },
+    {
+      "path": "doctor.py",
+      "lines": 26,
+      "sha256": "b802db61075f5af7b3197a07ddbb06d91c71a139a2143daf869f1bd42b57f414",
+      "imports": [
+        "argparse",
+        "importlib.metadata",
+        "json",
+        "platform",
+        "sys"
+      ],
+      "functions": [
+        "main"
+      ]
+    },
+    {
+      "path": "download_models.py",
+      "lines": 193,
+      "sha256": "db5194c5949925cf3879c75fff3cc1b4e7b2b77e25615a0a97bf9d39c6fca1cf",
+      "imports": [
+        "argparse",
+        "hashlib",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "sys",
+        "tempfile",
+        "urllib.request"
+      ],
+      "functions": [
+        "sha256",
+        "target_path",
+        "matches",
+        "selected",
+        "show_licenses",
+        "check_store",
+        "write_verified_bytes",
+        "download_one",
+        "acquire",
+        "main"
+      ]
+    },
+    {
+      "path": "evaluate_samples.py",
+      "lines": 42,
+      "sha256": "ac1f1ab3834694c73fe5566dc3f92c8ce37408c2f181a355ce4418afa4fd0dc0",
+      "imports": [
+        "argparse",
+        "json",
+        "music_semantics",
+        "pathlib",
+        "socket",
+        "sys"
+      ],
+      "functions": [
+        "main",
+        "denied"
+      ]
+    },
+    {
+      "path": "fetch_test_samples.py",
+      "lines": 28,
+      "sha256": "d21c4c7ab83ae578882e27afda5b2784d8feba6a7a5b2473295b126a4c0646ba",
+      "imports": [
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib",
+        "urllib.request"
+      ],
+      "functions": [
+        "main"
+      ]
+    },
+    {
+      "path": "music_gate.py",
+      "lines": 98,
+      "sha256": "b5ea671e0544420ea68c1aeeeda394c4574202b26bd9f1bc0046035025f5a787",
+      "imports": [
+        "numpy"
+      ],
+      "functions": [
+        "infer",
+        "validate",
+        "music_mask",
+        "overlap_weights",
+        "context_mask",
+        "describe",
+        "coarse_evidence"
+      ]
+    },
+    {
+      "path": "music_scribe.py",
+      "lines": 1347,
+      "sha256": "f47d46d61a79514dd836b70507aafbdef52196f655d251c3ef0aecb323709bb8",
+      "imports": [
+        "__future__",
+        "argparse",
+        "basic_pitch",
+        "basic_pitch.inference",
+        "functools",
+        "hashlib",
+        "html",
+        "imageio_ffmpeg",
+        "importlib.metadata",
+        "json",
+        "librosa",
+        "math",
+        "music21",
+        "music_semantics",
+        "numpy",
+        "os",
+        "pathlib",
+        "pretty_midi",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "time",
+        "verovio",
+        "warnings"
+      ],
+      "functions": [
+        "key_label",
+        "key_record",
+        "bar_seconds",
+        "bar_spans",
+        "has_scores",
+        "select_key",
+        "_pearson",
+        "key_table",
+        "z24",
+        "key_fifths",
+        "key_conflict",
+        "fuse",
+        "chord_segments",
+        "diatonic",
+        "functional_scores",
+        "roman",
+        "confidence",
+        "key_stability",
+        "load_audio",
+        "ensure_decodable",
+        "chroma_profile",
+        "estimate_tempo",
+        "transcribe",
+        "merge_events",
+        "events_to_midi",
+        "run_separation",
+        "pc_hist",
+        "bass_hist",
+        "window_keys",
+        "segments",
+        "quantize",
+        "_staff_metrics",
+        "detect_staves",
+        "resolve_staves",
+        "split_voices",
+        "group_onsets",
+        "duration_lanes",
+        "build_score",
+        "render_svg",
+        "svg_timeline",
+        "svg_density",
+        "key_grid",
+        "file_fingerprint",
+        "write_json",
+        "pitch_spellings",
+        "describe_chords",
+        "evaluate_decision",
+        "score_counts",
+        "make_summary",
+        "render_report",
+        "query_main",
+        "main",
+        "quality"
+      ]
+    },
+    {
+      "path": "music_semantics.py",
+      "lines": 524,
+      "sha256": "e048d739c1fab84086c22f41a996e554c939d473c7b525ca89628ae1c9c6923a",
+      "imports": [
+        "__future__",
+        "ctypes",
+        "hashlib",
+        "html",
+        "imageio_ffmpeg",
+        "json",
+        "music_gate",
+        "numpy",
+        "onnxruntime",
+        "os",
+        "pathlib",
+        "resource",
+        "semantic_frontend",
+        "soundfile",
+        "soxr",
+        "subprocess",
+        "tempfile",
+        "time",
+        "zipfile"
+      ],
+      "functions": [
+        "sha",
+        "fingerprint",
+        "write_json",
+        "memory",
+        "decode",
+        "default_models_dir",
+        "verify_models",
+        "cells",
+        "infer_audio",
+        "validate_arrays",
+        "cache_key",
+        "read_cache",
+        "save_cache",
+        "weighted",
+        "top",
+        "describe",
+        "summary_text",
+        "unavailable",
+        "analyze",
+        "compact",
+        "render_html",
+        "query",
+        "__init__",
+        "session",
+        "run",
+        "labels"
+      ]
+    },
+    {
+      "path": "selftest.py",
+      "lines": 221,
+      "sha256": "403cb713effdc7cdde3c283c624e70a3ff3020c1fc3fda85401bd71802403f86",
+      "imports": [
+        "argparse",
+        "json",
+        "librosa",
+        "music21",
+        "music_scribe",
+        "numpy",
+        "pathlib",
+        "soundfile",
+        "sys",
+        "tempfile",
+        "xml.etree.ElementTree"
+      ],
+      "functions": [
+        "tone",
+        "midi_f",
+        "make_piece",
+        "analyse",
+        "make_modulating_piece",
+        "test_modulation",
+        "main"
+      ]
+    },
+    {
+      "path": "semantic_frontend.py",
+      "lines": 90,
+      "sha256": "60c530d15f0b12194187f9dfa401241819241209966fdbff798f364186f47b15",
+      "imports": [
+        "functools",
+        "numpy",
+        "scipy.fft"
+      ],
+      "functions": [
+        "mel_filters",
+        "frame_features",
+        "audio_frames",
+        "audio_features",
+        "patches"
+      ]
+    },
+    {
+      "path": "split_stems.py",
+      "lines": 101,
+      "sha256": "132192501a3d1f22da52675534bc73dbb3913ae7befa9936f37b394554ae008f",
+      "imports": [
+        "argparse",
+        "demucs.apply",
+        "demucs.pretrained",
+        "librosa",
+        "numpy",
+        "os",
+        "pathlib",
+        "soundfile",
+        "sys",
+        "torch"
+      ],
+      "functions": [
+        "_load_torch",
+        "separate",
+        "main",
+        "offline_download"
+      ]
+    },
+    {
+      "path": "test_correctness.py",
+      "lines": 241,
+      "sha256": "6433a1177a389990a83315a7708f479cac2296f7eb6abcd5a074df84a7dfdcd5",
+      "imports": [
+        "collections",
+        "contextlib",
+        "io",
+        "json",
+        "math",
+        "music21",
+        "music_scribe",
+        "numpy",
+        "os",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "unittest",
+        "verify_musicxml",
+        "xml.etree.ElementTree"
+      ],
+      "functions": [
+        "test_meter_denominators_and_bpm_contract",
+        "test_bar_spans_exact_coverage_with_manual_origin",
+        "test_no_evidence_is_not_c_major_or_stable",
+        "test_uninformative_path_excluded",
+        "test_majority_safeguard_and_relative_key_exception",
+        "test_safeguard_reference_is_final_decision",
+        "test_decision_status_not_probability",
+        "test_all_chromatic_roman_degrees_in_c",
+        "test_enharmonic_keys_have_conventional_signature",
+        "test_chord_unknown_spans_and_ids_retained",
+        "test_seventh_gate_not_relaxed",
+        "test_repeated_one_pitch_not_harmony",
+        "test_roman_uses_local_segment_and_marks_boundary",
+        "test_merge_across_bin_boundary",
+        "test_merge_does_not_chain_or_merge_different_pitches",
+        "test_origin_crop_is_explicit_and_long_duration_preserved",
+        "test_duration_lane_intervals_do_not_overlap",
+        "test_full_musicxml_roundtrip_preserves_independent_durations",
+        "test_full_no_six_note_cap_and_bflat_musicxml",
+        "test_polyphonic_cross_bar_ties_with_repeated_pitches",
+        "test_xml_verifier_rejects_unmatched_tie",
+        "test_six_eight_key_change_matches_seconds",
+        "test_split_pitch_reports_actual_clamped_value",
+        "test_query_overlap_limit_and_integrity",
+        "test_bad_arguments_fail_before_inference",
+        "table"
+      ]
+    },
+    {
+      "path": "test_download_models.py",
+      "lines": 120,
+      "sha256": "a3efab603c2b38fff225554b1918d799cd8484f8d1644cfb69a44e2b9e256a25",
+      "imports": [
+        "contextlib",
+        "download_models",
+        "hashlib",
+        "io",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest",
+        "unittest.mock",
+        "urllib.error"
+      ],
+      "functions": [
+        "__init__",
+        "geturl",
+        "setUp",
+        "acquire",
+        "leftovers",
+        "test_gate_selection_does_not_require_five_music_models",
+        "test_manifest_path_traversal_rejected",
+        "test_plain_http_source_rejected",
+        "test_verified_acquisition_includes_pinned_metadata",
+        "test_existing_valid_weight_makes_no_network_request",
+        "test_same_size_wrong_sha_rejected_and_temp_removed",
+        "test_truncated_stream_rejected",
+        "test_oversized_stream_rejected_without_unbounded_write",
+        "test_http_content_length_mismatch_rejected",
+        "test_https_redirect_downgrade_rejected",
+        "test_interrupted_read_cleans_only_own_partial",
+        "test_http_404_leaves_no_weight_or_partial",
+        "test_existing_corrupt_weight_not_implicitly_overwritten",
+        "test_failed_explicit_repair_preserves_previous_file",
+        "test_successful_explicit_repair_replaces_only_after_validation",
+        "test_bad_bundled_metadata_fails_before_transport",
+        "test_cli_refusal_does_not_create_destination",
+        "test_cli_eof_does_not_assume_confirmation",
+        "test_check_is_read_only_and_rejects_corruption",
+        "test_license_notice_exposes_conflict",
+        "no_network",
+        "fail",
+        "no_network",
+        "read"
+      ]
+    },
+    {
+      "path": "test_gate.py",
+      "lines": 107,
+      "sha256": "a20cba1e55e500120202a2a42bbde5db27cfd5fc4ebc04ccc6bfec56ca2a3cde",
+      "imports": [
+        "json",
+        "music_gate",
+        "music_semantics",
+        "numpy",
+        "pathlib",
+        "soundfile",
+        "tempfile",
+        "test_semantics",
+        "unittest",
+        "unittest.mock"
+      ],
+      "functions": [
+        "setUpClass",
+        "arrays",
+        "test_speech_blocks_all_music_descriptions",
+        "test_unknown_low_support_does_not_force_a_label",
+        "test_single_short_music_peak_cannot_unlock_classifier",
+        "test_speech_and_music_together_are_allowed_mixed",
+        "test_context_crossing_speech_is_excluded",
+        "test_non_music_files_only_load_gate_model",
+        "test_low_fine_score_falls_back_to_parent_without_leaf_label",
+        "test_conflicting_parent_evidence_prevents_fine_claim",
+        "test_unstable_leaf_falls_back_even_with_large_average",
+        "test_supported_consistent_leaf_can_remain_fine",
+        "test_purpose_category_cannot_be_promoted_to_genre",
+        "test_generic_fallback_is_not_an_invented_genre",
+        "test_gate_cache_corruption_and_missing_gate_rejected",
+        "test_semantic_rows_outside_music_cannot_contain_hidden_scores",
+        "test_gate_clock_covers_tail_without_treating_padded_only_frames_as_audio",
+        "test_query_in_speech_does_not_leak_whole_song_style"
+      ]
+    },
+    {
+      "path": "test_semantics.py",
+      "lines": 185,
+      "sha256": "c74533e005165abe923b51e0504c15325adc012ea73b7de62261a3cf0361646f",
+      "imports": [
+        "hashlib",
+        "json",
+        "librosa",
+        "music_semantics",
+        "numpy",
+        "pathlib",
+        "semantic_frontend",
+        "soundfile",
+        "tempfile",
+        "unittest",
+        "unittest.mock"
+      ],
+      "functions": [
+        "setUpClass",
+        "arrays",
+        "test_official_frontend_fixture",
+        "test_tail_frame_and_silence_preserve_time",
+        "test_patch_end_and_cell_cover_exact_duration",
+        "test_decoder_wav_flac_and_resampling",
+        "test_ffmpeg_fallback_uses_same_channel_mean",
+        "test_missing_models_unavailable",
+        "test_same_size_corrupt_weight_rejected_by_hash",
+        "test_silence_and_short_skip_all_inference",
+        "test_cache_roundtrip_and_corruption",
+        "test_invalid_cache_nan_wrong_shape_and_time_rejected",
+        "test_cache_key_changes_for_source_weights_code_frontend",
+        "test_aggregation_does_not_double_count_overlapping_windows",
+        "test_mood_theme_separation_and_parent_max",
+        "test_ambiguity_and_disagreement_not_erased",
+        "test_axes_order_and_out_of_range_not_clipped",
+        "test_short_window_and_inactive_support_no_claims",
+        "test_query_rejects_modified_evidence",
+        "test_input_invalid_nonfinite_rejected",
+        "test_query_rounding_tolerance_only_one_canonical_sample",
+        "test_compact_omits_global_patch_lists_without_mutation",
+        "test_session_cpu_and_bounded_thread_configuration",
+        "test_models_labels_pinned_in_manifest"
+      ]
+    },
+    {
+      "path": "validate.py",
+      "lines": 143,
+      "sha256": "42aedecb21fce0d80db2b52de3dcc289f2eaba8e248922303aabc06f6c42d83d",
+      "imports": [
+        "argparse",
+        "importlib.metadata",
+        "json",
+        "librosa",
+        "music_scribe",
+        "numpy",
+        "os",
+        "pathlib",
+        "platform",
+        "scipy.signal",
+        "selftest",
+        "soundfile",
+        "tempfile",
+        "time"
+      ],
+      "functions": [
+        "degrade",
+        "main"
+      ]
+    },
+    {
+      "path": "validate_frontend_reference.py",
+      "lines": 66,
+      "sha256": "7f5b410a31bd1d00c4812e0e3ae6004a712432c746e3f1dfc9b0864304cab925",
+      "imports": [
+        "argparse",
+        "json",
+        "music_semantics",
+        "numpy",
+        "os",
+        "pathlib",
+        "semantic_frontend",
+        "subprocess"
+      ],
+      "functions": [
+        "main",
+        "add"
+      ]
+    },
+    {
+      "path": "validate_gate.py",
+      "lines": 60,
+      "sha256": "0036996b25efefe2f35135e4a87a4a079e1c4d308a808923fae0358e1509f6a7",
+      "imports": [
+        "argparse",
+        "json",
+        "music_semantics",
+        "numpy",
+        "pathlib",
+        "scipy.fft"
+      ],
+      "functions": [
+        "reference_mel",
+        "validate"
+      ]
+    },
+    {
+      "path": "verify_musicxml.py",
+      "lines": 79,
+      "sha256": "30b6e26e740eb8c55ad02fd76f9840e888c5ea7124b4082bbf04d2f800e36e92",
+      "imports": [
+        "collections",
+        "fractions",
+        "json",
+        "pathlib",
+        "sys",
+        "xml.etree.ElementTree"
+      ],
+      "functions": [
+        "read_intervals"
+      ]
+    },
+    {
+      "path": "verify_output.py",
+      "lines": 72,
+      "sha256": "3d063fbd100ec8e3819b64ffd36db2e253d0e0e8433b2173e2fc862ea1c10eb4",
+      "imports": [
+        "argparse",
+        "collections",
+        "json",
+        "music_scribe",
+        "pathlib",
+        "verify_musicxml"
+      ],
+      "functions": [
+        "verify"
+      ]
+    },
+    {
+      "path": "verify_semantics.py",
+      "lines": 79,
+      "sha256": "dc948eccca16b70baa5e47269fea2b817e14c6446ffa89766ad9a34c69664209",
+      "imports": [
+        "argparse",
+        "json",
+        "music_semantics",
+        "numpy",
+        "pathlib"
+      ],
+      "functions": [
+        "verify"
+      ]
+    },
+    {
+      "path": "verify_source.py",
+      "lines": 26,
+      "sha256": "d1d07ba4defd980cc4506f3b73c862dbf6decc737ec5d8635032cc2cc86768aa",
+      "imports": [
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "functions": [
+        "main"
+      ]
+    }
+  ]
+}

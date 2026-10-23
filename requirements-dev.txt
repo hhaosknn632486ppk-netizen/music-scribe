@@ -1,0 +1,3 @@
+-r requirements-core.txt
+-r requirements-semantics.txt
+# Test runner is the Python standard-library unittest module.

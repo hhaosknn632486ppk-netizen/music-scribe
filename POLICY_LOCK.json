@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-10-23T06:35:05.826Z",
+  "scope": "License/source-evidence preparation only. Existing numerical policies and models unchanged; no replacement, new calibration or new held-out claim.",
+  "variant": "public-source-license-review-1",
+  "baseline_policy_lock_sha256": "bf59b257e1cd0303f8ad73e65bc63ebff224eb488c542d0c57541cb0090deb7e",
+  "gate_policy": {
+    "calibrated": false,
+    "music_score_min": 0.5,
+    "low_music_max": 0.1,
+    "minimum_music_run_seconds": 1,
+    "minimum_music_seconds": 3,
+    "context_music_ratio_min": 0.6,
+    "minimum_context_real_seconds": 0.48,
+    "mixed_music_ratio_below": 0.8,
+    "non_music_alternative_min": 0.2,
+    "scope": "Frozen on development examples only. AudioSet activations are not calibrated correctness probabilities."
+  },
+  "semantic_policy": {
+    "calibrated": false,
+    "fine_min_score": 0.55,
+    "fine_min_margin": 0.2,
+    "fine_min_time_consistency": 0.7,
+    "coarse_min_score": 0.1,
+    "coarse_strong_score": 0.15,
+    "coarse_margin": 0.04,
+    "yamnet_coarse_source_min": 0.2,
+    "mood_min_score": 0.1,
+    "voice_min_score": 0.65,
+    "scope": "Candidate display rules only. Not correctness probabilities or out-of-distribution detection."
+  },
+  "code": {
+    "music_scribe.py": {
+      "name": "music_scribe.py",
+      "bytes": 69856,
+      "sha256": "f47d46d61a79514dd836b70507aafbdef52196f655d251c3ef0aecb323709bb8"
+    },
+    "music_semantics.py": {
+      "name": "music_semantics.py",
+      "bytes": 36372,
+      "sha256": "e7c1e3fae164e97b7e9af73db61b76656b41795484ba2d25cf31aa1a47bde9e2"
+    },
+    "music_gate.py": {
+      "name": "music_gate.py",
+      "bytes": 6230,
+      "sha256": "b5ea671e0544420ea68c1aeeeda394c4574202b26bd9f1bc0046035025f5a787"
+    },
+    "semantic_frontend.py": {
+      "name": "semantic_frontend.py",
+      "bytes": 3733,
+      "sha256": "7216f234dc8e18dacea90bc3e64ae17dc44029d084a5031bfd3d6949268f4a1f"
+    }
+  },
+  "models": {
+    "name": "manifest.json",
+    "sha256": "0d36aba9bf663fea84b20233f5a4c0e4a2d8aebf2fe0cd96f237dee31f9176a9"
+  },
+  "previous_source_policy_lock_sha256": "8a46ea207bf235d7ea4b6ce8ed2c3d86584848f349b62e704414dafa279015d6"
+}

@@ -1,0 +1,216 @@
+{
+  "models": {
+    "effnet": {
+      "weights": {
+        "name": "discogs-effnet-bsdynamic-1.onnx",
+        "bytes": 18027718,
+        "sha256": "a280825b334797cf677939db8cd5762c0392aedd0ca6415dbc1cd083f045e43c"
+      },
+      "metadata": {
+        "name": "discogs-effnet-bsdynamic-1.json",
+        "bytes": 14986,
+        "sha256": "a2e85b2e7372d5f8e0f35bdd6aeae1139f101087d183d0b2fb60b0ea0f01a0ff"
+      },
+      "official_url": "https://essentia.upf.edu/models/feature-extractors/discogs-effnet/discogs-effnet-bsdynamic-1.onnx",
+      "metadata_url": "https://essentia.upf.edu/models/feature-extractors/discogs-effnet/discogs-effnet-bsdynamic-1.json",
+      "inputs": [
+        {
+          "name": "melspectrogram",
+          "shape": [
+            "batch_size",
+            128,
+            96
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "activations",
+          "shape": [
+            "batch_size",
+            400
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "embeddings",
+          "shape": [
+            "batch_size",
+            1280
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0"
+    },
+    "moodtheme": {
+      "weights": {
+        "name": "mtg_jamendo_moodtheme-discogs-effnet-1.onnx",
+        "bytes": 2739322,
+        "sha256": "7d6270acaa5f4bba4b115a0d6849aca05ed6bd153dcb6d9da4f6ab9f99ef10ff"
+      },
+      "metadata": {
+        "name": "mtg_jamendo_moodtheme-discogs-effnet-1.json",
+        "bytes": 3646,
+        "sha256": "d62cd90263e4d613fa7fcce7a831e339450394794af63685f96e065c1a896ab0"
+      },
+      "official_url": "https://essentia.upf.edu/models/classification-heads/mtg_jamendo_moodtheme/mtg_jamendo_moodtheme-discogs-effnet-1.onnx",
+      "metadata_url": "https://essentia.upf.edu/models/classification-heads/mtg_jamendo_moodtheme/mtg_jamendo_moodtheme-discogs-effnet-1.json",
+      "inputs": [
+        {
+          "name": "embeddings",
+          "shape": [
+            "unk__6",
+            1280
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "activations",
+          "shape": [
+            "unk__7",
+            56
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0"
+    },
+    "voice": {
+      "weights": {
+        "name": "voice_instrumental-discogs-effnet-1.onnx",
+        "bytes": 514114,
+        "sha256": "20155e4c439714b0c45c08644b73c8e12d9dccb173bd4ab9934bf1e5aee837ca"
+      },
+      "metadata": {
+        "name": "voice_instrumental-discogs-effnet-1.json",
+        "bytes": 2013,
+        "sha256": "43ac2c3b055dfaed20f6232e0f10636c287f1c5a6e5bd02c5585860031964c8f"
+      },
+      "official_url": "https://essentia.upf.edu/models/classification-heads/voice_instrumental/voice_instrumental-discogs-effnet-1.onnx",
+      "metadata_url": "https://essentia.upf.edu/models/classification-heads/voice_instrumental/voice_instrumental-discogs-effnet-1.json",
+      "inputs": [
+        {
+          "name": "embeddings",
+          "shape": [
+            "unk__6",
+            1280
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "activations",
+          "shape": [
+            "unk__7",
+            2
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0"
+    },
+    "musicnn": {
+      "weights": {
+        "name": "msd-musicnn-1.onnx",
+        "bytes": 3168334,
+        "sha256": "49668ffec47e52e94b96f45930bb46a28a1368d4bdfb5c05378fa834aca616e1"
+      },
+      "metadata": {
+        "name": "msd-musicnn-1.json",
+        "bytes": 3298,
+        "sha256": "24842b068b5c09dce033a0bcb41d450e4e469352b799e831ac7728c93bbfb6be"
+      },
+      "official_url": "https://essentia.upf.edu/models/autotagging/msd/msd-musicnn-1.onnx",
+      "metadata_url": "https://essentia.upf.edu/models/autotagging/msd/msd-musicnn-1.json",
+      "inputs": [
+        {
+          "name": "melspectrogram",
+          "shape": [
+            "unk__155",
+            187,
+            96
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "activations",
+          "shape": [
+            "unk__156",
+            50
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "embeddings",
+          "shape": [
+            "unk__157",
+            200
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0"
+    },
+    "deam": {
+      "weights": {
+        "name": "deam-msd-musicnn-2.onnx",
+        "bytes": 82032,
+        "sha256": "2cb8f33f188d73fcb651f7c065b049959166c7852f454a59c13e66fe2c092bde"
+      },
+      "metadata": {
+        "name": "deam-msd-musicnn-2.json",
+        "bytes": 2698,
+        "sha256": "079df8d538d093ba35c34b7fbee01ff2773c4469be5281520f55d585295a3c58"
+      },
+      "official_url": "https://essentia.upf.edu/models/classification-heads/deam/deam-msd-musicnn-2.onnx",
+      "metadata_url": "https://essentia.upf.edu/models/classification-heads/deam/deam-msd-musicnn-2.json",
+      "inputs": [
+        {
+          "name": "model/Placeholder:0",
+          "shape": [
+            "unk__6",
+            200
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model/Identity:0",
+          "shape": [
+            "unk__7",
+            2
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0"
+    },
+    "gate": {
+      "weights": {
+        "name": "yamnet_3s.onnx",
+        "bytes": 16109405,
+        "sha256": "47363761b27c34fe1f9da8177c40589e9714b422e129f3210be730338f8cf72c"
+      },
+      "metadata": {
+        "name": "yamnet_3s.json",
+        "bytes": 11334,
+        "sha256": "66e553cb71c7c4bf6fe04241e4b5d6bb4a47d48580d17871cad9e29e91e73094"
+      },
+      "official_url": "https://ftrg.zbox.filez.com/v2/delivery/data/95f00b0fc900458ba134f8b180b3f7a1/examples/yamnet/yamnet_3s.onnx",
+      "exporter": "Rockchip official rknn_model_zoo, not a Google-published ONNX",
+      "license": "Apache-2.0"
+    }
+  },
+  "total_weight_bytes": 40640925,
+  "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "provider": "MTG / UPF Essentia model repository",
+  "notice": "Voice filename is -1; official metadata version is 2. Both contents are pinned."
+}

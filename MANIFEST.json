@@ -1,0 +1,391 @@
+{
+  "variant": "github-source-1",
+  "scope": "Public source allowlist. Root .git metadata excluded from strict checks. No weights or real audio.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 77,
+      "sha256": "8118fe1c62a01a97bcd3f0d9812eadcb2aca08f3220741b32d600d210bcb9740"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 554,
+      "sha256": "23f369ba5a025dea717f742c95a18f2a6a7af4f0de7bc771bb3b77d9e84680b2"
+    },
+    {
+      "path": "ACCEPTANCE.md",
+      "bytes": 4356,
+      "sha256": "a4d7806f4f2a65a05a412e032cc86df8c30cdf2f2eab7d3d1492bc51a700d952"
+    },
+    {
+      "path": "AUTHORIZATION.md",
+      "bytes": 1012,
+      "sha256": "0465d41e829adfe5e3ae6323a11d287acc2cca3187adbb3de70c587a8cd797fa"
+    },
+    {
+      "path": "CHANGES.md",
+      "bytes": 3028,
+      "sha256": "1d6502d19bd1e59ae7a8e7c55817e6bc3bad5e82f56ee4e3f854fa7f8da43e7f"
+    },
+    {
+      "path": "DEPENDENCY_LICENSES.json",
+      "bytes": 50808,
+      "sha256": "c81591ef2be178a83872f20b5096c89140a256b787ffa7c929cb9e5453bac731"
+    },
+    {
+      "path": "FILE_LIST.md",
+      "bytes": 2347,
+      "sha256": "0ee40f487d7ee0c8a86b8a55b3105cfd694b6727b1b2fde1e057fdac40f6a711"
+    },
+    {
+      "path": "FRONTEND_VALIDATION.json",
+      "bytes": 5759,
+      "sha256": "36664a0121aa23c3f7521aee1b3594897cc4c73ee6413e16288729167efe0455"
+    },
+    {
+      "path": "GITHUB_PUBLICATION.md",
+      "bytes": 2241,
+      "sha256": "85f2f6ab42cb0ca24f0bc18b72ee7c969f57d20315ff2d792918eb1ae2bcad4c"
+    },
+    {
+      "path": "INSTALL.md",
+      "bytes": 3653,
+      "sha256": "2d2e579e3cb4737073638c5291ce8d91c03d64236ccc02cdb564236e21516b02"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 34523,
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    },
+    {
+      "path": "LICENSE_REVIEW_ACCEPTANCE.json",
+      "bytes": 4576,
+      "sha256": "7c54abaae91717419e14270e4ec0d0eb1c083cdfa1565910439d87abe0ba2e63"
+    },
+    {
+      "path": "LICENSE_REVIEW_ACCEPTANCE.md",
+      "bytes": 4118,
+      "sha256": "37a6d7e73000cbec87482e201ce23182b5b15f5c75a6cd0326f3b55ede4383ac"
+    },
+    {
+      "path": "LICENSE_SCOPE.md",
+      "bytes": 3405,
+      "sha256": "b2f56c6b5ba5e0a7f3ad7194a8926a5bbde7668904359c99f3d6b4b9279df0eb"
+    },
+    {
+      "path": "LICENSE_STATUS.md",
+      "bytes": 4121,
+      "sha256": "fe6c6029448dc5199762876bdfa803e87fd3e9aa70dd86bd20c41f725f57f905"
+    },
+    {
+      "path": "LLM_INTEGRATION.md",
+      "bytes": 1400,
+      "sha256": "be43d86806abcd1d6cbfcf41b13cc01a70cf6115218a002ffca777b7e050e190"
+    },
+    {
+      "path": "MODEL_LICENSES.md",
+      "bytes": 3032,
+      "sha256": "b4535c8984cd632b0b6dd71c682c376331ca799a32a78c05215de613dea44f60"
+    },
+    {
+      "path": "POLICY_LOCK.json",
+      "bytes": 2180,
+      "sha256": "14de8c38c6b7d75a049c9e9d201b4188251e1183ff26eca7b8a172145b263967"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8335,
+      "sha256": "295e9ea06aac4fd9d267aabc8e243f6c51cf7847fff526f44975a3a538fd69c3"
+    },
+    {
+      "path": "SOURCE_AUDIT.json",
+      "bytes": 36692,
+      "sha256": "eff79469559df54c35ced5c0c24e05df64f14f3ea8c4085c9481929cd1c5aac7"
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "bytes": 7628,
+      "sha256": "19b66daa57ab2fe9473e108ccd2a71a3f46330e195d874b6229915b0bb07bfe7"
+    },
+    {
+      "path": "SOURCE_PROVENANCE.json",
+      "bytes": 12387,
+      "sha256": "938f9ec57f92d908c08478c93bfcaa429d4c2fae57a2586c9c43190eedcfb33f"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/Basic-Pitch-Apache-2.0.txt",
+      "bytes": 11384,
+      "sha256": "929c910bae2152fa87199a5d0660e09263419b7eee6d4b301d05ee2aaf211c37"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/Basic-Pitch-NOTICE.txt",
+      "bytes": 1034,
+      "sha256": "b810e55c0e3b520fabb45fc2ccc74880187bf84e309971968541cc812dcde905"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/README.md",
+      "bytes": 1012,
+      "sha256": "9092b4f81c27c18fba7d6d680beddfa51aba45adb08854ce26db5527e73a8293"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/dora-MIT.txt",
+      "bytes": 1084,
+      "sha256": "55a2428c9ce7748b3389df9505f92f3fabe0329fa4e46469269c968c52e2e97d"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/music21-BSD.txt",
+      "bytes": 2625,
+      "sha256": "8237252231dcfc495feccc28ba106161e434cfbe257235b1467f26a5e158c781"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 6825,
+      "sha256": "5c3c9e874ba80c887fbfaced8b4277add17d93d9e8105c216acaf4e078804df4"
+    },
+    {
+      "path": "_vendor/dora/__init__.py",
+      "bytes": 471,
+      "sha256": "0c69e4b6bcce125d8145d63af552a29931576efd3b8ce06f7c1c317bd22d4f28"
+    },
+    {
+      "path": "_vendor/dora/log.py",
+      "bytes": 573,
+      "sha256": "1655d8223df11a7e81fd9ff2ea60dd3d06e582d6f6c9b20b19718e4a3ac43721"
+    },
+    {
+      "path": "benchmark_semantics.py",
+      "bytes": 4068,
+      "sha256": "7a0032eaff1dd55acebcadc449c502f6d95450f1b01c18e6614dec517d27913c"
+    },
+    {
+      "path": "doctor.py",
+      "bytes": 1534,
+      "sha256": "b802db61075f5af7b3197a07ddbb06d91c71a139a2143daf869f1bd42b57f414"
+    },
+    {
+      "path": "download_models.py",
+      "bytes": 9541,
+      "sha256": "2af109523173a73523f107f46e7720f48414cb8a872c9b3d95fe3b66b9a5590b"
+    },
+    {
+      "path": "evaluate_samples.py",
+      "bytes": 2938,
+      "sha256": "ac1f1ab3834694c73fe5566dc3f92c8ce37408c2f181a355ce4418afa4fd0dc0"
+    },
+    {
+      "path": "fetch_test_samples.py",
+      "bytes": 1447,
+      "sha256": "d21c4c7ab83ae578882e27afda5b2784d8feba6a7a5b2473295b126a4c0646ba"
+    },
+    {
+      "path": "models/LICENSE-RKNN.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "models/LICENSE-YAMNET.txt",
+      "bytes": 11512,
+      "sha256": "5b17814bf0de8cf65069bc6d7cc38cff19fcaa864d243423ad3ef3db01b52385"
+    },
+    {
+      "path": "models/LICENSE.txt",
+      "bytes": 69392,
+      "sha256": "f0c076094cc08acb265ea3304ec522cf331917d19bdd271ed69f10ef174f3ea4"
+    },
+    {
+      "path": "models/deam-msd-musicnn-2.json",
+      "bytes": 2698,
+      "sha256": "079df8d538d093ba35c34b7fbee01ff2773c4469be5281520f55d585295a3c58"
+    },
+    {
+      "path": "models/discogs-effnet-bsdynamic-1.json",
+      "bytes": 14986,
+      "sha256": "a2e85b2e7372d5f8e0f35bdd6aeae1139f101087d183d0b2fb60b0ea0f01a0ff"
+    },
+    {
+      "path": "models/manifest.json",
+      "bytes": 6737,
+      "sha256": "0d36aba9bf663fea84b20233f5a4c0e4a2d8aebf2fe0cd96f237dee31f9176a9"
+    },
+    {
+      "path": "models/msd-musicnn-1.json",
+      "bytes": 3298,
+      "sha256": "24842b068b5c09dce033a0bcb41d450e4e469352b799e831ac7728c93bbfb6be"
+    },
+    {
+      "path": "models/mtg_jamendo_moodtheme-discogs-effnet-1.json",
+      "bytes": 3646,
+      "sha256": "d62cd90263e4d613fa7fcce7a831e339450394794af63685f96e065c1a896ab0"
+    },
+    {
+      "path": "models/voice_instrumental-discogs-effnet-1.json",
+      "bytes": 2013,
+      "sha256": "43ac2c3b055dfaed20f6232e0f10636c287f1c5a6e5bd02c5585860031964c8f"
+    },
+    {
+      "path": "models/yamnet_3s.json",
+      "bytes": 11334,
+      "sha256": "66e553cb71c7c4bf6fe04241e4b5d6bb4a47d48580d17871cad9e29e91e73094"
+    },
+    {
+      "path": "models/yamnet_class_map.csv",
+      "bytes": 14096,
+      "sha256": "cdf24d193e196d9e95912a2667051ae203e92a2ba09449218ccb40ef787c6df2"
+    },
+    {
+      "path": "models/yamnet_class_map.txt",
+      "bytes": 8203,
+      "sha256": "108826ee87f1c9ef2c907e73dadfb9444141fda2069f742b568bd3a93c71da1d"
+    },
+    {
+      "path": "music_gate.py",
+      "bytes": 6230,
+      "sha256": "b5ea671e0544420ea68c1aeeeda394c4574202b26bd9f1bc0046035025f5a787"
+    },
+    {
+      "path": "music_scribe.cmd",
+      "bytes": 449,
+      "sha256": "b6a18da75fdc70a2a778d1375e456d21b96f8d963a5551961589c9d9e9bf349b"
+    },
+    {
+      "path": "music_scribe.py",
+      "bytes": 69856,
+      "sha256": "f47d46d61a79514dd836b70507aafbdef52196f655d251c3ef0aecb323709bb8"
+    },
+    {
+      "path": "music_scribe_cli.cmd",
+      "bytes": 365,
+      "sha256": "bbe82e54de3dff48870a48c93abf631d4847d94fcb72d574550220d4267ae438"
+    },
+    {
+      "path": "music_scribe_sep.cmd",
+      "bytes": 546,
+      "sha256": "016c92fb4c041c4440548200c15cbd522b3334aeaafb8136f31f3f865670e7f8"
+    },
+    {
+      "path": "music_semantics.cmd",
+      "bytes": 458,
+      "sha256": "17cf9b38c061e5b01aa70f57a32ac7760af9735c10263eb2a48c46ac872ebfc3"
+    },
+    {
+      "path": "music_semantics.py",
+      "bytes": 36372,
+      "sha256": "e7c1e3fae164e97b7e9af73db61b76656b41795484ba2d25cf31aa1a47bde9e2"
+    },
+    {
+      "path": "requirements-core.txt",
+      "bytes": 353,
+      "sha256": "904fa044bf6b4e78018be26e696a6465bdd50eb5480f199d95a0f3176cece471"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 117,
+      "sha256": "2a49d5f0c113dc553d57c2191d00628dbd26af9282ce32719b9a8721f2523f7a"
+    },
+    {
+      "path": "requirements-lock-windows-py310.txt",
+      "bytes": 1128,
+      "sha256": "8a3f7d205e8da11d39806ebaa94cffddfdd2a481fbeee31ea9c258c810ab0990"
+    },
+    {
+      "path": "requirements-semantics.txt",
+      "bytes": 170,
+      "sha256": "d302b579d6eb73d4737656f6763149d82850413c2fd9843debdd6dd6bcd7ce34"
+    },
+    {
+      "path": "requirements-separation.txt",
+      "bytes": 161,
+      "sha256": "80f00c6f0518c88149fafdaa028a20c53470f1ab076cf44ecbd576ee74867baa"
+    },
+    {
+      "path": "samples/README.md",
+      "bytes": 1513,
+      "sha256": "def21faaba5e11ab4481d6535cfafda594edc2108cbb66fe446df32b5fbda1d5"
+    },
+    {
+      "path": "samples/SAMPLES.json",
+      "bytes": 2046,
+      "sha256": "66e7348b3f419ab9bea383725ee131bfe19875d52d060d6473984aacfd11441a"
+    },
+    {
+      "path": "selftest.py",
+      "bytes": 10157,
+      "sha256": "403cb713effdc7cdde3c283c624e70a3ff3020c1fc3fda85401bd71802403f86"
+    },
+    {
+      "path": "semantic_frontend.py",
+      "bytes": 3733,
+      "sha256": "7216f234dc8e18dacea90bc3e64ae17dc44029d084a5031bfd3d6949268f4a1f"
+    },
+    {
+      "path": "split_stems.py",
+      "bytes": 4030,
+      "sha256": "132192501a3d1f22da52675534bc73dbb3913ae7befa9936f37b394554ae008f"
+    },
+    {
+      "path": "test_correctness.py",
+      "bytes": 12530,
+      "sha256": "6433a1177a389990a83315a7708f479cac2296f7eb6abcd5a074df84a7dfdcd5"
+    },
+    {
+      "path": "test_download_models.py",
+      "bytes": 7516,
+      "sha256": "a3efab603c2b38fff225554b1918d799cd8484f8d1644cfb69a44e2b9e256a25"
+    },
+    {
+      "path": "test_gate.py",
+      "bytes": 6717,
+      "sha256": "a20cba1e55e500120202a2a42bbde5db27cfd5fc4ebc04ccc6bfec56ca2a3cde"
+    },
+    {
+      "path": "test_semantics.py",
+      "bytes": 11069,
+      "sha256": "c74533e005165abe923b51e0504c15325adc012ea73b7de62261a3cf0361646f"
+    },
+    {
+      "path": "tests/fixtures/frontend_fixture.npz",
+      "bytes": 56275,
+      "sha256": "83b65c858c0cc4ba447babf8ef27b49697f17d6202dcba0b097f34fd030cd916"
+    },
+    {
+      "path": "tools/reference_frontend.cjs",
+      "bytes": 1749,
+      "sha256": "8b42653667e9b503fa9cee921bac8a138fe08bbd872d81d5e9758fba8e3f440c"
+    },
+    {
+      "path": "validate.py",
+      "bytes": 7913,
+      "sha256": "42aedecb21fce0d80db2b52de3dcc289f2eaba8e248922303aabc06f6c42d83d"
+    },
+    {
+      "path": "validate_frontend_reference.py",
+      "bytes": 4179,
+      "sha256": "7f5b410a31bd1d00c4812e0e3ae6004a712432c746e3f1dfc9b0864304cab925"
+    },
+    {
+      "path": "validate_gate.py",
+      "bytes": 3590,
+      "sha256": "0036996b25efefe2f35135e4a87a4a079e1c4d308a808923fae0358e1509f6a7"
+    },
+    {
+      "path": "verify_musicxml.py",
+      "bytes": 3668,
+      "sha256": "30b6e26e740eb8c55ad02fd76f9840e888c5ea7124b4082bbf04d2f800e36e92"
+    },
+    {
+      "path": "verify_output.py",
+      "bytes": 4062,
+      "sha256": "3d063fbd100ec8e3819b64ffd36db2e253d0e0e8433b2173e2fc862ea1c10eb4"
+    },
+    {
+      "path": "verify_semantics.py",
+      "bytes": 5375,
+      "sha256": "dc948eccca16b70baa5e47269fea2b817e14c6446ffa89766ad9a34c69664209"
+    },
+    {
+      "path": "verify_source.py",
+      "bytes": 1617,
+      "sha256": "5855c982d072333c8f23568f4f1017718ca1aba7c5b3a154a92411847f4b1218"
+    }
+  ]
+}

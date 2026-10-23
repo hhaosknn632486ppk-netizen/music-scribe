@@ -1,0 +1,3 @@
+# Optional; not needed for transcription or local music semantics.
+# Install a matching torch/torchaudio pair for your CPU/GPU first (INSTALL.md).
+demucs==4.0.1
