@@ -29,3 +29,5 @@ completed 只表示执行完成，不表示谱面已验证。需要声称文件�
 如果只能聊天、不能执行本地命令，就明确说明这一点，请用户先在终端运行工具，再粘贴生成的 JSON。
 
 排版1.3.2：需要核对谱面时先运行 verify_output.py，再运行 verify_layout.py 结果目录/score.musicxml --check-staff-rests。前者检查音符区间，后者检查符杠和休止符规则；通过不代表识别正确或所有视觉碰撞消除。记谱和弦只合并同时起止的音，声部仍是机械分配；不能解释成辨认出了真实乐器或演奏声部。
+
+当前1.3.3追加升降号与延音线排版优化，不新增依赖。先用 verify_output.py 校验音符区间，再用 verify_layout.py 检查符杠/休止，最后执行 `verify_engraving.py 结果目录/score.musicxml` 重读可见升降号含义；通过不证明转录准确或无视觉碰撞。五组完整输入页数未增加，其他曲目不保证。验收和剩余拥挤见 ENGRAVING_ACCEPTANCE.md。旧报告由原生成版本校验。

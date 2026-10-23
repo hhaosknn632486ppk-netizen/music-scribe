@@ -84,3 +84,5 @@ doctor 检查环境，download_models --check 检查模型，verify_semantics �
 完整环境显式固定 setuptools==80.9.0，为 Basic Pitch 所依赖 resampy 0.4.2 提供 pkg_resources；仅 pip check 不足以发现这个导入兼容问题，doctor 会核对版本。本版在独立新环境完成 selftest 和真实文件复测，见 TIE_FIX_ACCEPTANCE.md；轻量 requirements-semantics.txt 不增加该依赖。
 
 1.3.2排版版沿用1.3.1全部运行依赖和六模型，完整107项、轻量44项回归通过。检查谱面时先运行 verify_output.py 对照音符区间，再运行 `verify_layout.py 结果目录/score.musicxml --check-staff-rests` 核对符杠结构和休止符显示规则。具体改善与分页代价见 LAYOUT_ACCEPTANCE.md。
+
+当前1.3.3追加升降号与延音线排版优化，不新增依赖。先用 verify_output.py 校验音符区间，再用 verify_layout.py 检查符杠/休止，最后执行 `verify_engraving.py 结果目录/score.musicxml` 重读可见升降号含义；通过不证明转录准确或无视觉碰撞。五组完整输入页数未增加，其他曲目不保证。验收和剩余拥挤见 ENGRAVING_ACCEPTANCE.md。旧报告由原生成版本校验。

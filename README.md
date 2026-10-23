@@ -1,8 +1,8 @@
 # music_scribe：本地转录、排谱与可选音乐语义
 
-这是转谱 1.3.2 的独立公开源码版本（github-source-4）。保留音符转录、调性/BPM/和弦、简化/完整MusicXML及SVG谱面、可选Demucs分轨、音乐门控、风格/情绪/人声倾向和连续效价/唤醒分析。没有替换模型、减少语义功能或调整分类规则。
+这是转谱 1.3.3 的独立公开源码版本（github-source-5）。保留音符转录、调性/BPM/和弦、简化/完整MusicXML及SVG谱面、可选Demucs分轨、音乐门控、风格/情绪/人声倾向和连续效价/唤醒分析。没有替换模型、减少语义功能或调整分类规则。
 
-**本版谱面更新：** 减少机械声部和辅助休止符拥挤，按实际拍内位置重建符杠；107项完整回归、44项轻量回归通过。新旧谱面、分页代价与限制见 [LAYOUT_ACCEPTANCE.md](LAYOUT_ACCEPTANCE.md)。
+**本版谱面更新：** 减少冗余升降号，按符杠组调整符干并固定延音链弧线侧；五组完整输入页数均未增加。117项完整回归、44项轻量回归通过。改善、局部退步与限制见 [ENGRAVING_ACCEPTANCE.md](ENGRAVING_ACCEPTANCE.md)。
 
 **第一次使用：按 [QUICKSTART.md](QUICKSTART.md) 从安装、下载模型到音乐/讲话示例完整跑一遍。** 给能执行本地命令的 AI 助手使用时，参考 [LLM_INTEGRATION.md](LLM_INTEGRATION.md) 与 [可复制的助手指令](examples/assistant_prompt.txt)。无需大模型 API 密钥；这不是自动注册的 MCP 服务或聊天网页插件。
 
@@ -70,17 +70,18 @@ python download_models.py --repair --models-dir 'D:\MusicModels\music_scribe'
 # 先使用已经下载且校验通过的完整六模型目录
 $env:MUSIC_SCRIBE_MODELS='D:\MusicModels\music_scribe'
 .\.venv\Scripts\python.exe -m unittest test_gate test_download_models test_llm_tool -v
-# test_semantics 含 librosa 对照，放在完整环境中运行；另含延音与排版回归，共107项
-.\.venv-core\Scripts\python.exe -m unittest test_correctness test_semantics test_gate test_download_models test_llm_tool test_ties test_layout -v
+# test_semantics 含 librosa 对照，放在完整环境中运行；另含延音与排版回归，共117项
+.\.venv-core\Scripts\python.exe -m unittest test_correctness test_semantics test_gate test_download_models test_llm_tool test_ties test_layout test_engraving -v
 .\.venv-core\Scripts\python.exe selftest.py
 .\.venv-core\Scripts\python.exe verify_output.py 'D:\Results\new_full'
 .\.venv-core\Scripts\python.exe verify_layout.py 'D:\Results\new_full\score.musicxml' --check-staff-rests
+.\.venv-core\Scripts\python.exe verify_engraving.py 'D:\Results\new_full\score.musicxml'
 .\.venv\Scripts\python.exe verify_semantics.py 'D:\Results\new_semantics' --models-dir 'D:\MusicModels\music_scribe'
 ```
 
 不含权重的核心测试与受控传输测试不访问网络。原始语义测试需要完整本地模型，不会自动下载或悄悄跳过。当前新用户安装和示例验收见 [NEW_USER_ACCEPTANCE.md](NEW_USER_ACCEPTANCE.md)，历史验收见 [ACCEPTANCE.md](ACCEPTANCE.md)；其中公开数值不能当成曲目级识别准确率。
 
-schema继续为music-scribe/1.1和music-semantics/1.1；转谱tool_version为1.3.2，未改动的语义分支仍为1.3.0，源码变体和文件配对另记在SOURCE_PROVENANCE.json、POLICY_LOCK.json及输出指纹。细风格证据不足退回粗类，非音乐或不确定输入拒绝风格/情绪；局部讲话查询不会借用整曲风格。调用规则见[LLM_INTEGRATION.md](LLM_INTEGRATION.md)。
+schema继续为music-scribe/1.1和music-semantics/1.1；转谱tool_version为1.3.3，未改动的语义分支仍为1.3.0，源码变体和文件配对另记在SOURCE_PROVENANCE.json、POLICY_LOCK.json及输出指纹。细风格证据不足退回粗类，非音乐或不确定输入拒绝风格/情绪；局部讲话查询不会借用整曲风格。调用规则见[LLM_INTEGRATION.md](LLM_INTEGRATION.md)。
 
 源码整理改变了语义模块指纹；旧1.3的语义报告请继续用原副本query，新副本不绕过代码配对校验。已有HTML仍可静态查看。改动范围见[CHANGES.md](CHANGES.md)。
 

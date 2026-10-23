@@ -42,7 +42,7 @@ if '--semantics' in sys.argv or '--semantics-only' in sys.argv:
 
 import numpy as np
 
-VERSION = "1.3.2"
+VERSION = "1.3.3"
 SCHEMA_VERSION = "music-scribe/1.1"
 TRANSCRIPTION_PARAMETERS = dict(onset_threshold=0.5, frame_threshold=0.3,
     minimum_note_length=90.0, minimum_frequency=27.5, maximum_frequency=4200.0,
@@ -972,6 +972,138 @@ def _beam_layout_measure(measure):
     measure.streamStatus.beams = True
 
 
+def _engrave_accidentals(part):
+    """Share bar accidental state across notation voices, not playback pitches.
+
+    Simultaneous conflicting alterations remain explicit. Tied continuations
+    do not silently establish an accidental for a later new attack.
+    """
+    from music21 import key, pitch, stream
+    key_alters = {}
+    for measure in part.getElementsByClass(stream.Measure):
+        signatures = list(measure.getElementsByClass(key.KeySignature))
+        if signatures:
+            key_alters = {p.step: float(p.accidental.alter) for p in signatures[-1].alteredPitches}
+        state, groups = {}, {}
+        for n in measure.recurse().notes:
+            onset = n.getOffsetInHierarchy(measure)
+            for component in n.notes if n.isChord else [n]:
+                p = component.pitch
+                groups.setdefault((onset, p.step, p.octave), []).append(component)
+        for (_, step, octave), members in sorted(groups.items()):
+            values = {float(n.pitch.accidental.alter) if n.pitch.accidental else 0. for n in members}
+            conflict = len(values) > 1
+            previous = state.get((step, octave), key_alters.get(step, 0.))
+            shown = set()
+            attacked = False
+            for n in members:
+                alteration = float(n.pitch.accidental.alter) if n.pitch.accidental else 0.
+                continuation = n.tie is not None and n.tie.type in ('stop', 'continue')
+                needed = conflict or (not continuation and alteration != previous and alteration not in shown)
+                if n.pitch.accidental is None:
+                    n.pitch.accidental = pitch.Accidental(0)
+                n.pitch.accidental.displayStatus = needed
+                if needed:
+                    shown.add(alteration)
+                attacked |= not continuation
+            if attacked:
+                state[step, octave] = None if conflict else next(iter(values))
+
+
+def _engrave_directions(part):
+    """Choose consistent beam-unit stems and persistent tie-chain sides.
+
+    Costs use actual simultaneous note positions. No event offsets, durations,
+    staff allocation, tie identities or pitches are changed.
+    """
+    from music21 import stream
+    all_notes, chains, active = [], [], {}
+    center = 35
+    for measure in part.getElementsByClass(stream.Measure):
+        notes = list(measure.recurse().notes)
+        positions = {id(n): float(n.getOffsetInHierarchy(measure)) for n in notes}
+        clefs = list(measure.getElementsByClass('Clef'))
+        if clefs:
+            center = 35 if clefs[-1].sign == 'G' else 23
+        note_heights = {id(n): [p.diatonicNoteNum for p in n.pitches] for n in notes}
+        def heights(n):
+            return note_heights[id(n)]
+        def direction(n):
+            if n.stemDirection in ('up', 'down'):
+                return n.stemDirection
+            return 'up' if float(np.median(heights(n))) < center else 'down'
+        units = []
+        for voice in measure.voices:
+            unit = []
+            for n in voice.notes:
+                role = n.beams.getByNumber(1).type if 1 in n.beams.getNumbers() else None
+                if role == 'start':
+                    unit = [n]
+                elif role in ('continue', 'stop') and unit:
+                    unit.append(n)
+                    if role == 'stop':
+                        units.append(unit)
+                        unit = []
+                else:
+                    units.append([n])
+        for _ in range(2):
+            for unit in units:
+                own = {id(n) for n in unit}
+                def cost(side):
+                    total = 0
+                    for n in unit:
+                        hs = heights(n)
+                        low, high = min(hs), max(hs)
+                        a, b = (low, high + 7) if side == 'up' else (low - 7, high)
+                        for other in notes:
+                            if id(other) in own or positions[id(other)] != positions[id(n)]:
+                                continue
+                            oh = heights(other)
+                            total += 10 * sum(a < h < b and h not in hs for h in oh)
+                            if direction(other) == side:
+                                c, d = ((min(oh), max(oh) + 7) if side == 'up' else (min(oh) - 7, max(oh)))
+                                if max(a, c) < min(b, d) and set(hs).isdisjoint(oh):
+                                    total += 2
+                    return total
+                current = direction(unit[0])
+                alternative = 'down' if current == 'up' else 'up'
+                if cost(alternative) < cost(current):
+                    for n in unit:
+                        n.stemDirection = alternative
+        for n in sorted(notes, key=lambda n: (positions[id(n)], n.editorial['notation_lane'])):
+            onset = float(measure.offset) + positions[id(n)]
+            for component in n.notes if n.isChord else [n]:
+                entry = dict(note=component, owner=n, onset=onset, end=onset + float(n.quarterLength),
+                             height=component.pitch.diatonicNoteNum, stem=direction(n))
+                all_notes.append(entry)
+                if component.tie is None:
+                    continue
+                k = (n.editorial['notation_lane'], component.pitch.midi)
+                if component.tie.type == 'start':
+                    active[k] = [entry]
+                elif k in active:
+                    active[k].append(entry)
+                    if component.tie.type == 'stop':
+                        chains.append(active.pop(k))
+    for chain in chains:
+        own = {id(e['note']) for e in chain}
+        first, last = chain[0], chain[-1]
+        def cost(side):
+            total = 0
+            for other in all_notes:
+                if id(other['note']) in own or other['onset'] > last['onset'] or other['end'] <= first['onset']:
+                    continue
+                delta = (other['height'] - first['height']) * (1 if side == 'above' else -1)
+                if 0 < delta <= 3:
+                    total += 4 - delta
+            return total
+        preferred = 'above' if first['stem'] == 'up' else 'below'
+        opposite = 'below' if preferred == 'above' else 'above'
+        placement = opposite if cost(opposite) < cost(preferred) else preferred
+        for entry in chain:
+            entry['note'].tie.placement = placement
+
+
 def write_score_musicxml(score, path):
     """Export prepared notation without changing tie-chain voice identities.
 
@@ -1021,6 +1153,8 @@ def write_score_musicxml(score, path):
     for part in prepared.parts:
         for measure in part.getElementsByClass(stream.Measure):
             _beam_layout_measure(measure)
+        _engrave_directions(part)
+        _engrave_accidentals(part)
         part.streamStatus.beams = True
     return prepared.write('musicxml', fp=str(path), makeNotation=False)
 

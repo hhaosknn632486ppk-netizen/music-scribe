@@ -1,3 +1,5 @@
+> 历史1.3.2排版记录。当前1.3.3验收见 [ENGRAVING_ACCEPTANCE.md](ENGRAVING_ACCEPTANCE.md)。
+
 # 五线谱排版优化与验收
 
 日期：2026-10-23。转谱 1.3.2，源码变体 github-source-4；对照 1.3.1 公开提交 834cbd4b8ace8557e85ac0bb80de7b9bd2a08343。独立副本开发，现有版本及本地完整版保留。

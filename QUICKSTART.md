@@ -140,3 +140,5 @@ Python：D:\Tools\music-scribe\.venv\Scripts\python.exe
 ## 谱面排版与检查
 
 1.3.2将同时起止的不同音高写成记谱和弦，辅助计时休止符可隐藏，真实谱表静默保留可见休止符，并重建拍内符杠。它不识别真实乐器声部；间距增加可能带来更多页。需要确认音符/时值保留，先用完整环境运行 `verify_output.py 结果目录`，再用 `verify_layout.py 结果目录/score.musicxml --check-staff-rests` 检查排版结构。验收与剩余限制见 LAYOUT_ACCEPTANCE.md。
+
+当前1.3.3追加升降号与延音线排版优化，不新增依赖。先用 verify_output.py 校验音符区间，再用 verify_layout.py 检查符杠/休止，最后执行 `verify_engraving.py 结果目录/score.musicxml` 重读可见升降号含义；通过不证明转录准确或无视觉碰撞。五组完整输入页数未增加，其他曲目不保证。验收和剩余拥挤见 ENGRAVING_ACCEPTANCE.md。旧报告由原生成版本校验。

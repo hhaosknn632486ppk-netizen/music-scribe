@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-23T06:35:05.826Z",
-  "scope": "Notation chord bundling, compact rest display, beat-based beam reconstruction and spacing; models, dependencies, transcription, quantization, gate and semantic policies unchanged.",
-  "variant": "github-source-4",
+  "scope": "Visible accidental state, beam-unit stem direction and tie-chain placement; audio, models, dependencies and semantic policies unchanged.",
+  "variant": "github-source-5",
   "baseline_policy_lock_sha256": "bf59b257e1cd0303f8ad73e65bc63ebff224eb488c542d0c57541cb0090deb7e",
   "gate_policy": {
     "calibrated": false,
@@ -31,8 +31,8 @@
   "code": {
     "music_scribe.py": {
       "name": "music_scribe.py",
-      "bytes": 79497,
-      "sha256": "71a2970c8ea3fe02a855f91119712246da3e5d4acb34f5a4d08ed200028f2c15"
+      "bytes": 86133,
+      "sha256": "4918eba560c5fe2d7a1019272b8e4a70088ea1c5fa1b9c842bab74b3a800a9b0"
     },
     "music_semantics.py": {
       "name": "music_semantics.py",
@@ -54,7 +54,7 @@
     "name": "manifest.json",
     "sha256": "0d36aba9bf663fea84b20233f5a4c0e4a2d8aebf2fe0cd96f237dee31f9176a9"
   },
-  "previous_source_policy_lock_sha256": "54f8ec578a8042bfd97ad963a6d5f0508235445cc6e98689a9b490a0887d6bc4",
+  "previous_source_policy_lock_sha256": "1e36a4fcc99ed4b7b836aa1bd4505d9d4ba9aca96685a04cc48e16568ee21321",
   "notation_layout": {
     "bundle": "equal onset and duration only; unique pitches per chord; preserve duplicates",
     "rests": "timing spacers retained; one visible stream during entire staff silence",
@@ -67,5 +67,11 @@
       "spacingNonLinear": 0.65,
       "systemMaxPerPage": 4
     }
+  },
+  "engraving": {
+    "accidentals": "shared staff/bar/octave state, conflicting alterations explicit",
+    "stems": "beam-unit greedy local cost, two passes",
+    "ties": "persistent side across chain; no slur detection",
+    "render_options_unchanged": true
   }
 }

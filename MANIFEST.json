@@ -1,5 +1,5 @@
 {
-  "variant": "github-source-4",
+  "variant": "github-source-5",
   "scope": "Public source/documentation allowlist; only synthetic fixture NPZ. No models, real audio, runtime environments or outputs. Root .git metadata excluded.",
   "files": [
     {
@@ -24,8 +24,8 @@
     },
     {
       "path": "CHANGES.md",
-      "bytes": 5379,
-      "sha256": "77d01d500d0b611b5d6c9ed1bb8a6a967dec4515cb06b689c2f712fbbd0c1079"
+      "bytes": 5837,
+      "sha256": "958cb6fd7edab4bdc9a3f57438d91586f87facc6eb801820a5ecf09a6856dd10"
     },
     {
       "path": "DEPENDENCY_LICENSES.json",
@@ -33,9 +33,19 @@
       "sha256": "9a40818d4fee5204e33be1e0fe201003598ab7d25b84d2a1420a00deca7b4680"
     },
     {
+      "path": "ENGRAVING_ACCEPTANCE.json",
+      "bytes": 85643,
+      "sha256": "ab4d316cddc1cf5e899ee72a0b0b349b8f4e079443d151f385a87fd61bc59674"
+    },
+    {
+      "path": "ENGRAVING_ACCEPTANCE.md",
+      "bytes": 6193,
+      "sha256": "478d8fe9fd0f37949ae61c527c1fd170a3f906eb4d9d8ca702fb63dd495a5bbc"
+    },
+    {
       "path": "FILE_LIST.md",
-      "bytes": 2615,
-      "sha256": "1efc2801a2b51472aac103e6d6eb9eff300ca90768947b6c8157379f1d98447a"
+      "bytes": 2685,
+      "sha256": "6a7a1b4fc96fb8be7df55b29026e8f462a51ed25732364f21b271a327fd20295"
     },
     {
       "path": "FRONTEND_VALIDATION.json",
@@ -44,13 +54,13 @@
     },
     {
       "path": "GITHUB_PUBLICATION.md",
-      "bytes": 2553,
-      "sha256": "7ce86d66d97c6b57eb0ad2e00419c836d7fafef835365104ef6611122a5ef5cf"
+      "bytes": 2690,
+      "sha256": "7179264a102cd515f410a0b8a5a4033b630692a3691b72a8903c6c003df64025"
     },
     {
       "path": "INSTALL.md",
-      "bytes": 6321,
-      "sha256": "4f186aa114841423e812cc35308251bb92cd89c7da1a68729ebed10ddba5149a"
+      "bytes": 6773,
+      "sha256": "428f06819100bbd6f361137ba1b72e86d1ba6f9770f5179fe3c82150ccb365d4"
     },
     {
       "path": "LAYOUT_ACCEPTANCE.json",
@@ -59,8 +69,8 @@
     },
     {
       "path": "LAYOUT_ACCEPTANCE.md",
-      "bytes": 8674,
-      "sha256": "53443d55c2c21ac85f450c1030ff3b1b4b47f5a6ed35fddf877d56699d02e555"
+      "bytes": 8778,
+      "sha256": "53cc67069d927b1ce7b0757473e9dcad2cb47017c4b4b57b5470cef623b762fa"
     },
     {
       "path": "LICENSE",
@@ -89,8 +99,8 @@
     },
     {
       "path": "LLM_INTEGRATION.md",
-      "bytes": 6521,
-      "sha256": "35041648a760712b7c1c5530b6e86821d6a07e9dd6545e06fd74d95e840e06c0"
+      "bytes": 6973,
+      "sha256": "681ce66e2f1e3fc83d2ed526292c46c2bac4bade0d168f400665e0975b2feb38"
     },
     {
       "path": "MODEL_LICENSES.md",
@@ -109,18 +119,18 @@
     },
     {
       "path": "POLICY_LOCK.json",
-      "bytes": 2691,
-      "sha256": "1e36a4fcc99ed4b7b836aa1bd4505d9d4ba9aca96685a04cc48e16568ee21321"
+      "bytes": 2912,
+      "sha256": "d2ee6f8d96c71ad4be212a132051ce38ade45851339380760299866575ea8b92"
     },
     {
       "path": "QUICKSTART.md",
-      "bytes": 8563,
-      "sha256": "3a526f665cdca734dec4b56716ff69040650224d18fd665b55844e9a8be917d9"
+      "bytes": 9015,
+      "sha256": "32f239eaeaa7f2b367a36020de24cc40aa1d477dce6f997a5fa365b730b17a9e"
     },
     {
       "path": "README.md",
-      "bytes": 10537,
-      "sha256": "63d79f85a35fcb247aefe9ca49ba13e7b7521566eaf21c66be1fcb5b24f2c98f"
+      "bytes": 10677,
+      "sha256": "08f7b6c2f5490ce59256a5e241092e46b9d638bc5041f8829e8ea43fa928aaf9"
     },
     {
       "path": "SOURCE_AUDIT.json",
@@ -134,8 +144,8 @@
     },
     {
       "path": "SOURCE_PROVENANCE.json",
-      "bytes": 13372,
-      "sha256": "b589a7a3d61ddc60986224579b193e3309d6015ecc061f13a1a3211bb216bd02"
+      "bytes": 13644,
+      "sha256": "a92b85358f756411ec8a657114e00e8ae826fdbf999067a9269bac41abc32584"
     },
     {
       "path": "THIRD_PARTY_LICENSES/Basic-Pitch-Apache-2.0.txt",
@@ -209,8 +219,8 @@
     },
     {
       "path": "examples/assistant_prompt.txt",
-      "bytes": 3286,
-      "sha256": "fa1e351bd44e6bf1a42d74208085fa6bf207d4a46f3e32f9755996dfa45878fc"
+      "bytes": 3740,
+      "sha256": "e9e629e94727cc42452caae1488f572fe5650adc18e0bceb3c76bce9cc019520"
     },
     {
       "path": "examples/llm_tool.py",
@@ -299,8 +309,8 @@
     },
     {
       "path": "music_scribe.py",
-      "bytes": 79497,
-      "sha256": "71a2970c8ea3fe02a855f91119712246da3e5d4acb34f5a4d08ed200028f2c15"
+      "bytes": 86133,
+      "sha256": "4918eba560c5fe2d7a1019272b8e4a70088ea1c5fa1b9c842bab74b3a800a9b0"
     },
     {
       "path": "music_scribe_cli.cmd",
@@ -383,6 +393,11 @@
       "sha256": "a3efab603c2b38fff225554b1918d799cd8484f8d1644cfb69a44e2b9e256a25"
     },
     {
+      "path": "test_engraving.py",
+      "bytes": 5016,
+      "sha256": "417a90c72ff282f6fbeb4ae24b126e37fef69f6bc3f732959aa69555fdd0b050"
+    },
+    {
       "path": "test_gate.py",
       "bytes": 6717,
       "sha256": "a20cba1e55e500120202a2a42bbde5db27cfd5fc4ebc04ccc6bfec56ca2a3cde"
@@ -431,6 +446,11 @@
       "path": "validate_gate.py",
       "bytes": 3590,
       "sha256": "0036996b25efefe2f35135e4a87a4a079e1c4d308a808923fae0358e1509f6a7"
+    },
+    {
+      "path": "verify_engraving.py",
+      "bytes": 4957,
+      "sha256": "f83b0b9ca2d84e8845273ce3f5dec123baf17a62f469146dfa8663cc46029ea3"
     },
     {
       "path": "verify_layout.py",

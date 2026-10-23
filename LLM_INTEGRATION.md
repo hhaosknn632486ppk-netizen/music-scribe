@@ -91,3 +91,5 @@ analyze 的 completed 不是自动验证通过。旧版全长公开音乐的未�
 Python 排谱调用请使用 `write_score_musicxml(build_score(...), path)`，完整模式不可再用默认 `score.write(...)` 触发一次第三方声部重整。旧结果继续使用生成它的源码副本查询/校验。
 
 1.3.2排版检查：先执行 verify_output.py 核对逻辑音符区间，再执行 `verify_layout.py 结果目录/score.musicxml --check-staff-rests`。新检查只核对符杠结构和项目的休止符显示规则，不证明像素无碰撞、转录准确或真实乐器声部。两种谱面模式均应通过 write_score_musicxml 导出；数据schema和命令接入契约未变。紧凑谱会隐藏辅助声部空白，独立乐器的完整休止信息不能由此推断。
+
+当前1.3.3追加升降号与延音线排版优化，不新增依赖。先用 verify_output.py 校验音符区间，再用 verify_layout.py 检查符杠/休止，最后执行 `verify_engraving.py 结果目录/score.musicxml` 重读可见升降号含义；通过不证明转录准确或无视觉碰撞。五组完整输入页数未增加，其他曲目不保证。验收和剩余拥挤见 ENGRAVING_ACCEPTANCE.md。旧报告由原生成版本校验。

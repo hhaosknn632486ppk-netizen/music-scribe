@@ -1,0 +1,2746 @@
+{
+  "date": "2026-10-23",
+  "version": "1.3.3",
+  "baseline_commit": "a4ec213281dd511a7955dc238421d737a6b94c8c",
+  "python": "3.10.20",
+  "platform": "Windows x64 / CPU",
+  "scope": "Six reused independent public recordings (four music, two non-music) plus one private derived repeat. Interval/engraving regression, no annotated accuracy benchmark.",
+  "resource_scope": "One sequential run per version/sample in a warm installed environment. Analysis wall time includes startup, transcription, notation, SVG and semantics, before independent checks. Memory is actual process lifetime peak working set recorded by semantic branch before final report serialization, not whole-system RAM or isolated notation/model allocation.",
+  "samples": [
+    {
+      "key": "brahms",
+      "description": "Brahms - Hungarian Dance #5",
+      "input_name": "Hungarian_Dance_number_5_-_Allegro_in_F_sharp_minor_(string_orchestra).ogg",
+      "input_sha256": "919b48aa4cc66a0357d2cd5728664c5ab8f15c4b3469460df4b59470d35d3e49",
+      "input_url": "https://librosa.org/data/audio/Hungarian_Dance_number_5_-_Allegro_in_F_sharp_minor_%28string_orchestra%29.ogg",
+      "license_and_source": "Hungarian Dance number 5 by Johannes Brahms / US Army Strings is in the Public Domain. \nFrom Musopen: https://musopen.org/music/43805-hungarian-dance-no-5-in-f-sharp-minor-woo-1-string-orchestra-arr/\nPublic Domain https://creativecommons.org/publicdomain/mark/1.0/\n",
+      "derived_stress_input": false,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 45.844875,
+          "wall_seconds": 9.876,
+          "peak_working_set_bytes": 558432256,
+          "beam_warnings": 0,
+          "notes": 537,
+          "bpm": 143.6,
+          "events_sha256": "5a488007730449950e9d6667a4c9059cb5eea6910224bf22c0e857c81aafe51a",
+          "midi_sha256": "efd79a6fb0204d352664d116bdbd384a33daf0d4604b73e5131beaa82ec8ae6d",
+          "svg_pages": 3,
+          "score_and_svg_seconds": 0.8222784000026877,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 537,
+            "chord_segments": 28,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 537,
+              "tied_continuation_segments": 60,
+              "expected_intervals": 537,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 597,
+              "chord_members": 78,
+              "visible_rests": 84,
+              "hidden_rests": 277,
+              "beam_elements": 282,
+              "primary_beam_groups": 76,
+              "beam_hooks": 41,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 6,
+              "mean_pitched_voices_per_staff_measure": 2.9167
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 537,
+              "chord_members": 171,
+              "visible_rests": 96,
+              "hidden_rests": 0,
+              "beam_elements": 446,
+              "primary_beam_groups": 92,
+              "beam_hooks": 35,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 520,
+            "tied_continuation_segments": 17,
+            "visible_rests": 96,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 171,
+            "beam_warnings": 0,
+            "pages": 3,
+            "seconds": 1.536
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "8be9b95c652f88abc8601dcb7e76d2c604c2bd74eb9abbad0620e7b4508f04df",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        },
+        "engraving": {
+          "duration_seconds": 45.844875,
+          "wall_seconds": 43.257,
+          "peak_working_set_bytes": 556072960,
+          "beam_warnings": 0,
+          "notes": 537,
+          "bpm": 143.6,
+          "events_sha256": "5a488007730449950e9d6667a4c9059cb5eea6910224bf22c0e857c81aafe51a",
+          "midi_sha256": "efd79a6fb0204d352664d116bdbd384a33daf0d4604b73e5131beaa82ec8ae6d",
+          "svg_pages": 3,
+          "score_and_svg_seconds": 3.622215400006098,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 537,
+            "chord_segments": 28,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 537,
+              "tied_continuation_segments": 60,
+              "expected_intervals": 537,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 597,
+              "chord_members": 78,
+              "visible_rests": 84,
+              "hidden_rests": 277,
+              "beam_elements": 282,
+              "primary_beam_groups": 76,
+              "beam_hooks": 41,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 6,
+              "mean_pitched_voices_per_staff_measure": 2.9167
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "engraving": {
+            "status": "PASS",
+            "pitch_segments_checked": 597,
+            "displayed_accidentals": 46,
+            "tied_continuations": 60,
+            "scope": "Visible accidental semantics versus encoded pitches, not pixel collision or recognition accuracy."
+          },
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 537,
+              "chord_members": 171,
+              "visible_rests": 96,
+              "hidden_rests": 0,
+              "beam_elements": 446,
+              "primary_beam_groups": 92,
+              "beam_hooks": 35,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 520,
+            "tied_continuation_segments": 17,
+            "visible_rests": 96,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 171,
+            "beam_warnings": 0,
+            "pages": 3,
+            "seconds": 7.428
+          },
+          "reduction_engraving": {
+            "status": "PASS",
+            "pitch_segments_checked": 537,
+            "displayed_accidentals": 48,
+            "tied_continuations": 17,
+            "scope": "Visible accidental semantics versus encoded pitches, not pixel collision or recognition accuracy."
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "8be9b95c652f88abc8601dcb7e76d2c604c2bd74eb9abbad0620e7b4508f04df",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true,
+      "midi_bytes_unchanged": true,
+      "full_intervals_unchanged": true,
+      "reduction_intervals_unchanged": true
+    },
+    {
+      "key": "choice",
+      "description": "Admiral Bob - Choice (drum+bass)",
+      "input_name": "admiralbob77_-_Choice_-_Drum-bass.ogg",
+      "input_sha256": "ac644f9645e7c15174e4a4f8561e4d1448d7f6e59ff6b0556b310ebbced879bc",
+      "input_url": "https://librosa.org/data/audio/admiralbob77_-_Choice_-_Drum-bass.ogg",
+      "license_and_source": "Choice by Admiral Bob (c) copyright 2020 Licensed under a Creative Commons Attribution Noncommercial  (3.0) license. http://dig.ccmixter.org/files/admiralbob77/61638 Ft: Snowflake\nhttps://creativecommons.org/licenses/by-nc/4.0/\n\nThis excerpt has been truncated and modified to include only the drum and bass tracks by Brian McFee (2020).\n",
+      "derived_stress_input": false,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 25.026,
+          "wall_seconds": 7.869,
+          "peak_working_set_bytes": 535576576,
+          "beam_warnings": 0,
+          "notes": 97,
+          "bpm": 136.0,
+          "events_sha256": "439582a7ad88bf36283fb6cf02a3bae8aaf2396044d1ab1cb173f787e68751de",
+          "midi_sha256": "c0aed8a906a61152e14dc5e974d56d70c701933325b368d598b9c956fc5de415",
+          "svg_pages": 2,
+          "score_and_svg_seconds": 0.224675000004936,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 97,
+            "chord_segments": 15,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 97,
+              "tied_continuation_segments": 0,
+              "expected_intervals": 97,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 97,
+              "chord_members": 7,
+              "visible_rests": 63,
+              "hidden_rests": 29,
+              "beam_elements": 40,
+              "primary_beam_groups": 14,
+              "beam_hooks": 5,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 3,
+              "mean_pitched_voices_per_staff_measure": 1.375
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 95,
+              "chord_members": 14,
+              "visible_rests": 64,
+              "hidden_rests": 0,
+              "beam_elements": 50,
+              "primary_beam_groups": 14,
+              "beam_hooks": 5,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 95,
+            "tied_continuation_segments": 0,
+            "visible_rests": 64,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 14,
+            "beam_warnings": 0,
+            "pages": 2,
+            "seconds": 1.108
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "dabbe822819f400876704491e2f4667b0a8f783feb4b89eca8cd3286f291562e",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        },
+        "engraving": {
+          "duration_seconds": 25.026,
+          "wall_seconds": 20.075,
+          "peak_working_set_bytes": 539672576,
+          "beam_warnings": 0,
+          "notes": 97,
+          "bpm": 136.0,
+          "events_sha256": "439582a7ad88bf36283fb6cf02a3bae8aaf2396044d1ab1cb173f787e68751de",
+          "midi_sha256": "c0aed8a906a61152e14dc5e974d56d70c701933325b368d598b9c956fc5de415",
+          "svg_pages": 2,
+          "score_and_svg_seconds": 0.30938980000064475,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 97,
+            "chord_segments": 15,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 97,
+              "tied_continuation_segments": 0,
+              "expected_intervals": 97,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 97,
+              "chord_members": 7,
+              "visible_rests": 63,
+              "hidden_rests": 29,
+              "beam_elements": 40,
+              "primary_beam_groups": 14,
+              "beam_hooks": 5,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 3,
+              "mean_pitched_voices_per_staff_measure": 1.375
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "engraving": {
+            "status": "PASS",
+            "pitch_segments_checked": 97,
+            "displayed_accidentals": 9,
+            "tied_continuations": 0,
+            "scope": "Visible accidental semantics versus encoded pitches, not pixel collision or recognition accuracy."
+          },
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 95,
+              "chord_members": 14,
+              "visible_rests": 64,
+              "hidden_rests": 0,
+              "beam_elements": 50,
+              "primary_beam_groups": 14,
+              "beam_hooks": 5,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 95,
+            "tied_continuation_segments": 0,
+            "visible_rests": 64,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 14,
+            "beam_warnings": 0,
+            "pages": 2,
+            "seconds": 1.841
+          },
+          "reduction_engraving": {
+            "status": "PASS",
+            "pitch_segments_checked": 95,
+            "displayed_accidentals": 9,
+            "tied_continuations": 0,
+            "scope": "Visible accidental semantics versus encoded pitches, not pixel collision or recognition accuracy."
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "dabbe822819f400876704491e2f4667b0a8f783feb4b89eca8cd3286f291562e",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true,
+      "midi_bytes_unchanged": true,
+      "full_intervals_unchanged": true,
+      "reduction_intervals_unchanged": true
+    },
+    {
+      "key": "fishin",
+      "description": "Karissa Hobbs - Let's Go Fishin'",
+      "input_name": "Karissa_Hobbs_-_Lets_Go_Fishin.ogg",
+      "input_sha256": "27b3667c396c1831511aa3c415fcf582b6e8be560cafb844c5b67b76b72c1cb3",
+      "input_url": "https://librosa.org/data/audio/Karissa_Hobbs_-_Lets_Go_Fishin.ogg",
+      "license_and_source": "Let's Go Fishin' by Karissa Hobbs is licensed under a Creative Commons Attribution License.\nFrom the Free Music Archive: https://freemusicarchive.org/music/Karissa_Hobbs/Age_of_Flowers/09_Lets_Go_Fishin\nCC-BY https://creativecommons.org/licenses/by/3.0/\n",
+      "derived_stress_input": false,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 132.989,
+          "wall_seconds": 18.203,
+          "peak_working_set_bytes": 625631232,
+          "beam_warnings": 0,
+          "notes": 1950,
+          "bpm": 117.5,
+          "events_sha256": "a86136ebab432a81a7a747611a59d85b30fd6dfacd4596cfd234abfc03561ee0",
+          "midi_sha256": "f2a111497e84097e632f72e0dbc361af8559b053089a31b9125de24af4ead8dc",
+          "svg_pages": 11,
+          "score_and_svg_seconds": 2.6690245999998297,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 1950,
+            "chord_segments": 66,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 1950,
+              "tied_continuation_segments": 141,
+              "expected_intervals": 1950,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 2091,
+              "chord_members": 295,
+              "visible_rests": 150,
+              "hidden_rests": 796,
+              "beam_elements": 1364,
+              "primary_beam_groups": 350,
+              "beam_hooks": 191,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 5,
+              "mean_pitched_voices_per_staff_measure": 2.8692
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 1948,
+              "chord_members": 628,
+              "visible_rests": 212,
+              "hidden_rests": 0,
+              "beam_elements": 1936,
+              "primary_beam_groups": 382,
+              "beam_hooks": 142,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 1895,
+            "tied_continuation_segments": 53,
+            "visible_rests": 212,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 628,
+            "beam_warnings": 0,
+            "pages": 9,
+            "seconds": 2.826
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "c9711473074e2af40d66f3b1ebc3bee31f730da5f2ed02c1c18b51c616c2d96d",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        },
+        "engraving": {
+          "duration_seconds": 132.989,
+          "wall_seconds": 27.375,
+          "peak_working_set_bytes": 625848320,
+          "beam_warnings": 0,
+          "notes": 1950,
+          "bpm": 117.5,
+          "events_sha256": "a86136ebab432a81a7a747611a59d85b30fd6dfacd4596cfd234abfc03561ee0",
+          "midi_sha256": "f2a111497e84097e632f72e0dbc361af8559b053089a31b9125de24af4ead8dc",
+          "svg_pages": 9,
+          "score_and_svg_seconds": 3.6845475000009174,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 1950,
+            "chord_segments": 66,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 1950,
+              "tied_continuation_segments": 141,
+              "expected_intervals": 1950,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 2091,
+              "chord_members": 295,
+              "visible_rests": 150,
+              "hidden_rests": 796,
+              "beam_elements": 1364,
+              "primary_beam_groups": 350,
+              "beam_hooks": 191,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 5,
+              "mean_pitched_voices_per_staff_measure": 2.8692
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "engraving": {
+            "status": "PASS",
+            "pitch_segments_checked": 2091,
+            "displayed_accidentals": 34,
+            "tied_continuations": 141,
+            "scope": "Visible accidental semantics versus encoded pitches, not pixel collision or recognition accuracy."
+          },
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 1948,
+              "chord_members": 628,
+              "visible_rests": 212,
+              "hidden_rests": 0,
+              "beam_elements": 1936,
+              "primary_beam_groups": 382,
+              "beam_hooks": 142,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 1895,
+            "tied_continuation_segments": 53,
+            "visible_rests": 212,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 628,
+            "beam_warnings": 0,
+            "pages": 8,
+            "seconds": 4.072
+          },
+          "reduction_engraving": {
+            "status": "PASS",
+            "pitch_segments_checked": 1948,
+            "displayed_accidentals": 43,
+            "tied_continuations": 53,
+            "scope": "Visible accidental semantics versus encoded pitches, not pixel collision or recognition accuracy."
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "c9711473074e2af40d66f3b1ebc3bee31f730da5f2ed02c1c18b51c616c2d96d",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true,
+      "midi_bytes_unchanged": true,
+      "full_intervals_unchanged": true,
+      "reduction_intervals_unchanged": true
+    },
+    {
+      "key": "trumpet",
+      "description": "Mihai Sorohan - Trumpet loop",
+      "input_name": "sorohanro_-_solo-trumpet-06.ogg",
+      "input_sha256": "8374466fd3951d24509da6e799b132a0db0bdeda69d99c69d989a6888d3d727d",
+      "input_url": "https://librosa.org/data/audio/sorohanro_-_solo-trumpet-06.ogg",
+      "license_and_source": "Part of \"Jazz Trumpet Loops Pack in F 90 bpm\" by Mihai Sorohan\nAll parts in this pack are in F, mostly Blues and Dorian scale and all are in stereo acidized .wav format, 16 bit, 44.1 khz sample rate, 90 bpm. \nFrom Freesound.org https://freesound.org/s/77711/\nCC-BY https://creativecommons.org/licenses/by/3.0/\n",
+      "derived_stress_input": false,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 5.333375,
+          "wall_seconds": 6.534,
+          "peak_working_set_bytes": 401129472,
+          "beam_warnings": 0,
+          "notes": 13,
+          "bpm": 123.0,
+          "events_sha256": "1744e6b51e7264cdf02b8f908bec79fe8307c258157e7cefbfc36d8faf884d63",
+          "midi_sha256": "db45876d7b45e730fa0ad10febd69067db598f85e511c46250efec7e9f51c568",
+          "svg_pages": 1,
+          "score_and_svg_seconds": 0.07495210000342922,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 13,
+            "chord_segments": 3,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 13,
+              "tied_continuation_segments": 3,
+              "expected_intervals": 13,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 16,
+              "chord_members": 0,
+              "visible_rests": 6,
+              "hidden_rests": 0,
+              "beam_elements": 12,
+              "primary_beam_groups": 3,
+              "beam_hooks": 2,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 16,
+              "chord_members": 0,
+              "visible_rests": 6,
+              "hidden_rests": 0,
+              "beam_elements": 12,
+              "primary_beam_groups": 3,
+              "beam_hooks": 2,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 13,
+            "tied_continuation_segments": 3,
+            "visible_rests": 6,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 0,
+            "beam_warnings": 0,
+            "pages": 1,
+            "seconds": 1.046
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "90cda5b060519583f611f09b85b3dbb0f5269eee5ba6e953d7c1d7d1eb279387",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "mixed"
+          }
+        },
+        "engraving": {
+          "duration_seconds": 5.333375,
+          "wall_seconds": 9.366,
+          "peak_working_set_bytes": 397705216,
+          "beam_warnings": 0,
+          "notes": 13,
+          "bpm": 123.0,
+          "events_sha256": "1744e6b51e7264cdf02b8f908bec79fe8307c258157e7cefbfc36d8faf884d63",
+          "midi_sha256": "db45876d7b45e730fa0ad10febd69067db598f85e511c46250efec7e9f51c568",
+          "svg_pages": 1,
+          "score_and_svg_seconds": 0.11259720000089146,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 13,
+            "chord_segments": 3,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 13,
+              "tied_continuation_segments": 3,
+              "expected_intervals": 13,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 16,
+              "chord_members": 0,
+              "visible_rests": 6,
+              "hidden_rests": 0,
+              "beam_elements": 12,
+              "primary_beam_groups": 3,
+              "beam_hooks": 2,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "engraving": {
+            "status": "PASS",
+            "pitch_segments_checked": 16,
+            "displayed_accidentals": 2,
+            "tied_continuations": 3,
+            "scope": "Visible accidental semantics versus encoded pitches, not pixel collision or recognition accuracy."
+          },
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 16,
+              "chord_members": 0,
+              "visible_rests": 6,
+              "hidden_rests": 0,
+              "beam_elements": 12,
+              "primary_beam_groups": 3,
+              "beam_hooks": 2,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 13,
+            "tied_continuation_segments": 3,
+            "visible_rests": 6,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 0,
+            "beam_warnings": 0,
+            "pages": 1,
+            "seconds": 1.665
+          },
+          "reduction_engraving": {
+            "status": "PASS",
+            "pitch_segments_checked": 16,
+            "displayed_accidentals": 2,
+            "tied_continuations": 3,
+            "scope": "Visible accidental semantics versus encoded pitches, not pixel collision or recognition accuracy."
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "90cda5b060519583f611f09b85b3dbb0f5269eee5ba6e953d7c1d7d1eb279387",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "mixed"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true,
+      "midi_bytes_unchanged": true,
+      "full_intervals_unchanged": true,
+      "reduction_intervals_unchanged": true
+    },
+    {
+      "key": "libri1",
+      "description": "Ashiel Mystery - A Detective Story, chapter 2, narrated by Garth Comira",
+      "input_name": "5703-47212-0000.ogg",
+      "input_sha256": "a284612b46af0535f7e1873758c4387bb8369f6dbbe192ffdec1f171108f98dd",
+      "input_url": "https://librosa.org/data/audio/5703-47212-0000.ogg",
+      "license_and_source": "Ashiel Mystery - A Detective Story, chapter 2, narrated by Garth Comira\nFrom the LibriSpeech SLR12 collection: https://www.openslr.org/12/\nCC-BY 4.0 https://creativecommons.org/licenses/by/4.0/\n",
+      "derived_stress_input": false,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 14.84,
+          "wall_seconds": 1.917,
+          "peak_working_set_bytes": 131354624,
+          "beam_warnings": 0,
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "3028e927cb1f37b49501f60a2dea38712c795e33220ef081597590dbc82de514",
+          "semantic_summary": {
+            "status": "not_music",
+            "music_presence": "non_music"
+          }
+        },
+        "engraving": {
+          "duration_seconds": 14.84,
+          "wall_seconds": 2.575,
+          "peak_working_set_bytes": 132239360,
+          "beam_warnings": 0,
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "3028e927cb1f37b49501f60a2dea38712c795e33220ef081597590dbc82de514",
+          "semantic_summary": {
+            "status": "not_music",
+            "music_presence": "non_music"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true
+    },
+    {
+      "key": "humpback",
+      "description": "Glacier Bay 60-second clip humpback whale song November 2020",
+      "input_name": "glacier-bay-humpback.ogg",
+      "input_sha256": "64395c617b28b5e31a03032b99b4617bc96b926f3bc5c141862cd13fb79ccd8e",
+      "input_url": "https://librosa.org/data/audio/glacier-bay-humpback.ogg",
+      "license_and_source": "Glacier Bay 60-second clip humpback whale song November 2020\nRecorded by NPS - Chris Gabriele, 2020/11/13\nhttps://www.nps.gov/glba/learn/nature/soundclips.htm\nPublic domain, https://www.nps.gov/aboutus/disclaimer.htm\n",
+      "derived_stress_input": false,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 64.809,
+          "wall_seconds": 1.93,
+          "peak_working_set_bytes": 134344704,
+          "beam_warnings": 0,
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "286e7c6883d29769c24f097f39b40015a55041402d59528a82b3c8d0c79d6249",
+          "semantic_summary": {
+            "status": "uncertain_input",
+            "music_presence": "uncertain"
+          }
+        },
+        "engraving": {
+          "duration_seconds": 64.809,
+          "wall_seconds": 2.703,
+          "peak_working_set_bytes": 134995968,
+          "beam_warnings": 0,
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "286e7c6883d29769c24f097f39b40015a55041402d59528a82b3c8d0c79d6249",
+          "semantic_summary": {
+            "status": "uncertain_input",
+            "music_presence": "uncertain"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true
+    },
+    {
+      "key": "user_repeat_180",
+      "description": "Existing private user_other stem repeated to 180 seconds at 16 kHz via np.resize; not an independent music recording.",
+      "input_name": "real_repeated_180.wav",
+      "input_sha256": "e46fd524130466fa4aa3c8f820d038c744cddb83b98f66ace27d31349533ac42",
+      "input_url": null,
+      "license_and_source": "Private existing local user audio, not redistributed; no additional rights inferred.",
+      "derived_stress_input": true,
+      "versions": {
+        "baseline": {
+          "duration_seconds": 180.0,
+          "wall_seconds": 24.311,
+          "peak_working_set_bytes": 767025152,
+          "beam_warnings": 0,
+          "notes": 2687,
+          "bpm": 123.0,
+          "events_sha256": "97224f2556e7201b30b6e1f257dabe214f4058f01a13eb49e170d86d91e0caea",
+          "midi_sha256": "b7f66e86473282776b684a4aefe8f53d2439d2d946f7e17d11d3feb4e55bc570",
+          "svg_pages": 13,
+          "score_and_svg_seconds": 4.8407907000000705,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 2687,
+            "chord_segments": 93,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 2687,
+              "tied_continuation_segments": 431,
+              "expected_intervals": 2687,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 3118,
+              "chord_members": 399,
+              "visible_rests": 83,
+              "hidden_rests": 1403,
+              "beam_elements": 1297,
+              "primary_beam_groups": 372,
+              "beam_hooks": 201,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 6,
+              "mean_pitched_voices_per_staff_measure": 3.7978
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 2634,
+              "chord_members": 957,
+              "visible_rests": 146,
+              "hidden_rests": 0,
+              "beam_elements": 2203,
+              "primary_beam_groups": 487,
+              "beam_hooks": 185,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 2505,
+            "tied_continuation_segments": 129,
+            "visible_rests": 146,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 957,
+            "beam_warnings": 0,
+            "pages": 12,
+            "seconds": 3.591
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "6d967061dd208ad3d71483f4f6996328659141e44780f3f96b4f2e4304a60acc",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        },
+        "engraving": {
+          "duration_seconds": 180.0,
+          "wall_seconds": 35.46,
+          "peak_working_set_bytes": 767918080,
+          "beam_warnings": 0,
+          "notes": 2687,
+          "bpm": 123.0,
+          "events_sha256": "97224f2556e7201b30b6e1f257dabe214f4058f01a13eb49e170d86d91e0caea",
+          "midi_sha256": "b7f66e86473282776b684a4aefe8f53d2439d2d946f7e17d11d3feb4e55bc570",
+          "svg_pages": 12,
+          "score_and_svg_seconds": 6.930092700000387,
+          "score_verification": {
+            "schema": "music-scribe/1.1",
+            "events": 2687,
+            "chord_segments": 93,
+            "evidence_checks": "PASS",
+            "full_score": {
+              "logical_note_intervals": 2687,
+              "tied_continuation_segments": 431,
+              "expected_intervals": 2687,
+              "missing_or_changed": 0,
+              "extra_or_changed": 0
+            },
+            "scope": "Output consistency only; no independently annotated recognition accuracy."
+          },
+          "layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 3118,
+              "chord_members": 399,
+              "visible_rests": 83,
+              "hidden_rests": 1403,
+              "beam_elements": 1297,
+              "primary_beam_groups": 372,
+              "beam_hooks": 201,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 6,
+              "mean_pitched_voices_per_staff_measure": 3.7978
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "local_query": "PASS",
+          "engraving": {
+            "status": "PASS",
+            "pitch_segments_checked": 3118,
+            "displayed_accidentals": 0,
+            "tied_continuations": 431,
+            "scope": "Visible accidental semantics versus encoded pitches, not pixel collision or recognition accuracy."
+          },
+          "reduction_layout": {
+            "status": "PASS",
+            "metrics": {
+              "pitched_segments": 2634,
+              "chord_members": 957,
+              "visible_rests": 146,
+              "hidden_rests": 0,
+              "beam_elements": 2203,
+              "primary_beam_groups": 487,
+              "beam_hooks": 185,
+              "visible_rest_note_overlaps": 0,
+              "maximum_pitched_voices_per_staff_measure": 1,
+              "mean_pitched_voices_per_staff_measure": 1.0
+            },
+            "staff_silence_rest_policy_checked": true,
+            "scope": "Beam structure and generated rest policy only; not note accuracy, voice identity or visual-collision certification."
+          },
+          "reduction_metrics": {
+            "logical_note_intervals": 2505,
+            "tied_continuation_segments": 129,
+            "visible_rests": 146,
+            "hidden_rests": 0,
+            "max_voices": 1,
+            "mean_voices": 1.0,
+            "chord_members": 957,
+            "beam_warnings": 0,
+            "pages": 11,
+            "seconds": 5.157
+          },
+          "reduction_engraving": {
+            "status": "PASS",
+            "pitch_segments_checked": 2634,
+            "displayed_accidentals": 0,
+            "tied_continuations": 129,
+            "scope": "Visible accidental semantics versus encoded pitches, not pixel collision or recognition accuracy."
+          },
+          "semantic_verification": "PASS",
+          "semantic_global_sha256": "6d967061dd208ad3d71483f4f6996328659141e44780f3f96b4f2e4304a60acc",
+          "semantic_summary": {
+            "status": "ambiguous",
+            "music_presence": "music"
+          }
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true,
+      "midi_bytes_unchanged": true,
+      "full_intervals_unchanged": true,
+      "reduction_intervals_unchanged": true
+    }
+  ],
+  "integration_checks": {
+    "pip_check": "PASS",
+    "doctor": "PASS",
+    "selftest": "PASS",
+    "assistant_full_sample": "PASS",
+    "assistant_local_query": "PASS",
+    "new_user_demo_with_score": "PASS"
+  },
+  "variant": "github-source-5",
+  "regression": {
+    "full": {
+      "tests": 117,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lightweight": {
+      "tests": 44,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "unchanged_files": [
+    "verify_output.py",
+    "verify_musicxml.py",
+    "verify_semantics.py",
+    "verify_layout.py",
+    "music_semantics.py",
+    "music_gate.py",
+    "semantic_frontend.py",
+    "LICENSE",
+    "models/manifest.json",
+    "requirements-core.txt",
+    "requirements-semantics.txt"
+  ],
+  "modified_previous_functions": [
+    "write_score_musicxml"
+  ],
+  "new_functions": [
+    "_engrave_accidentals",
+    "_engrave_directions"
+  ],
+  "new_runtime_dependencies": false,
+  "baseline_measurement": "Retained 1.3.2 outputs and metrics from the same machine, exact source commit and identical audio hashes; candidate rerun now. Timing observations are not a controlled speed benchmark.",
+  "svg_geometry": {
+    "method": "SVG fill/stroke sampled at 0.3 CSS pixel grid, >=2 common points. Own note/chord stem joins and nearby tie endpoint owners excluded. Diagnostic proxy, not exhaustive collision certification.",
+    "seconds": 9.096497499995166,
+    "samples": {
+      "layout_brahms": {
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 1,
+          "accid_stem": 0,
+          "stem_foreign_head": 6,
+          "stem_stem": 0,
+          "tie_foreign_head": 2,
+          "tie_stem": 16,
+          "tie_accid": 16,
+          "tie_tie": 2,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 597,
+          "accidentals": 537,
+          "stems": 519,
+          "ties": 84,
+          "rests": 84
+        },
+        "pages": 3
+      },
+      "layout_choice": {
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 0,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 97,
+          "accidentals": 43,
+          "stems": 90,
+          "ties": 0,
+          "rests": 58
+        },
+        "pages": 2
+      },
+      "layout_fishin": {
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 6,
+          "accid_stem": 0,
+          "stem_foreign_head": 16,
+          "stem_stem": 3,
+          "tie_foreign_head": 9,
+          "tie_stem": 49,
+          "tie_accid": 55,
+          "tie_tie": 4,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 2091,
+          "accidentals": 1950,
+          "stems": 1792,
+          "ties": 206,
+          "rests": 150
+        },
+        "pages": 11
+      },
+      "layout_trumpet": {
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 0,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 16,
+          "accidentals": 13,
+          "stems": 16,
+          "ties": 3,
+          "rests": 6
+        },
+        "pages": 1
+      },
+      "layout_user_repeat_180": {
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 12,
+          "accid_stem": 0,
+          "stem_foreign_head": 32,
+          "stem_stem": 10,
+          "tie_foreign_head": 70,
+          "tie_stem": 161,
+          "tie_accid": 199,
+          "tie_tie": 37,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 3118,
+          "accidentals": 2687,
+          "stems": 2716,
+          "ties": 566,
+          "rests": 82
+        },
+        "pages": 13
+      },
+      "engraving_brahms": {
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 7,
+          "stem_stem": 1,
+          "tie_foreign_head": 0,
+          "tie_stem": 12,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 597,
+          "accidentals": 46,
+          "stems": 519,
+          "ties": 84,
+          "rests": 84
+        },
+        "pages": 3
+      },
+      "engraving_choice": {
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 0,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 97,
+          "accidentals": 9,
+          "stems": 90,
+          "ties": 0,
+          "rests": 58
+        },
+        "pages": 2
+      },
+      "engraving_fishin": {
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 18,
+          "stem_stem": 4,
+          "tie_foreign_head": 5,
+          "tie_stem": 49,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 2091,
+          "accidentals": 34,
+          "stems": 1792,
+          "ties": 186,
+          "rests": 150
+        },
+        "pages": 9
+      },
+      "engraving_trumpet": {
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 0,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 16,
+          "accidentals": 2,
+          "stems": 16,
+          "ties": 3,
+          "rests": 6
+        },
+        "pages": 1
+      },
+      "engraving_user_repeat_180": {
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 24,
+          "stem_stem": 9,
+          "tie_foreign_head": 20,
+          "tie_stem": 160,
+          "tie_accid": 0,
+          "tie_tie": 3,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 3118,
+          "accidentals": 0,
+          "stems": 2716,
+          "ties": 565,
+          "rests": 82
+        },
+        "pages": 12
+      }
+    },
+    "pages": [
+      {
+        "name": "layout_brahms/score_p1.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 1,
+          "tie_stem": 0,
+          "tie_accid": 1,
+          "tie_tie": 1,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 165,
+          "accidentals": 159,
+          "stems": 157,
+          "ties": 12,
+          "rests": 30
+        }
+      },
+      {
+        "name": "layout_brahms/score_p2.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 1,
+          "accid_stem": 0,
+          "stem_foreign_head": 4,
+          "stem_stem": 0,
+          "tie_foreign_head": 1,
+          "tie_stem": 7,
+          "tie_accid": 7,
+          "tie_tie": 1,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 247,
+          "accidentals": 221,
+          "stems": 194,
+          "ties": 40,
+          "rests": 26
+        }
+      },
+      {
+        "name": "layout_brahms/score_p3.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 9,
+          "tie_accid": 8,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 185,
+          "accidentals": 157,
+          "stems": 168,
+          "ties": 32,
+          "rests": 28
+        }
+      },
+      {
+        "name": "layout_choice/score_p1.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 0,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 61,
+          "accidentals": 27,
+          "stems": 55,
+          "ties": 0,
+          "rests": 38
+        }
+      },
+      {
+        "name": "layout_choice/score_p2.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 0,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 36,
+          "accidentals": 16,
+          "stems": 35,
+          "ties": 0,
+          "rests": 20
+        }
+      },
+      {
+        "name": "layout_fishin/score_p1.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 1,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 2,
+          "tie_accid": 3,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 215,
+          "accidentals": 206,
+          "stems": 179,
+          "ties": 17,
+          "rests": 7
+        }
+      },
+      {
+        "name": "layout_fishin/score_p10.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 5,
+          "tie_accid": 3,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 156,
+          "accidentals": 149,
+          "stems": 128,
+          "ties": 12,
+          "rests": 8
+        }
+      },
+      {
+        "name": "layout_fishin/score_p11.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 1,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 0,
+          "tie_foreign_head": 4,
+          "tie_stem": 7,
+          "tie_accid": 13,
+          "tie_tie": 2,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 152,
+          "accidentals": 126,
+          "stems": 129,
+          "ties": 37,
+          "rests": 9
+        }
+      },
+      {
+        "name": "layout_fishin/score_p2.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 2,
+          "tie_accid": 5,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 225,
+          "accidentals": 214,
+          "stems": 193,
+          "ties": 15,
+          "rests": 30
+        }
+      },
+      {
+        "name": "layout_fishin/score_p3.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 2,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 0,
+          "tie_foreign_head": 1,
+          "tie_stem": 6,
+          "tie_accid": 4,
+          "tie_tie": 1,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 246,
+          "accidentals": 231,
+          "stems": 208,
+          "ties": 20,
+          "rests": 10
+        }
+      },
+      {
+        "name": "layout_fishin/score_p4.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 1,
+          "accid_stem": 0,
+          "stem_foreign_head": 4,
+          "stem_stem": 2,
+          "tie_foreign_head": 2,
+          "tie_stem": 8,
+          "tie_accid": 7,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 168,
+          "accidentals": 150,
+          "stems": 156,
+          "ties": 23,
+          "rests": 14
+        }
+      },
+      {
+        "name": "layout_fishin/score_p5.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 1,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 6,
+          "tie_accid": 7,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 170,
+          "accidentals": 160,
+          "stems": 143,
+          "ties": 12,
+          "rests": 10
+        }
+      },
+      {
+        "name": "layout_fishin/score_p6.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 1,
+          "tie_accid": 2,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 223,
+          "accidentals": 216,
+          "stems": 200,
+          "ties": 10,
+          "rests": 26
+        }
+      },
+      {
+        "name": "layout_fishin/score_p7.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 1,
+          "tie_accid": 3,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 131,
+          "accidentals": 123,
+          "stems": 114,
+          "ties": 12,
+          "rests": 6
+        }
+      },
+      {
+        "name": "layout_fishin/score_p8.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 1,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 2,
+          "tie_stem": 8,
+          "tie_accid": 3,
+          "tie_tie": 1,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 246,
+          "accidentals": 225,
+          "stems": 215,
+          "ties": 33,
+          "rests": 20
+        }
+      },
+      {
+        "name": "layout_fishin/score_p9.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 3,
+          "stem_stem": 1,
+          "tie_foreign_head": 0,
+          "tie_stem": 3,
+          "tie_accid": 5,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 159,
+          "accidentals": 150,
+          "stems": 127,
+          "ties": 15,
+          "rests": 10
+        }
+      },
+      {
+        "name": "layout_trumpet/score_p1.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 0,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 16,
+          "accidentals": 13,
+          "stems": 16,
+          "ties": 3,
+          "rests": 6
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p1.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 1,
+          "tie_foreign_head": 2,
+          "tie_stem": 19,
+          "tie_accid": 19,
+          "tie_tie": 6,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 178,
+          "accidentals": 125,
+          "stems": 166,
+          "ties": 62,
+          "rests": 8
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p10.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 3,
+          "accid_stem": 0,
+          "stem_foreign_head": 5,
+          "stem_stem": 1,
+          "tie_foreign_head": 10,
+          "tie_stem": 8,
+          "tie_accid": 16,
+          "tie_tie": 1,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 285,
+          "accidentals": 260,
+          "stems": 243,
+          "ties": 32,
+          "rests": 9
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p11.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 10,
+          "tie_stem": 18,
+          "tie_accid": 22,
+          "tie_tie": 5,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 189,
+          "accidentals": 148,
+          "stems": 177,
+          "ties": 57,
+          "rests": 15
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p12.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 8,
+          "tie_stem": 15,
+          "tie_accid": 19,
+          "tie_tie": 5,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 177,
+          "accidentals": 134,
+          "stems": 168,
+          "ties": 48,
+          "rests": 8
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p13.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 5,
+          "tie_accid": 4,
+          "tie_tie": 1,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 70,
+          "accidentals": 61,
+          "stems": 64,
+          "ties": 13,
+          "rests": 7
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p2.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 2,
+          "accid_stem": 0,
+          "stem_foreign_head": 4,
+          "stem_stem": 2,
+          "tie_foreign_head": 5,
+          "tie_stem": 7,
+          "tie_accid": 13,
+          "tie_tie": 1,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 196,
+          "accidentals": 173,
+          "stems": 184,
+          "ties": 27,
+          "rests": 19
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p3.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 1,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 0,
+          "tie_foreign_head": 12,
+          "tie_stem": 11,
+          "tie_accid": 21,
+          "tie_tie": 4,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 308,
+          "accidentals": 265,
+          "stems": 261,
+          "ties": 55,
+          "rests": 6
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p4.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 2,
+          "tie_foreign_head": 6,
+          "tie_stem": 15,
+          "tie_accid": 20,
+          "tie_tie": 8,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 273,
+          "accidentals": 238,
+          "stems": 241,
+          "ties": 49,
+          "rests": 1
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p5.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 2,
+          "accid_stem": 0,
+          "stem_foreign_head": 8,
+          "stem_stem": 2,
+          "tie_foreign_head": 2,
+          "tie_stem": 16,
+          "tie_accid": 12,
+          "tie_tie": 4,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 282,
+          "accidentals": 235,
+          "stems": 259,
+          "ties": 58,
+          "rests": 2
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p6.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 1,
+          "accid_stem": 0,
+          "stem_foreign_head": 4,
+          "stem_stem": 1,
+          "tie_foreign_head": 1,
+          "tie_stem": 14,
+          "tie_accid": 13,
+          "tie_tie": 1,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 255,
+          "accidentals": 231,
+          "stems": 200,
+          "ties": 45,
+          "rests": 1
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p7.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 1,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 5,
+          "tie_stem": 12,
+          "tie_accid": 19,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 348,
+          "accidentals": 308,
+          "stems": 290,
+          "ties": 52,
+          "rests": 1
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p8.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 1,
+          "tie_foreign_head": 5,
+          "tie_stem": 11,
+          "tie_accid": 14,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 251,
+          "accidentals": 229,
+          "stems": 210,
+          "ties": 34,
+          "rests": 0
+        }
+      },
+      {
+        "name": "layout_user_repeat_180/score_p9.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 2,
+          "accid_stem": 0,
+          "stem_foreign_head": 3,
+          "stem_stem": 0,
+          "tie_foreign_head": 4,
+          "tie_stem": 10,
+          "tie_accid": 7,
+          "tie_tie": 1,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 306,
+          "accidentals": 280,
+          "stems": 253,
+          "ties": 34,
+          "rests": 5
+        }
+      },
+      {
+        "name": "engraving_brahms/score_p1.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 0,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 165,
+          "accidentals": 4,
+          "stems": 157,
+          "ties": 12,
+          "rests": 30
+        }
+      },
+      {
+        "name": "engraving_brahms/score_p2.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 5,
+          "stem_stem": 1,
+          "tie_foreign_head": 0,
+          "tie_stem": 5,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 247,
+          "accidentals": 25,
+          "stems": 194,
+          "ties": 40,
+          "rests": 26
+        }
+      },
+      {
+        "name": "engraving_brahms/score_p3.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 7,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 185,
+          "accidentals": 17,
+          "stems": 168,
+          "ties": 32,
+          "rests": 28
+        }
+      },
+      {
+        "name": "engraving_choice/score_p1.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 0,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 73,
+          "accidentals": 7,
+          "stems": 67,
+          "ties": 0,
+          "rests": 42
+        }
+      },
+      {
+        "name": "engraving_choice/score_p2.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 0,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 24,
+          "accidentals": 2,
+          "stems": 23,
+          "ties": 0,
+          "rests": 16
+        }
+      },
+      {
+        "name": "engraving_fishin/score_p1.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 3,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 258,
+          "accidentals": 4,
+          "stems": 217,
+          "ties": 18,
+          "rests": 19
+        }
+      },
+      {
+        "name": "engraving_fishin/score_p2.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 1,
+          "tie_foreign_head": 0,
+          "tie_stem": 1,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 253,
+          "accidentals": 6,
+          "stems": 213,
+          "ties": 18,
+          "rests": 22
+        }
+      },
+      {
+        "name": "engraving_fishin/score_p3.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 4,
+          "stem_stem": 1,
+          "tie_foreign_head": 0,
+          "tie_stem": 7,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 260,
+          "accidentals": 4,
+          "stems": 230,
+          "ties": 22,
+          "rests": 14
+        }
+      },
+      {
+        "name": "engraving_fishin/score_p4.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 1,
+          "tie_foreign_head": 1,
+          "tie_stem": 11,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 253,
+          "accidentals": 5,
+          "stems": 219,
+          "ties": 21,
+          "rests": 16
+        }
+      },
+      {
+        "name": "engraving_fishin/score_p5.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 1,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 223,
+          "accidentals": 2,
+          "stems": 200,
+          "ties": 10,
+          "rests": 26
+        }
+      },
+      {
+        "name": "engraving_fishin/score_p6.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 4,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 5,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 264,
+          "accidentals": 3,
+          "stems": 231,
+          "ties": 27,
+          "rests": 15
+        }
+      },
+      {
+        "name": "engraving_fishin/score_p7.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 1,
+          "tie_foreign_head": 1,
+          "tie_stem": 7,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 272,
+          "accidentals": 7,
+          "stems": 225,
+          "ties": 26,
+          "rests": 21
+        }
+      },
+      {
+        "name": "engraving_fishin/score_p8.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 0,
+          "tie_foreign_head": 3,
+          "tie_stem": 11,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 294,
+          "accidentals": 3,
+          "stems": 243,
+          "ties": 36,
+          "rests": 13
+        }
+      },
+      {
+        "name": "engraving_fishin/score_p9.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 3,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 14,
+          "accidentals": 0,
+          "stems": 14,
+          "ties": 8,
+          "rests": 4
+        }
+      },
+      {
+        "name": "engraving_trumpet/score_p1.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 0,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 16,
+          "accidentals": 2,
+          "stems": 16,
+          "ties": 3,
+          "rests": 6
+        }
+      },
+      {
+        "name": "engraving_user_repeat_180/score_p1.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 1,
+          "tie_foreign_head": 1,
+          "tie_stem": 12,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 178,
+          "accidentals": 0,
+          "stems": 166,
+          "ties": 62,
+          "rests": 8
+        }
+      },
+      {
+        "name": "engraving_user_repeat_180/score_p10.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 2,
+          "tie_stem": 18,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 197,
+          "accidentals": 0,
+          "stems": 185,
+          "ties": 61,
+          "rests": 16
+        }
+      },
+      {
+        "name": "engraving_user_repeat_180/score_p11.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 2,
+          "tie_stem": 14,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 196,
+          "accidentals": 0,
+          "stems": 185,
+          "ties": 52,
+          "rests": 9
+        }
+      },
+      {
+        "name": "engraving_user_repeat_180/score_p12.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 0,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 1,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 43,
+          "accidentals": 0,
+          "stems": 39,
+          "ties": 7,
+          "rests": 5
+        }
+      },
+      {
+        "name": "engraving_user_repeat_180/score_p2.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 3,
+          "stem_stem": 1,
+          "tie_foreign_head": 2,
+          "tie_stem": 5,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 196,
+          "accidentals": 0,
+          "stems": 184,
+          "ties": 27,
+          "rests": 19
+        }
+      },
+      {
+        "name": "engraving_user_repeat_180/score_p3.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 0,
+          "tie_foreign_head": 2,
+          "tie_stem": 14,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 308,
+          "accidentals": 0,
+          "stems": 261,
+          "ties": 55,
+          "rests": 6
+        }
+      },
+      {
+        "name": "engraving_user_repeat_180/score_p4.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 1,
+          "stem_stem": 1,
+          "tie_foreign_head": 5,
+          "tie_stem": 21,
+          "tie_accid": 0,
+          "tie_tie": 1,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 306,
+          "accidentals": 0,
+          "stems": 270,
+          "ties": 62,
+          "rests": 2
+        }
+      },
+      {
+        "name": "engraving_user_repeat_180/score_p5.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 4,
+          "stem_stem": 2,
+          "tie_foreign_head": 1,
+          "tie_stem": 18,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 305,
+          "accidentals": 0,
+          "stems": 273,
+          "ties": 59,
+          "rests": 1
+        }
+      },
+      {
+        "name": "engraving_user_repeat_180/score_p6.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 0,
+          "tie_foreign_head": 0,
+          "tie_stem": 23,
+          "tie_accid": 0,
+          "tie_tie": 1,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 379,
+          "accidentals": 0,
+          "stems": 314,
+          "ties": 62,
+          "rests": 1
+        }
+      },
+      {
+        "name": "engraving_user_repeat_180/score_p7.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 4,
+          "stem_stem": 2,
+          "tie_foreign_head": 4,
+          "tie_stem": 17,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 369,
+          "accidentals": 0,
+          "stems": 300,
+          "ties": 48,
+          "rests": 1
+        }
+      },
+      {
+        "name": "engraving_user_repeat_180/score_p8.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 2,
+          "stem_stem": 1,
+          "tie_foreign_head": 0,
+          "tie_stem": 11,
+          "tie_accid": 0,
+          "tie_tie": 0,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 356,
+          "accidentals": 0,
+          "stems": 296,
+          "ties": 38,
+          "rests": 5
+        }
+      },
+      {
+        "name": "engraving_user_repeat_180/score_p9.svg",
+        "metrics": {
+          "accid_head": 0,
+          "accid_accid": 0,
+          "accid_stem": 0,
+          "stem_foreign_head": 4,
+          "stem_stem": 1,
+          "tie_foreign_head": 1,
+          "tie_stem": 6,
+          "tie_accid": 0,
+          "tie_tie": 1,
+          "rest_head_bbox": 0,
+          "rest_rest_bbox": 0
+        },
+        "counts": {
+          "heads": 285,
+          "accidentals": 0,
+          "stems": 243,
+          "ties": 32,
+          "rests": 9
+        }
+      }
+    ],
+    "public_scope": "Aggregate and per-page counts only; private collision symbol IDs and glyph coordinates omitted."
+  },
+  "visual_review": "First-page before/after images inspected for Brahms, Fishin and the private derived repeat; all pages measured geometrically. No complete page-by-page manual engraving audit.",
+  "isolated_notation_timing": {
+    "method": "One warmed process, three interleaved A/B rounds per input, build_score + MusicXML + SVG only. No transcription or semantic inference. Informal local timing, not cross-platform benchmark.",
+    "rows": [
+      {
+        "key": "brahms",
+        "round": 0,
+        "version": "baseline",
+        "seconds": 0.737375400000019
+      },
+      {
+        "key": "brahms",
+        "round": 0,
+        "version": "engraving",
+        "seconds": 0.7172118999951635
+      },
+      {
+        "key": "brahms",
+        "round": 1,
+        "version": "engraving",
+        "seconds": 0.7304760999977589
+      },
+      {
+        "key": "brahms",
+        "round": 1,
+        "version": "baseline",
+        "seconds": 0.6782151000006706
+      },
+      {
+        "key": "brahms",
+        "round": 2,
+        "version": "baseline",
+        "seconds": 0.7014135999997961
+      },
+      {
+        "key": "brahms",
+        "round": 2,
+        "version": "engraving",
+        "seconds": 0.723833400006697
+      },
+      {
+        "key": "fishin",
+        "round": 0,
+        "version": "baseline",
+        "seconds": 2.4398303999987547
+      },
+      {
+        "key": "fishin",
+        "round": 0,
+        "version": "engraving",
+        "seconds": 2.540281599998707
+      },
+      {
+        "key": "fishin",
+        "round": 1,
+        "version": "engraving",
+        "seconds": 2.6064074999958393
+      },
+      {
+        "key": "fishin",
+        "round": 1,
+        "version": "baseline",
+        "seconds": 2.4780996999979834
+      },
+      {
+        "key": "fishin",
+        "round": 2,
+        "version": "baseline",
+        "seconds": 2.421799000003375
+      },
+      {
+        "key": "fishin",
+        "round": 2,
+        "version": "engraving",
+        "seconds": 2.6429022000011173
+      },
+      {
+        "key": "user_repeat_180",
+        "round": 0,
+        "version": "baseline",
+        "seconds": 4.301591099996585
+      },
+      {
+        "key": "user_repeat_180",
+        "round": 0,
+        "version": "engraving",
+        "seconds": 4.5482409999967786
+      },
+      {
+        "key": "user_repeat_180",
+        "round": 1,
+        "version": "engraving",
+        "seconds": 4.758081100000709
+      },
+      {
+        "key": "user_repeat_180",
+        "round": 1,
+        "version": "baseline",
+        "seconds": 4.558954600004654
+      },
+      {
+        "key": "user_repeat_180",
+        "round": 2,
+        "version": "baseline",
+        "seconds": 4.450342800002545
+      },
+      {
+        "key": "user_repeat_180",
+        "round": 2,
+        "version": "engraving",
+        "seconds": 4.627273199999763
+      }
+    ],
+    "medians": {
+      "brahms": {
+        "baseline": 0.7014135999997961,
+        "engraving": 0.723833400006697
+      },
+      "fishin": {
+        "baseline": 2.4398303999987547,
+        "engraving": 2.6064074999958393
+      },
+      "user_repeat_180": {
+        "baseline": 4.450342800002545,
+        "engraving": 4.627273199999763
+      }
+    }
+  }
+}
