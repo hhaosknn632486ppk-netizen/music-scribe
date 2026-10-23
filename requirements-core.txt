@@ -1,5 +1,7 @@
 # Tested target: Windows x64, CPython 3.10. Basic Pitch chooses heavier
 # platform-dependent backends on other Python/OS combinations; see INSTALL.md.
+# resampy 0.4.2 (Basic Pitch dependency) imports legacy pkg_resources.
+setuptools==80.9.0
 numpy==2.2.6
 scipy==1.15.3
 librosa==0.11.0

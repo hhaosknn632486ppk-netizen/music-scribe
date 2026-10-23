@@ -1,5 +1,5 @@
 {
-  "variant": "github-source-2",
+  "variant": "github-source-3",
   "scope": "Public source/documentation allowlist; only synthetic fixture NPZ. No models, real audio, runtime environments or outputs. Root .git metadata excluded.",
   "files": [
     {
@@ -24,18 +24,18 @@
     },
     {
       "path": "CHANGES.md",
-      "bytes": 3845,
-      "sha256": "8a039039c46b9264410f2c7710052e6e132c047cb501f95a02e3ab371358f67a"
+      "bytes": 4579,
+      "sha256": "4ef1e05525532e0e2a04211a33feff939e380dbdf6b31931055514b4217f428e"
     },
     {
       "path": "DEPENDENCY_LICENSES.json",
-      "bytes": 50808,
-      "sha256": "c81591ef2be178a83872f20b5096c89140a256b787ffa7c929cb9e5453bac731"
+      "bytes": 56746,
+      "sha256": "9a40818d4fee5204e33be1e0fe201003598ab7d25b84d2a1420a00deca7b4680"
     },
     {
       "path": "FILE_LIST.md",
-      "bytes": 2510,
-      "sha256": "c2419033aa312a57208ae640e6688967b2269cf23df62c6779ba8a977e5aba52"
+      "bytes": 2513,
+      "sha256": "f932ae8aab777ff3d3512fe975b05262c44daf7851457525eb9b484008aeca58"
     },
     {
       "path": "FRONTEND_VALIDATION.json",
@@ -44,13 +44,13 @@
     },
     {
       "path": "GITHUB_PUBLICATION.md",
-      "bytes": 2241,
-      "sha256": "85f2f6ab42cb0ca24f0bc18b72ee7c969f57d20315ff2d792918eb1ae2bcad4c"
+      "bytes": 2324,
+      "sha256": "d1a8c8edf6a0db5107433cbeac02e32f90767afc2c335a2a4032ef5870d58330"
     },
     {
       "path": "INSTALL.md",
-      "bytes": 5588,
-      "sha256": "e2cf72512dd229feed0bd09c86c072d7520a633ce32fc256269a0d69fdfb6eaa"
+      "bytes": 5981,
+      "sha256": "6d2bda75fc906d88b8602a718ef400540316d726ad49cc28cf5c11c710dd2163"
     },
     {
       "path": "LICENSE",
@@ -79,8 +79,8 @@
     },
     {
       "path": "LLM_INTEGRATION.md",
-      "bytes": 5875,
-      "sha256": "44046b346258dbcb7cd29c3dd569ae63f2ef9e2a373b3e5f807e90ebb05cac3e"
+      "bytes": 6041,
+      "sha256": "fa35747919efddb6922fef8fe95565c4071b78a1dee0551437f8e5e1249a7616"
     },
     {
       "path": "MODEL_LICENSES.md",
@@ -94,23 +94,23 @@
     },
     {
       "path": "NEW_USER_ACCEPTANCE.md",
-      "bytes": 3814,
-      "sha256": "071b5c19e5c4729629f98dfb15b9ec94a981a67d7852c532e2228b3503eb1a42"
+      "bytes": 3956,
+      "sha256": "cae817af793ceb1d298560db58f98d5ff44a76683f881af3ffc1eba643505c8f"
     },
     {
       "path": "POLICY_LOCK.json",
-      "bytes": 2232,
-      "sha256": "d965cecc7cea384e3f1ab713ec740123ba96ec024c45c5753038d04018a96c20"
+      "bytes": 2172,
+      "sha256": "54f8ec578a8042bfd97ad963a6d5f0508235445cc6e98689a9b490a0887d6bc4"
     },
     {
       "path": "QUICKSTART.md",
-      "bytes": 8160,
-      "sha256": "8400176c2b96ed218a15aa855f51f72d994a6c744d89d9edac8da36c6e6a30bc"
+      "bytes": 8075,
+      "sha256": "400e4238b2336d84a2bba211bb672430d2a2441f1d50e216ae5335511467e1cd"
     },
     {
       "path": "README.md",
-      "bytes": 9740,
-      "sha256": "0c025628e3c722548da4b16dcbea5e68834d33e0f4b8b92d7e0a49bfb40de73b"
+      "bytes": 10157,
+      "sha256": "4c58312e925039f3bf940ff29e3d82acfe17437d94bb61f84e64352105c30ddd"
     },
     {
       "path": "SOURCE_AUDIT.json",
@@ -124,8 +124,8 @@
     },
     {
       "path": "SOURCE_PROVENANCE.json",
-      "bytes": 12890,
-      "sha256": "d340da9931a82d28bdedafe5741d51cb8d970a7c596d8641de65459589b10f3b"
+      "bytes": 12955,
+      "sha256": "5b72a34864719c77b5ca25ba74fa11ae41dbfb8e2d081523223fbdecce56bab6"
     },
     {
       "path": "THIRD_PARTY_LICENSES/Basic-Pitch-Apache-2.0.txt",
@@ -154,8 +154,18 @@
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 6825,
-      "sha256": "5c3c9e874ba80c887fbfaced8b4277add17d93d9e8105c216acaf4e078804df4"
+      "bytes": 7216,
+      "sha256": "693590a954b38d63355a4ac9c28fa88a3a1b22c63402633deca2ac6c639d8cc5"
+    },
+    {
+      "path": "TIE_FIX_ACCEPTANCE.json",
+      "bytes": 45163,
+      "sha256": "da34161003726062a80aa3912c370ff5795e7ab3dd3feb83a0ec6b5e0fec0b04"
+    },
+    {
+      "path": "TIE_FIX_ACCEPTANCE.md",
+      "bytes": 8996,
+      "sha256": "afddc2213613cf10c0b7abfa30dda4acd409065aeb6fe97627b4207aa63b69a6"
     },
     {
       "path": "_vendor/dora/__init__.py",
@@ -174,8 +184,8 @@
     },
     {
       "path": "doctor.py",
-      "bytes": 1852,
-      "sha256": "d51d8fb7564d3a11807d0dc1dfd3e71bcf53f6a536c64467fc59cd8e7de7dc90"
+      "bytes": 1874,
+      "sha256": "5cba686311e3f22283e08dfeb668131f446ef1017d6130e56ab8c0a1554fe60b"
     },
     {
       "path": "download_models.py",
@@ -279,8 +289,8 @@
     },
     {
       "path": "music_scribe.py",
-      "bytes": 69856,
-      "sha256": "f47d46d61a79514dd836b70507aafbdef52196f655d251c3ef0aecb323709bb8"
+      "bytes": 72758,
+      "sha256": "363fd7278c99da21a9c9d528a47814d1daa870cef9e4b308a5b7cb242e55c821"
     },
     {
       "path": "music_scribe_cli.cmd",
@@ -304,8 +314,8 @@
     },
     {
       "path": "requirements-core.txt",
-      "bytes": 353,
-      "sha256": "904fa044bf6b4e78018be26e696a6465bdd50eb5480f199d95a0f3176cece471"
+      "bytes": 443,
+      "sha256": "274694cbe918fa45f998c18e60f9019ace0c5e0a77924bb1ec6b0dec94fc68a5"
     },
     {
       "path": "requirements-dev.txt",
@@ -314,8 +324,8 @@
     },
     {
       "path": "requirements-lock-windows-py310.txt",
-      "bytes": 1128,
-      "sha256": "8a3f7d205e8da11d39806ebaa94cffddfdd2a481fbeee31ea9c258c810ab0990"
+      "bytes": 1226,
+      "sha256": "78893fa8e3b379c50b9ff5806d8dfd8cb4fe38d8fdd98fa274592fe04f145ba5"
     },
     {
       "path": "requirements-semantics.txt",
@@ -354,8 +364,8 @@
     },
     {
       "path": "test_correctness.py",
-      "bytes": 12530,
-      "sha256": "6433a1177a389990a83315a7708f479cac2296f7eb6abcd5a074df84a7dfdcd5"
+      "bytes": 12527,
+      "sha256": "943d0fd5f1126eb2bc93c73cb956e2e9bf5174ab90b66fedbd491f6f5ff88de2"
     },
     {
       "path": "test_download_models.py",
@@ -376,6 +386,11 @@
       "path": "test_semantics.py",
       "bytes": 11069,
       "sha256": "c74533e005165abe923b51e0504c15325adc012ea73b7de62261a3cf0361646f"
+    },
+    {
+      "path": "test_ties.py",
+      "bytes": 4371,
+      "sha256": "2141d0ae5c2c3ff6d298b06db5296f42379ea27cb8cad66bed79ac1c3edfaabf"
     },
     {
       "path": "tests/fixtures/frontend_fixture.npz",

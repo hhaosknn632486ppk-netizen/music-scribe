@@ -151,7 +151,7 @@ class CorrectnessTests(unittest.TestCase):
                  {'o': .5, 'd': .25, 'p': 67, 'a': .7}]
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / 'score.musicxml'
-            ms.build_score(items, 120, 0, 'major', 'full', staves='1').write('musicxml', fp=str(path))
+            ms.write_score_musicxml(ms.build_score(items, 120, 0, 'major', 'full', staves='1'), path)
             score = converter.parse(str(path)).stripTies()
             actual = sorted((float(n.getOffsetInHierarchy(score)), n.pitch.midi, float(n.duration.quarterLength))
                             for n in score.recurse().notes)
@@ -162,7 +162,7 @@ class CorrectnessTests(unittest.TestCase):
         notes = [{'o': 0., 'd': 1., 'p': p, 'a': .8} for p in range(60, 69)]
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / 'score.musicxml'
-            ms.build_score(notes, 120, 10, 'major', 'full', staves='1').write('musicxml', fp=str(path))
+            ms.write_score_musicxml(ms.build_score(notes, 120, 10, 'major', 'full', staves='1'), path)
             xml = ET.parse(path)
         self.assertEqual(len(xml.findall('.//pitch')), 9)
         self.assertEqual({int(x.text) for x in xml.findall('.//fifths')}, {-2})
@@ -175,7 +175,7 @@ class CorrectnessTests(unittest.TestCase):
                   (3.75, .5, 81), (3.75, .5, 83), (4.75, .5, 71), (10.75, 1.5, 71)]]
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / 'score.musicxml'
-            ms.build_score(items, 120, 4, 'minor', 'full', staves='1').write('musicxml', fp=str(path))
+            ms.write_score_musicxml(ms.build_score(items, 120, 4, 'minor', 'full', staves='1'), path)
             actual, stats = read_intervals(path)
         expected = collections.Counter((n['p'], n['o'], n['d']) for n in items)
         self.assertEqual(actual, expected)

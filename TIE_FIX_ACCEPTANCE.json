@@ -1,0 +1,1209 @@
+{
+  "baseline_commit": "afca7e5f7f1997e9e2bb7688cb17fa97f783925b",
+  "fixed_version": "1.3.1",
+  "python": "3.10.22",
+  "platform": "Windows x64 / CPU",
+  "resource_scope": "Wall time: one sequential run per version/sample in a warm installed CPU environment, not a speed benchmark. Memory: actual analysis process lifetime peak working set read by the engine after scoring/semantic inference, before final report serialization; excludes child processes and runner. Windows venv-launcher PID measurements were discarded.",
+  "accuracy_scope": "Consistency with retained detector events only; no human-annotated transcription ground truth.",
+  "samples": [
+    {
+      "key": "brahms",
+      "description": "Brahms - Hungarian Dance #5",
+      "input_name": "Hungarian_Dance_number_5_-_Allegro_in_F_sharp_minor_(string_orchestra).ogg",
+      "input_sha256": "919b48aa4cc66a0357d2cd5728664c5ab8f15c4b3469460df4b59470d35d3e49",
+      "input_url": "https://librosa.org/data/audio/Hungarian_Dance_number_5_-_Allegro_in_F_sharp_minor_%28string_orchestra%29.ogg",
+      "license_and_source": "Hungarian Dance number 5 by Johannes Brahms / US Army Strings is in the Public Domain. \nFrom Musopen: https://musopen.org/music/43805-hungarian-dance-no-5-in-f-sharp-minor-woo-1-string-orchestra-arr/\nPublic Domain https://creativecommons.org/publicdomain/mark/1.0/\n",
+      "derived_stress_input": false,
+      "mode": "full_score_and_semantics",
+      "versions": {
+        "baseline": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 8.798,
+            "peak_working_set_bytes": 569344000,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 45.844875,
+          "semantics_status": "ambiguous",
+          "music_presence": "music",
+          "styles": {
+            "status": "candidate",
+            "level": "coarse",
+            "candidates": [
+              {
+                "label": "Classical",
+                "display_zh": "古典",
+                "score": 0.21134257156358546,
+                "aggregation": "max_child_score_not_probability",
+                "source": "discogs_parent_max"
+              }
+            ],
+            "parent_genres": [
+              {
+                "label": "Classical",
+                "display_zh": "古典",
+                "score": 0.21134257156358546,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Latin",
+                "display_zh": "拉丁",
+                "score": 0.08132668541563065,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Jazz",
+                "display_zh": "爵士",
+                "score": 0.07485348484852297,
+                "aggregation": "max_child_score_not_probability"
+              }
+            ],
+            "fine_status": "suppressed",
+            "fallback_reason": "insufficient_fine_score_margin_consistency_or_parent_agreement",
+            "fine_time_consistency": 0.595184656192614
+          },
+          "mood": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "label": "romantic",
+                "display_zh": "浪漫",
+                "score": 0.06906855999328877,
+                "index": 43
+              },
+              {
+                "label": "emotional",
+                "display_zh": "情绪化",
+                "score": 0.04626917858813106,
+                "index": 17
+              },
+              {
+                "label": "inspiring",
+                "display_zh": "鼓舞",
+                "score": 0.04395545846076675,
+                "index": 30
+              }
+            ]
+          },
+          "svg_pages": 3,
+          "notes": 537,
+          "bpm": 143.6,
+          "timings_seconds": {
+            "decode": 2.6598297000018647,
+            "transcribe_and_optional_separation": 0.7530298999990919,
+            "analysis": 2.73440059999848,
+            "score_and_svg": 0.9393947999997181,
+            "semantics": 1.0200484000015422,
+            "total_before_report": 8.158033500003512
+          },
+          "events_sha256": "5a488007730449950e9d6667a4c9059cb5eea6910224bf22c0e857c81aafe51a",
+          "score_verification": {
+            "exit_code": 1,
+            "result": null,
+            "error": "Verification failed: Unmatched or noncontiguous tie stop: (0, '2', '0', 60), onset=28"
+          },
+          "query": "PASS",
+          "semantic_verification": "PASS"
+        },
+        "fixed": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 8.861,
+            "peak_working_set_bytes": 556896256,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 45.844875,
+          "semantics_status": "ambiguous",
+          "music_presence": "music",
+          "styles": {
+            "status": "candidate",
+            "level": "coarse",
+            "candidates": [
+              {
+                "label": "Classical",
+                "display_zh": "古典",
+                "score": 0.21134257156358546,
+                "aggregation": "max_child_score_not_probability",
+                "source": "discogs_parent_max"
+              }
+            ],
+            "parent_genres": [
+              {
+                "label": "Classical",
+                "display_zh": "古典",
+                "score": 0.21134257156358546,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Latin",
+                "display_zh": "拉丁",
+                "score": 0.08132668541563065,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Jazz",
+                "display_zh": "爵士",
+                "score": 0.07485348484852297,
+                "aggregation": "max_child_score_not_probability"
+              }
+            ],
+            "fine_status": "suppressed",
+            "fallback_reason": "insufficient_fine_score_margin_consistency_or_parent_agreement",
+            "fine_time_consistency": 0.595184656192614
+          },
+          "mood": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "label": "romantic",
+                "display_zh": "浪漫",
+                "score": 0.06906855999328877,
+                "index": 43
+              },
+              {
+                "label": "emotional",
+                "display_zh": "情绪化",
+                "score": 0.04626917858813106,
+                "index": 17
+              },
+              {
+                "label": "inspiring",
+                "display_zh": "鼓舞",
+                "score": 0.04395545846076675,
+                "index": 30
+              }
+            ]
+          },
+          "svg_pages": 3,
+          "notes": 537,
+          "bpm": 143.6,
+          "timings_seconds": {
+            "decode": 2.5794587999989744,
+            "transcribe_and_optional_separation": 0.7198520000019926,
+            "analysis": 2.735258000000613,
+            "score_and_svg": 1.0334364000009373,
+            "semantics": 1.0514086999974097,
+            "total_before_report": 8.204124500000034
+          },
+          "events_sha256": "5a488007730449950e9d6667a4c9059cb5eea6910224bf22c0e857c81aafe51a",
+          "score_verification": {
+            "exit_code": 0,
+            "result": {
+              "schema": "music-scribe/1.1",
+              "events": 537,
+              "chord_segments": 28,
+              "evidence_checks": "PASS",
+              "full_score": {
+                "logical_note_intervals": 537,
+                "tied_continuation_segments": 60,
+                "expected_intervals": 537,
+                "missing_or_changed": 0,
+                "extra_or_changed": 0
+              },
+              "scope": "Output consistency only; no independently annotated recognition accuracy."
+            },
+            "error": null
+          },
+          "query": "PASS",
+          "semantic_verification": "PASS"
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true
+    },
+    {
+      "key": "choice",
+      "description": "Admiral Bob - Choice (drum+bass)",
+      "input_name": "admiralbob77_-_Choice_-_Drum-bass.ogg",
+      "input_sha256": "ac644f9645e7c15174e4a4f8561e4d1448d7f6e59ff6b0556b310ebbced879bc",
+      "input_url": "https://librosa.org/data/audio/admiralbob77_-_Choice_-_Drum-bass.ogg",
+      "license_and_source": "Choice by Admiral Bob (c) copyright 2020 Licensed under a Creative Commons Attribution Noncommercial  (3.0) license. http://dig.ccmixter.org/files/admiralbob77/61638 Ft: Snowflake\nhttps://creativecommons.org/licenses/by-nc/4.0/\n\nThis excerpt has been truncated and modified to include only the drum and bass tracks by Brian McFee (2020).\n",
+      "derived_stress_input": false,
+      "mode": "full_score_and_semantics",
+      "versions": {
+        "baseline": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 6.998,
+            "peak_working_set_bytes": 539901952,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 25.026,
+          "semantics_status": "ambiguous",
+          "music_presence": "music",
+          "styles": {
+            "status": "candidate",
+            "level": "coarse",
+            "candidates": [
+              {
+                "label": "Jazz",
+                "display_zh": "爵士",
+                "score": 0.16486827043593058,
+                "aggregation": "max_child_score_not_probability",
+                "source": "discogs_parent_max"
+              }
+            ],
+            "parent_genres": [
+              {
+                "label": "Jazz",
+                "display_zh": "爵士",
+                "score": 0.16486827043593058,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Blues",
+                "display_zh": "蓝调",
+                "score": 0.11201601541766512,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Rock",
+                "display_zh": "摇滚",
+                "score": 0.08280844902685994,
+                "aggregation": "max_child_score_not_probability"
+              }
+            ],
+            "fine_status": "suppressed",
+            "fallback_reason": "insufficient_fine_score_margin_consistency_or_parent_agreement",
+            "fine_time_consistency": 0.30024524584891227
+          },
+          "mood": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "label": "dark",
+                "display_zh": "阴暗",
+                "score": 0.07989040997658306,
+                "index": 11
+              },
+              {
+                "label": "energetic",
+                "display_zh": "有活力",
+                "score": 0.07409205285867708,
+                "index": 18
+              },
+              {
+                "label": "love",
+                "display_zh": "爱意",
+                "score": 0.058031278488834714,
+                "index": 31
+              }
+            ]
+          },
+          "svg_pages": 1,
+          "notes": 97,
+          "bpm": 136.0,
+          "timings_seconds": {
+            "decode": 2.712597400000959,
+            "transcribe_and_optional_separation": 0.6032040000063716,
+            "analysis": 2.04148599999462,
+            "score_and_svg": 0.2657636000003549,
+            "semantics": 0.7237000000022817,
+            "total_before_report": 6.387881899994682
+          },
+          "events_sha256": "439582a7ad88bf36283fb6cf02a3bae8aaf2396044d1ab1cb173f787e68751de",
+          "score_verification": {
+            "exit_code": 0,
+            "result": {
+              "schema": "music-scribe/1.1",
+              "events": 97,
+              "chord_segments": 15,
+              "evidence_checks": "PASS",
+              "full_score": {
+                "logical_note_intervals": 97,
+                "tied_continuation_segments": 0,
+                "expected_intervals": 97,
+                "missing_or_changed": 0,
+                "extra_or_changed": 0
+              },
+              "scope": "Output consistency only; no independently annotated recognition accuracy."
+            },
+            "error": null
+          },
+          "query": "PASS",
+          "semantic_verification": "PASS"
+        },
+        "fixed": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 7.385,
+            "peak_working_set_bytes": 542982144,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 25.026,
+          "semantics_status": "ambiguous",
+          "music_presence": "music",
+          "styles": {
+            "status": "candidate",
+            "level": "coarse",
+            "candidates": [
+              {
+                "label": "Jazz",
+                "display_zh": "爵士",
+                "score": 0.16486827043593058,
+                "aggregation": "max_child_score_not_probability",
+                "source": "discogs_parent_max"
+              }
+            ],
+            "parent_genres": [
+              {
+                "label": "Jazz",
+                "display_zh": "爵士",
+                "score": 0.16486827043593058,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Blues",
+                "display_zh": "蓝调",
+                "score": 0.11201601541766512,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Rock",
+                "display_zh": "摇滚",
+                "score": 0.08280844902685994,
+                "aggregation": "max_child_score_not_probability"
+              }
+            ],
+            "fine_status": "suppressed",
+            "fallback_reason": "insufficient_fine_score_margin_consistency_or_parent_agreement",
+            "fine_time_consistency": 0.30024524584891227
+          },
+          "mood": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "label": "dark",
+                "display_zh": "阴暗",
+                "score": 0.07989040997658306,
+                "index": 11
+              },
+              {
+                "label": "energetic",
+                "display_zh": "有活力",
+                "score": 0.07409205285867708,
+                "index": 18
+              },
+              {
+                "label": "love",
+                "display_zh": "爱意",
+                "score": 0.058031278488834714,
+                "index": 31
+              }
+            ]
+          },
+          "svg_pages": 1,
+          "notes": 97,
+          "bpm": 136.0,
+          "timings_seconds": {
+            "decode": 2.9355937000000267,
+            "transcribe_and_optional_separation": 0.5647828999935882,
+            "analysis": 2.1813164000050165,
+            "score_and_svg": 0.2776795999961905,
+            "semantics": 0.7406864000004134,
+            "total_before_report": 6.7490417000008165
+          },
+          "events_sha256": "439582a7ad88bf36283fb6cf02a3bae8aaf2396044d1ab1cb173f787e68751de",
+          "score_verification": {
+            "exit_code": 0,
+            "result": {
+              "schema": "music-scribe/1.1",
+              "events": 97,
+              "chord_segments": 15,
+              "evidence_checks": "PASS",
+              "full_score": {
+                "logical_note_intervals": 97,
+                "tied_continuation_segments": 0,
+                "expected_intervals": 97,
+                "missing_or_changed": 0,
+                "extra_or_changed": 0
+              },
+              "scope": "Output consistency only; no independently annotated recognition accuracy."
+            },
+            "error": null
+          },
+          "query": "PASS",
+          "semantic_verification": "PASS"
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true
+    },
+    {
+      "key": "fishin",
+      "description": "Karissa Hobbs - Let's Go Fishin'",
+      "input_name": "Karissa_Hobbs_-_Lets_Go_Fishin.ogg",
+      "input_sha256": "27b3667c396c1831511aa3c415fcf582b6e8be560cafb844c5b67b76b72c1cb3",
+      "input_url": "https://librosa.org/data/audio/Karissa_Hobbs_-_Lets_Go_Fishin.ogg",
+      "license_and_source": "Let's Go Fishin' by Karissa Hobbs is licensed under a Creative Commons Attribution License.\nFrom the Free Music Archive: https://freemusicarchive.org/music/Karissa_Hobbs/Age_of_Flowers/09_Lets_Go_Fishin\nCC-BY https://creativecommons.org/licenses/by/3.0/\n",
+      "derived_stress_input": false,
+      "mode": "full_score_and_semantics",
+      "versions": {
+        "baseline": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 18.269,
+            "peak_working_set_bytes": 625057792,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 132.989,
+          "semantics_status": "ambiguous",
+          "music_presence": "music",
+          "styles": {
+            "status": "ambiguous",
+            "level": "coarse",
+            "candidates": [
+              {
+                "label": "Vocal music",
+                "display_zh": "有人声音乐",
+                "score": 0.9461322242357341,
+                "source": "voice_type",
+                "kind": "content_type_not_genre"
+              }
+            ],
+            "parent_genres": [
+              {
+                "label": "Rock",
+                "display_zh": "摇滚",
+                "score": 0.07543674324965093,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Folk, World, & Country",
+                "display_zh": "民谣／世界／乡村",
+                "score": 0.06615560828735696,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Pop",
+                "display_zh": "流行",
+                "score": 0.04953549346577707,
+                "aggregation": "max_child_score_not_probability"
+              }
+            ],
+            "fine_status": "suppressed",
+            "fallback_reason": "insufficient_fine_score_margin_consistency_or_parent_agreement",
+            "fine_time_consistency": 0.11396120494061661
+          },
+          "mood": {
+            "status": "candidate",
+            "candidates": [
+              {
+                "label": "happy",
+                "display_zh": "愉快",
+                "score": 0.46711868163281156,
+                "index": 26
+              },
+              {
+                "label": "uplifting",
+                "display_zh": "振奋",
+                "score": 0.20941283276586226,
+                "index": 55
+              },
+              {
+                "label": "love",
+                "display_zh": "爱意",
+                "score": 0.19736808335086342,
+                "index": 31
+              }
+            ]
+          },
+          "svg_pages": 11,
+          "notes": 1950,
+          "bpm": 117.5,
+          "timings_seconds": {
+            "decode": 2.769346200002474,
+            "transcribe_and_optional_separation": 1.8404555000015534,
+            "analysis": 6.122918999993999,
+            "score_and_svg": 3.574536600004649,
+            "semantics": 3.2199424999998882,
+            "total_before_report": 17.602717000001576
+          },
+          "events_sha256": "a86136ebab432a81a7a747611a59d85b30fd6dfacd4596cfd234abfc03561ee0",
+          "score_verification": {
+            "exit_code": 0,
+            "result": {
+              "schema": "music-scribe/1.1",
+              "events": 1950,
+              "chord_segments": 66,
+              "evidence_checks": "PASS",
+              "full_score": {
+                "logical_note_intervals": 1950,
+                "tied_continuation_segments": 141,
+                "expected_intervals": 1950,
+                "missing_or_changed": 0,
+                "extra_or_changed": 0
+              },
+              "scope": "Output consistency only; no independently annotated recognition accuracy."
+            },
+            "error": null
+          },
+          "query": "PASS",
+          "semantic_verification": "PASS"
+        },
+        "fixed": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 19.177,
+            "peak_working_set_bytes": 624287744,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 132.989,
+          "semantics_status": "ambiguous",
+          "music_presence": "music",
+          "styles": {
+            "status": "ambiguous",
+            "level": "coarse",
+            "candidates": [
+              {
+                "label": "Vocal music",
+                "display_zh": "有人声音乐",
+                "score": 0.9461322242357341,
+                "source": "voice_type",
+                "kind": "content_type_not_genre"
+              }
+            ],
+            "parent_genres": [
+              {
+                "label": "Rock",
+                "display_zh": "摇滚",
+                "score": 0.07543674324965093,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Folk, World, & Country",
+                "display_zh": "民谣／世界／乡村",
+                "score": 0.06615560828735696,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Pop",
+                "display_zh": "流行",
+                "score": 0.04953549346577707,
+                "aggregation": "max_child_score_not_probability"
+              }
+            ],
+            "fine_status": "suppressed",
+            "fallback_reason": "insufficient_fine_score_margin_consistency_or_parent_agreement",
+            "fine_time_consistency": 0.11396120494061661
+          },
+          "mood": {
+            "status": "candidate",
+            "candidates": [
+              {
+                "label": "happy",
+                "display_zh": "愉快",
+                "score": 0.46711868163281156,
+                "index": 26
+              },
+              {
+                "label": "uplifting",
+                "display_zh": "振奋",
+                "score": 0.20941283276586226,
+                "index": 55
+              },
+              {
+                "label": "love",
+                "display_zh": "爱意",
+                "score": 0.19736808335086342,
+                "index": 31
+              }
+            ]
+          },
+          "svg_pages": 8,
+          "notes": 1950,
+          "bpm": 117.5,
+          "timings_seconds": {
+            "decode": 2.747580099996412,
+            "transcribe_and_optional_separation": 2.0134655000001658,
+            "analysis": 6.414229900001374,
+            "score_and_svg": 3.9736383999988902,
+            "semantics": 3.2801484000010532,
+            "total_before_report": 18.51528269999835
+          },
+          "events_sha256": "a86136ebab432a81a7a747611a59d85b30fd6dfacd4596cfd234abfc03561ee0",
+          "score_verification": {
+            "exit_code": 0,
+            "result": {
+              "schema": "music-scribe/1.1",
+              "events": 1950,
+              "chord_segments": 66,
+              "evidence_checks": "PASS",
+              "full_score": {
+                "logical_note_intervals": 1950,
+                "tied_continuation_segments": 141,
+                "expected_intervals": 1950,
+                "missing_or_changed": 0,
+                "extra_or_changed": 0
+              },
+              "scope": "Output consistency only; no independently annotated recognition accuracy."
+            },
+            "error": null
+          },
+          "query": "PASS",
+          "semantic_verification": "PASS"
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true
+    },
+    {
+      "key": "trumpet",
+      "description": "Mihai Sorohan - Trumpet loop",
+      "input_name": "sorohanro_-_solo-trumpet-06.ogg",
+      "input_sha256": "8374466fd3951d24509da6e799b132a0db0bdeda69d99c69d989a6888d3d727d",
+      "input_url": "https://librosa.org/data/audio/sorohanro_-_solo-trumpet-06.ogg",
+      "license_and_source": "Part of \"Jazz Trumpet Loops Pack in F 90 bpm\" by Mihai Sorohan\nAll parts in this pack are in F, mostly Blues and Dorian scale and all are in stereo acidized .wav format, 16 bit, 44.1 khz sample rate, 90 bpm. \nFrom Freesound.org https://freesound.org/s/77711/\nCC-BY https://creativecommons.org/licenses/by/3.0/\n",
+      "derived_stress_input": false,
+      "mode": "full_score_and_semantics",
+      "versions": {
+        "baseline": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 5.503,
+            "peak_working_set_bytes": 395677696,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 5.333375,
+          "semantics_status": "ambiguous",
+          "music_presence": "mixed",
+          "styles": {
+            "status": "ambiguous",
+            "level": "coarse",
+            "candidates": [
+              {
+                "label": "Music",
+                "display_zh": "音乐，门类不明确",
+                "score": null,
+                "source": "music_presence_only",
+                "kind": "content_type_not_genre"
+              }
+            ],
+            "parent_genres": [],
+            "fine_status": "suppressed",
+            "fallback_reason": "insufficient_semantic_context"
+          },
+          "mood": null,
+          "svg_pages": 1,
+          "notes": 13,
+          "bpm": 123.0,
+          "timings_seconds": {
+            "decode": 2.6968666999964626,
+            "transcribe_and_optional_separation": 0.5005763000008301,
+            "analysis": 1.3463715999969281,
+            "score_and_svg": 0.0832412999952794,
+            "semantics": 0.24906849999388214,
+            "total_before_report": 4.9207057999956305
+          },
+          "events_sha256": "1744e6b51e7264cdf02b8f908bec79fe8307c258157e7cefbfc36d8faf884d63",
+          "score_verification": {
+            "exit_code": 0,
+            "result": {
+              "schema": "music-scribe/1.1",
+              "events": 13,
+              "chord_segments": 3,
+              "evidence_checks": "PASS",
+              "full_score": {
+                "logical_note_intervals": 13,
+                "tied_continuation_segments": 3,
+                "expected_intervals": 13,
+                "missing_or_changed": 0,
+                "extra_or_changed": 0
+              },
+              "scope": "Output consistency only; no independently annotated recognition accuracy."
+            },
+            "error": null
+          },
+          "query": "PASS",
+          "semantic_verification": "PASS"
+        },
+        "fixed": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 5.374,
+            "peak_working_set_bytes": 400429056,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 5.333375,
+          "semantics_status": "ambiguous",
+          "music_presence": "mixed",
+          "styles": {
+            "status": "ambiguous",
+            "level": "coarse",
+            "candidates": [
+              {
+                "label": "Music",
+                "display_zh": "音乐，门类不明确",
+                "score": null,
+                "source": "music_presence_only",
+                "kind": "content_type_not_genre"
+              }
+            ],
+            "parent_genres": [],
+            "fine_status": "suppressed",
+            "fallback_reason": "insufficient_semantic_context"
+          },
+          "mood": null,
+          "svg_pages": 1,
+          "notes": 13,
+          "bpm": 123.0,
+          "timings_seconds": {
+            "decode": 2.607184500004223,
+            "transcribe_and_optional_separation": 0.37556050000421237,
+            "analysis": 1.4300320999973337,
+            "score_and_svg": 0.07266119999985676,
+            "semantics": 0.25941859999875305,
+            "total_before_report": 4.7730070000034175
+          },
+          "events_sha256": "1744e6b51e7264cdf02b8f908bec79fe8307c258157e7cefbfc36d8faf884d63",
+          "score_verification": {
+            "exit_code": 0,
+            "result": {
+              "schema": "music-scribe/1.1",
+              "events": 13,
+              "chord_segments": 3,
+              "evidence_checks": "PASS",
+              "full_score": {
+                "logical_note_intervals": 13,
+                "tied_continuation_segments": 3,
+                "expected_intervals": 13,
+                "missing_or_changed": 0,
+                "extra_or_changed": 0
+              },
+              "scope": "Output consistency only; no independently annotated recognition accuracy."
+            },
+            "error": null
+          },
+          "query": "PASS",
+          "semantic_verification": "PASS"
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true
+    },
+    {
+      "key": "libri1",
+      "description": "Ashiel Mystery - A Detective Story, chapter 2, narrated by Garth Comira",
+      "input_name": "5703-47212-0000.ogg",
+      "input_sha256": "a284612b46af0535f7e1873758c4387bb8369f6dbbe192ffdec1f171108f98dd",
+      "input_url": "https://librosa.org/data/audio/5703-47212-0000.ogg",
+      "license_and_source": "Ashiel Mystery - A Detective Story, chapter 2, narrated by Garth Comira\nFrom the LibriSpeech SLR12 collection: https://www.openslr.org/12/\nCC-BY 4.0 https://creativecommons.org/licenses/by/4.0/\n",
+      "derived_stress_input": false,
+      "mode": "semantics",
+      "versions": {
+        "baseline": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 1.375,
+            "peak_working_set_bytes": 132329472,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 14.84,
+          "semantics_status": "not_music",
+          "music_presence": "non_music",
+          "styles": null,
+          "mood": null,
+          "svg_pages": 0,
+          "semantic_verification": "PASS"
+        },
+        "fixed": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 1.318,
+            "peak_working_set_bytes": 132669440,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 14.84,
+          "semantics_status": "not_music",
+          "music_presence": "non_music",
+          "styles": null,
+          "mood": null,
+          "svg_pages": 0,
+          "semantic_verification": "PASS"
+        }
+      },
+      "semantic_decisions_unchanged": true
+    },
+    {
+      "key": "humpback",
+      "description": "Glacier Bay 60-second clip humpback whale song November 2020",
+      "input_name": "glacier-bay-humpback.ogg",
+      "input_sha256": "64395c617b28b5e31a03032b99b4617bc96b926f3bc5c141862cd13fb79ccd8e",
+      "input_url": "https://librosa.org/data/audio/glacier-bay-humpback.ogg",
+      "license_and_source": "Glacier Bay 60-second clip humpback whale song November 2020\nRecorded by NPS - Chris Gabriele, 2020/11/13\nhttps://www.nps.gov/glba/learn/nature/soundclips.htm\nPublic domain, https://www.nps.gov/aboutus/disclaimer.htm\n",
+      "derived_stress_input": false,
+      "mode": "semantics",
+      "versions": {
+        "baseline": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 1.452,
+            "peak_working_set_bytes": 134586368,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 64.809,
+          "semantics_status": "uncertain_input",
+          "music_presence": "uncertain",
+          "styles": null,
+          "mood": null,
+          "svg_pages": 0,
+          "semantic_verification": "PASS"
+        },
+        "fixed": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 1.386,
+            "peak_working_set_bytes": 136159232,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 64.809,
+          "semantics_status": "uncertain_input",
+          "music_presence": "uncertain",
+          "styles": null,
+          "mood": null,
+          "svg_pages": 0,
+          "semantic_verification": "PASS"
+        }
+      },
+      "semantic_decisions_unchanged": true
+    },
+    {
+      "key": "user_repeat_180",
+      "description": "180-second repetition of the existing private user_other stem via np.resize after decoding to 16 kHz. Not an independent recording; not the public Brahms sample.",
+      "input_name": "real_repeated_180.wav",
+      "input_sha256": "e46fd524130466fa4aa3c8f820d038c744cddb83b98f66ace27d31349533ac42",
+      "input_url": null,
+      "license_and_source": "Existing private local user input; no redistribution rights inferred. Audio and output scores remain local.",
+      "derived_stress_input": true,
+      "mode": "full_score_and_semantics",
+      "versions": {
+        "baseline": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 26.328,
+            "peak_working_set_bytes": 766308352,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 180.0,
+          "semantics_status": "ambiguous",
+          "music_presence": "music",
+          "styles": {
+            "status": "ambiguous",
+            "level": "coarse",
+            "candidates": [
+              {
+                "label": "Electronic",
+                "display_zh": "电子",
+                "score": 0.13659130915552078,
+                "aggregation": "max_child_score_not_probability",
+                "source": "discogs_parent_max"
+              },
+              {
+                "label": "Classical",
+                "display_zh": "古典",
+                "score": 0.11169080502927334,
+                "aggregation": "max_child_score_not_probability",
+                "source": "discogs_parent_max"
+              }
+            ],
+            "parent_genres": [
+              {
+                "label": "Electronic",
+                "display_zh": "电子",
+                "score": 0.13659130915552078,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Classical",
+                "display_zh": "古典",
+                "score": 0.11169080502927334,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Pop",
+                "display_zh": "流行",
+                "score": 0.036495400262210036,
+                "aggregation": "max_child_score_not_probability"
+              }
+            ],
+            "fine_status": "suppressed",
+            "fallback_reason": "insufficient_fine_score_margin_consistency_or_parent_agreement",
+            "fine_time_consistency": 0.501527952543592
+          },
+          "mood": {
+            "status": "candidate",
+            "candidates": [
+              {
+                "label": "emotional",
+                "display_zh": "情绪化",
+                "score": 0.16451132223585968,
+                "index": 17
+              },
+              {
+                "label": "inspiring",
+                "display_zh": "鼓舞",
+                "score": 0.16137791735508683,
+                "index": 30
+              },
+              {
+                "label": "romantic",
+                "display_zh": "浪漫",
+                "score": 0.13194521582924312,
+                "index": 43
+              }
+            ]
+          },
+          "svg_pages": 13,
+          "notes": 2687,
+          "bpm": 123.0,
+          "timings_seconds": {
+            "decode": 2.9417059999977937,
+            "transcribe_and_optional_separation": 2.8230160000020987,
+            "analysis": 8.301530299999285,
+            "score_and_svg": 6.779646599999978,
+            "semantics": 4.6298715000011725,
+            "total_before_report": 25.591114499999094
+          },
+          "events_sha256": "97224f2556e7201b30b6e1f257dabe214f4058f01a13eb49e170d86d91e0caea",
+          "score_verification": {
+            "exit_code": 1,
+            "result": null,
+            "error": "Verification failed: Unmatched or noncontiguous tie stop: (0, '2', '1', 40), onset=320"
+          },
+          "query": "PASS",
+          "semantic_verification": "PASS"
+        },
+        "fixed": {
+          "analysis": {
+            "exit_code": 0,
+            "wall_seconds": 27.206,
+            "peak_working_set_bytes": 766730240,
+            "memory_counter_source": "semantics.json resources.memory_after.peak_working_set_bytes"
+          },
+          "duration_seconds": 180.0,
+          "semantics_status": "ambiguous",
+          "music_presence": "music",
+          "styles": {
+            "status": "ambiguous",
+            "level": "coarse",
+            "candidates": [
+              {
+                "label": "Electronic",
+                "display_zh": "电子",
+                "score": 0.13659130915552078,
+                "aggregation": "max_child_score_not_probability",
+                "source": "discogs_parent_max"
+              },
+              {
+                "label": "Classical",
+                "display_zh": "古典",
+                "score": 0.11169080502927334,
+                "aggregation": "max_child_score_not_probability",
+                "source": "discogs_parent_max"
+              }
+            ],
+            "parent_genres": [
+              {
+                "label": "Electronic",
+                "display_zh": "电子",
+                "score": 0.13659130915552078,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Classical",
+                "display_zh": "古典",
+                "score": 0.11169080502927334,
+                "aggregation": "max_child_score_not_probability"
+              },
+              {
+                "label": "Pop",
+                "display_zh": "流行",
+                "score": 0.036495400262210036,
+                "aggregation": "max_child_score_not_probability"
+              }
+            ],
+            "fine_status": "suppressed",
+            "fallback_reason": "insufficient_fine_score_margin_consistency_or_parent_agreement",
+            "fine_time_consistency": 0.501527952543592
+          },
+          "mood": {
+            "status": "candidate",
+            "candidates": [
+              {
+                "label": "emotional",
+                "display_zh": "情绪化",
+                "score": 0.16451132223585968,
+                "index": 17
+              },
+              {
+                "label": "inspiring",
+                "display_zh": "鼓舞",
+                "score": 0.16137791735508683,
+                "index": 30
+              },
+              {
+                "label": "romantic",
+                "display_zh": "浪漫",
+                "score": 0.13194521582924312,
+                "index": 43
+              }
+            ]
+          },
+          "svg_pages": 10,
+          "notes": 2687,
+          "bpm": 123.0,
+          "timings_seconds": {
+            "decode": 2.7049723000018275,
+            "transcribe_and_optional_separation": 2.7495411000054446,
+            "analysis": 8.389656100000138,
+            "score_and_svg": 7.9041299000018626,
+            "semantics": 4.639869899998303,
+            "total_before_report": 26.49416989999736
+          },
+          "events_sha256": "97224f2556e7201b30b6e1f257dabe214f4058f01a13eb49e170d86d91e0caea",
+          "score_verification": {
+            "exit_code": 0,
+            "result": {
+              "schema": "music-scribe/1.1",
+              "events": 2687,
+              "chord_segments": 93,
+              "evidence_checks": "PASS",
+              "full_score": {
+                "logical_note_intervals": 2687,
+                "tied_continuation_segments": 431,
+                "expected_intervals": 2687,
+                "missing_or_changed": 0,
+                "extra_or_changed": 0
+              },
+              "scope": "Output consistency only; no independently annotated recognition accuracy."
+            },
+            "error": null
+          },
+          "query": "PASS",
+          "semantic_verification": "PASS"
+        }
+      },
+      "semantic_decisions_unchanged": true,
+      "detector_events_unchanged": true
+    }
+  ],
+  "date": "2026-10-23",
+  "variant": "github-source-3",
+  "independent_public_recordings": 6,
+  "independent_music_recordings": 4,
+  "derived_private_stress_inputs": 1,
+  "verifiers_byte_identical_to_baseline": true,
+  "unchanged_files": [
+    "verify_musicxml.py",
+    "verify_output.py",
+    "verify_semantics.py",
+    "music_semantics.py",
+    "music_gate.py",
+    "semantic_frontend.py",
+    "models/manifest.json",
+    "requirements-semantics.txt",
+    "LICENSE"
+  ],
+  "regression": {
+    "core_original_environment": {
+      "python": "3.10.22",
+      "tests": 99,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lightweight": {
+      "python": "3.12.13",
+      "tests": 44,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "clean_compatibility_environment": {
+    "python": "3.10.20",
+    "venv_isolated": true,
+    "checks": [
+      {
+        "name": "pip_check",
+        "status": "PASS",
+        "seconds": 3.202
+      },
+      {
+        "name": "doctor",
+        "status": "PASS",
+        "seconds": 0.638
+      },
+      {
+        "name": "regression",
+        "status": "PASS",
+        "seconds": 39.593
+      },
+      {
+        "name": "selftest",
+        "status": "PASS",
+        "seconds": 26.962
+      },
+      {
+        "name": "tool",
+        "status": "PASS",
+        "seconds": 12.689
+      },
+      {
+        "name": "score",
+        "status": "PASS",
+        "seconds": 1.076
+      },
+      {
+        "name": "semantics",
+        "status": "PASS",
+        "seconds": 1.727
+      },
+      {
+        "name": "query",
+        "status": "PASS",
+        "seconds": 1.878
+      },
+      {
+        "name": "demo",
+        "status": "PASS",
+        "seconds": 24.163
+      }
+    ],
+    "full_sample": {
+      "schema": "music-scribe/1.1",
+      "events": 537,
+      "chord_segments": 28,
+      "evidence_checks": "PASS",
+      "full_score": {
+        "logical_note_intervals": 537,
+        "tied_continuation_segments": 60,
+        "expected_intervals": 537,
+        "missing_or_changed": 0,
+        "extra_or_changed": 0
+      },
+      "scope": "Output consistency only; no independently annotated recognition accuracy."
+    },
+    "selftest_scope": "8 triad keys, 4 seventh-chord keys and E minor -> D major modulation. Synthetic chain check only.",
+    "tool_svg_pages": 3,
+    "full_events_match_primary_run": true
+  },
+  "compatibility_fix": {
+    "baseline_problem_reproduced": true,
+    "requirement": "setuptools==80.9.0",
+    "reason": "Basic Pitch uses resampy 0.4.2 which imports pkg_resources; setuptools 84.2.1 did not provide that module in the tested environment.",
+    "scope": "Full environment only; no lightweight semantics dependency added."
+  },
+  "visual_check": "Locally rendered and inspected page 1 of the repaired Brahms SVG (including measures 7/8). Not a full engraving-quality review.",
+  "limits": [
+    "Consistency is not transcription accuracy; no independent note-level ground truth.",
+    "Four music recordings and two non-music recordings are reused regression inputs, not an unseen evaluation set.",
+    "The failing public Brahms input is the complete 45.844875-second sample file, not the entire original composition.",
+    "180-second stress audio repeats an existing private user stem; not Brahms or an independent long recording. Audio and scores not uploaded.",
+    "music21 beam warnings and crowded mechanical voices/rests remain; no human-quality engraving guarantee.",
+    "Global BPM, default meter and sixteenth-note quantization can distort timing. Model note errors remain.",
+    "Windows x64 CPU only; no new GPU/Demucs/Linux/macOS/ARM validation.",
+    "Python 3.10 and the legacy pkg_resources compatibility pin are maintenance limitations.",
+    "AGPL, model non-commercial conditions and unresolved SA/ND conflict unchanged."
+  ]
+}

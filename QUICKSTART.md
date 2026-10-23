@@ -92,7 +92,7 @@ if ($LASTEXITCODE -ne 0) { throw '演示未完成，请查看报错' }
 
 此选项额外取公开音乐的前 12 秒，在结果目录生成本地 WAV，再生成并验证 MusicXML、SVG、MIDI 与语义证据，位置在 DEMO_RESULT.json 的 score_example。不会把该音频加入源码。
 
-短片段本次通过一致性验证；同一音乐全长在本次测试中出现连音不一致，见 NEW_USER_ACCEPTANCE.md。不能由“生成了谱面”推断整首转录可靠；该选项校验失败会返回 partial / 退出码 3。
+短片段示例通过一致性验证；1.3.1 也修复了同一公开音乐完整输入文件的跨小节延音问题，并用另外 3 首音乐回归，见 TIE_FIX_ACCEPTANCE.md。不能由“生成了谱面”推断整首转录可靠；该选项校验失败会返回 partial / 退出码 3。
 
 ## 5. 接给你的 AI 助手
 

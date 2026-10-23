@@ -5,7 +5,7 @@
 | 路线 | 能力 | 已测平台 | 依赖 |
 |---|---|---|---|
 | 推荐轻量语义 | 音乐门控、风格/类型/情感候选、局部证据查询 | Windows x64，Python 3.12.13；既有 3.10.22 也保留验证 | requirements-semantics.txt |
-| 完整兼容路线 | 转录、调性/BPM/和弦、MusicXML/SVG/MIDI，可加同一语义模型 | Windows x64，Python 3.10.22；3.12 完整转录未验收 | requirements-core.txt |
+| 完整兼容路线 | 转录、调性/BPM/和弦、MusicXML/SVG/MIDI，可加同一语义模型 | Windows x64，Python 3.10.22；修复版另新建 3.10.20 环境复测；3.12 完整转录未验收 | requirements-core.txt |
 | 可选分轨 | Demucs / torch | 本轮未重新验收 GPU、权重或新环境 | requirements-separation.txt |
 
 **Python 3.10 已于 2026-10-01 结束上游维护。** 完整路线是当前依赖约束下的旧环境重现方式，不是长期支持承诺。[Python 官方说明](https://www.python.org/downloads/release/python-31011/)。本次没有升级 Basic Pitch、替换模型或安装重量级替代后端来扩展完整支持版本。
@@ -34,9 +34,9 @@ uv venv --python 3.10 --seed .venv-core
 .\.venv-core\Scripts\python.exe doctor.py --mode core
 ```
 
-已有 64 位 3.10 可用 `py -3.10 -m venv .venv-core`，或 `& '实际Python路径' -m venv .venv-core` 替代第一条。未装该版本时 py -3.10 不会自行成功。uv 使用其提供的 Python 构建；本轮完整重现使用 3.10.22，不声称验证了所有发行来源。
+已有 64 位 3.10 可用 `py -3.10 -m venv .venv-core`，或 `& '实际Python路径' -m venv .venv-core` 替代第一条。未装该版本时 py -3.10 不会自行成功。uv 使用其提供的 Python 构建；本轮修复另用 uv 提供的 3.10.20 新建完整环境，原同环境对照为 3.10.22，不声称验证了所有发行来源。
 
-Basic Pitch 0.4.0 的依赖随平台与 Python 标记变化：Windows Python<3.11 选择 ONNX Runtime，其他组合可能引入 TensorFlow、TFLite 或 CoreML。不要在 3.12 装 core 并期待保持同样轻量。旧完整环境的解析记录是 requirements-lock-windows-py310.txt，不要套到 3.12。
+Basic Pitch 0.4.0 的依赖随平台与 Python 标记变化：Windows Python<3.11 选择 ONNX Runtime，其他组合可能引入 TensorFlow、TFLite 或 CoreML。不要在 3.12 装 core 并期待保持同样轻量。原完整环境的解析记录是 requirements-lock-windows-py310.txt，现补充 setuptools 兼容约束；不要套到 3.12。
 
 只生成谱面，无需六份语义权重：
 
@@ -80,3 +80,5 @@ doctor 检查环境，download_models --check 检查模型，verify_semantics �
 - 中文/空格路径保持引号，不要求开发者机器上的固定目录。
 - verify_source.py --strict 面向干净源码导出，在源码内建环境、缓存或下载权重前执行；已有本地生成文件时报告额外项是防止误上传的设计。
 - 离线机器要预先准备匹配平台的依赖与校验过的模型，并遵循各文件许可。
+
+完整环境显式固定 setuptools==80.9.0，为 Basic Pitch 所依赖 resampy 0.4.2 提供 pkg_resources；仅 pip check 不足以发现这个导入兼容问题，doctor 会核对版本。本版在独立新环境完成 selftest 和真实文件复测，见 TIE_FIX_ACCEPTANCE.md；轻量 requirements-semantics.txt 不增加该依赖。

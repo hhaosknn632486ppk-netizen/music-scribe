@@ -1,6 +1,6 @@
 # GitHub 源码文件清单
 
-变体 github-source-2，共 85 个文件；不含模型权重、真实音频、虚拟环境、结果或 Git 元数据。逐文件摘要见 MANIFEST.json。
+变体 github-source-3，转谱版本 1.3.1，共 88 个文件；不含模型权重、真实音频、虚拟环境、结果或 Git 元数据。逐文件摘要见 MANIFEST.json。
 
 - `.gitattributes`
 - `.gitignore`
@@ -34,6 +34,8 @@
 - `THIRD_PARTY_LICENSES/dora-MIT.txt`
 - `THIRD_PARTY_LICENSES/music21-BSD.txt`
 - `THIRD_PARTY_NOTICES.md`
+- `TIE_FIX_ACCEPTANCE.json`
+- `TIE_FIX_ACCEPTANCE.md`
 - `_vendor/dora/__init__.py`
 - `_vendor/dora/log.py`
 - `benchmark_semantics.py`
@@ -78,6 +80,7 @@
 - `test_gate.py`
 - `test_llm_tool.py`
 - `test_semantics.py`
+- `test_ties.py`
 - `tests/fixtures/frontend_fixture.npz`
 - `tools/reference_frontend.cjs`
 - `validate.py`

@@ -5,7 +5,7 @@ import json
 import platform
 import sys
 
-CORE={'numpy':'2.2.6','scipy':'1.15.3','librosa':'0.11.0','soundfile':'0.14.0',
+CORE={'setuptools':'80.9.0','numpy':'2.2.6','scipy':'1.15.3','librosa':'0.11.0','soundfile':'0.14.0',
       'soxr':'1.1.0','onnxruntime':'1.23.2','imageio-ffmpeg':'0.6.0','basic-pitch':'0.4.0',
       'pretty-midi':'0.2.11','mido':'1.3.3','music21':'9.9.2','verovio':'6.3.0'}
 SEMANTICS={key:CORE[key] for key in ('numpy','scipy','soundfile','soxr','onnxruntime','imageio-ffmpeg')}

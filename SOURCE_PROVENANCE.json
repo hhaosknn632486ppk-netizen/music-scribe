@@ -1,13 +1,13 @@
 {
   "baseline_version": "1.3.0",
-  "variant": "github-source-2",
+  "variant": "github-source-3",
   "scope": "Explicit source/metadata/synthetic-fixture allowlist. No weights, recordings, user scores, history or environment copied.",
   "baseline_files": [
     {
       "path": "music_scribe.py",
       "baseline_sha256": "f47d46d61a79514dd836b70507aafbdef52196f655d251c3ef0aecb323709bb8",
-      "candidate_sha256": "f47d46d61a79514dd836b70507aafbdef52196f655d251c3ef0aecb323709bb8",
-      "changed_from_baseline": false
+      "candidate_sha256": "363fd7278c99da21a9c9d528a47814d1daa870cef9e4b308a5b7cb242e55c821",
+      "changed_from_baseline": true
     },
     {
       "path": "music_semantics.py",
@@ -48,8 +48,8 @@
     {
       "path": "test_correctness.py",
       "baseline_sha256": "6433a1177a389990a83315a7708f479cac2296f7eb6abcd5a074df84a7dfdcd5",
-      "candidate_sha256": "6433a1177a389990a83315a7708f479cac2296f7eb6abcd5a074df84a7dfdcd5",
-      "changed_from_baseline": false
+      "candidate_sha256": "943d0fd5f1126eb2bc93c73cb956e2e9bf5174ab90b66fedbd491f6f5ff88de2",
+      "changed_from_baseline": true
     },
     {
       "path": "test_semantics.py",
@@ -240,8 +240,8 @@
     "Fixture/reference helper path relocation; sample manifest excludes private data",
     "Publication/install/license documents; no numerical policy/model change"
   ],
-  "previous_source_variant": "github-source-1",
-  "previous_source_provenance_sha256": "cfe6b467fe4c412578c682eba4754f0729333e133d9c076e8ab6b05861951dea",
+  "previous_source_variant": "github-source-2",
+  "previous_source_provenance_sha256": "d340da9931a82d28bdedafe5741d51cb8d970a7c596d8641de65459589b10f3b",
   "license_review": {
     "date": "2026-10-23",
     "maintainer_authorization": "AUTHORIZATION.md",
@@ -272,5 +272,14 @@
       "Installation and assistant documentation"
     ],
     "analysis_algorithms_and_weights_unchanged": true
+  },
+  "tie_fix": {
+    "date": "2026-10-23",
+    "base_commit": "afca7e5f7f1997e9e2bb7688cb17fa97f783925b",
+    "score_tool_version": "1.3.1",
+    "record": "TIE_FIX_ACCEPTANCE.json",
+    "models_gate_semantics_quantization_unchanged": true,
+    "verification_rules_unchanged": true,
+    "full_compatibility_dependency": "setuptools==80.9.0"
   }
 }

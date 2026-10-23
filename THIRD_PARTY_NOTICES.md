@@ -41,3 +41,7 @@
 samples/SAMPLES.json 只保留三份公开录音的引用、发布方许可说明及摘要，样本音频不在包内；素材使用方式仍需遵循 samples/README.md 和实际来源条款。tests/fixtures/frontend_fixture.npz 为合成帧和参考输出，不含真实录音。
 
 用户输入、原音乐作品、生成谱面/MIDI 的权利不由软件许可证统一解决。第三方作者没有为本工具或输出背书。当前是源码候选，不能把本轮结论直接用于 exe、离线全模型包、依赖再分发、字体包或已有 Git 历史/Release 附件。
+
+## 1.3.1 完整环境兼容补充
+
+完整依赖固定 setuptools 80.9.0，为 resampy 0.4.2 提供 pkg_resources；安装包元数据/原始许可为 MIT，内嵌第三方组件继续适用各自通知。已安装包的通知文件摘要补入 DEPENDENCY_LICENSES.json；没有把依赖 wheel、vendored 代码或权重复制到本仓库。原 57 项清单保留其当时的核对范围。

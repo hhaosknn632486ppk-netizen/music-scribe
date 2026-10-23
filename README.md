@@ -1,6 +1,6 @@
 # music_scribe：本地转录、排谱与可选音乐语义
 
-这是基于 1.3.0 整理的独立公开源码版本（github-source-2）。保留音符转录、调性/BPM/和弦、简化/完整MusicXML及SVG谱面、可选Demucs分轨、音乐门控、风格/情绪/人声倾向和连续效价/唤醒分析。没有替换模型、减少语义功能或调整分类规则。
+这是转谱 1.3.1 的独立公开源码版本（github-source-3）。保留音符转录、调性/BPM/和弦、简化/完整MusicXML及SVG谱面、可选Demucs分轨、音乐门控、风格/情绪/人声倾向和连续效价/唤醒分析。没有替换模型、减少语义功能或调整分类规则。
 
 **第一次使用：按 [QUICKSTART.md](QUICKSTART.md) 从安装、下载模型到音乐/讲话示例完整跑一遍。** 给能执行本地命令的 AI 助手使用时，参考 [LLM_INTEGRATION.md](LLM_INTEGRATION.md) 与 [可复制的助手指令](examples/assistant_prompt.txt)。无需大模型 API 密钥；这不是自动注册的 MCP 服务或聊天网页插件。
 
@@ -68,8 +68,8 @@ python download_models.py --repair --models-dir 'D:\MusicModels\music_scribe'
 # 先使用已经下载且校验通过的完整六模型目录
 $env:MUSIC_SCRIBE_MODELS='D:\MusicModels\music_scribe'
 .\.venv\Scripts\python.exe -m unittest test_gate test_download_models test_llm_tool -v
-# test_semantics 含 librosa 对照，放在完整环境中运行；共原83项加8项助手桥接测试
-.\.venv-core\Scripts\python.exe -m unittest test_correctness test_semantics test_gate test_download_models test_llm_tool -v
+# test_semantics 含 librosa 对照，放在完整环境中运行；另含延音回归，共99项
+.\.venv-core\Scripts\python.exe -m unittest test_correctness test_semantics test_gate test_download_models test_llm_tool test_ties -v
 .\.venv-core\Scripts\python.exe selftest.py
 .\.venv-core\Scripts\python.exe verify_output.py 'D:\Results\new_full'
 .\.venv\Scripts\python.exe verify_semantics.py 'D:\Results\new_semantics' --models-dir 'D:\MusicModels\music_scribe'
@@ -77,16 +77,18 @@ $env:MUSIC_SCRIBE_MODELS='D:\MusicModels\music_scribe'
 
 不含权重的核心测试与受控传输测试不访问网络。原始语义测试需要完整本地模型，不会自动下载或悄悄跳过。当前新用户安装和示例验收见 [NEW_USER_ACCEPTANCE.md](NEW_USER_ACCEPTANCE.md)，历史验收见 [ACCEPTANCE.md](ACCEPTANCE.md)；其中公开数值不能当成曲目级识别准确率。
 
-schema继续为music-scribe/1.1和music-semantics/1.1；运行时tool_version为1.3.0，源码变体和文件配对另记在SOURCE_PROVENANCE.json、POLICY_LOCK.json及输出指纹。细风格证据不足退回粗类，非音乐或不确定输入拒绝风格/情绪；局部讲话查询不会借用整曲风格。调用规则见[LLM_INTEGRATION.md](LLM_INTEGRATION.md)。
+schema继续为music-scribe/1.1和music-semantics/1.1；转谱tool_version为1.3.1，未改动的语义分支仍为1.3.0，源码变体和文件配对另记在SOURCE_PROVENANCE.json、POLICY_LOCK.json及输出指纹。细风格证据不足退回粗类，非音乐或不确定输入拒绝风格/情绪；局部讲话查询不会借用整曲风格。调用规则见[LLM_INTEGRATION.md](LLM_INTEGRATION.md)。
 
 源码整理改变了语义模块指纹；旧1.3的语义报告请继续用原副本query，新副本不绕过代码配对校验。已有HTML仍可静态查看。改动范围见[CHANGES.md](CHANGES.md)。
 
 模型分数未经概率校准，粗类/情绪会误判；弱背景音乐、氛围/噪音音乐和短独奏可能被门控误拒。情绪是听感候选，不证明作者意图。30分钟输入上限、内存解码、近似时间窗口等既有限制保留。曲名、歌手身份、歌词、续写和完整多乐器人工级总谱不在现有能力范围内。
 
-本轮真实全曲测试还发现：XML/SVG 生成成功不代表连音一致性校验通过。可复现短片段及全曲未通过项见 [NEW_USER_ACCEPTANCE.md](NEW_USER_ACCEPTANCE.md)，不能将 completed 状态当成谱面质量保证。
+**1.3.1 已修复完整模式跨小节延音的声部编号不一致。** 原失败的 45.84 秒 Brahms 输入完整文件、另外 3 首音乐及 180 秒派生压力输入均通过严格区间校验；完整回归 99/99，轻量 44/44。旧版失败和修复后效果、耗时、内存、样本限制见 [TIE_FIX_ACCEPTANCE.md](TIE_FIX_ACCEPTANCE.md)。completed 仍不等于自动验证通过或转录准确。
 
 此前许可整理的历史修改清单、回归与限制见 [LICENSE_REVIEW_ACCEPTANCE.md](LICENSE_REVIEW_ACCEPTANCE.md)。当时仅修正许可说明、两个模块文档字符串及下载提示；模块摘要因文档字符串变化而改变，旧候选的语义证据继续由旧副本查询，新候选生成的证据按新摘要配对。根 LICENSE、模型原始许可、六模型清单及数值策略未改。
 
 本次 GitHub 源码整理的文件边界与校验方法见 [GITHUB_PUBLICATION.md](GITHUB_PUBLICATION.md)。历史验收文件保留各自日期与当时的发布状态；当前文件完整性以本版本 MANIFEST.json 为准。
 
-本轮增加新手指南、本地 JSON 助手入口、演示和验证器显式模型目录；音乐推理代码及权重未改。已重新运行官方前端参考验证并刷新此前因注释改动失配的摘要，详见 NEW_USER_ACCEPTANCE.md。
+此前 github-source-2 增加新手指南、本地 JSON 助手入口、演示和验证器显式模型目录，当时音乐推理代码及权重未改。已重新运行官方前端参考验证并刷新此前因注释改动失配的摘要，详见 NEW_USER_ACCEPTANCE.md。
+
+本版另约束完整环境 setuptools==80.9.0，修复旧 resampy 自测入口缺 pkg_resources 的兼容问题，doctor 会核对。轻量环境不增加依赖。旧谱面报告应由保留的生成版本查询/校验，或使用本版重新分析；静态 HTML 可直接查看。

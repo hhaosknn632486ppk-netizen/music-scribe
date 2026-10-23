@@ -80,10 +80,12 @@ semantics 判断在 summary.status / summary.music_presence / summary.global。a
 
 一致性验证不证明真实性或判断正确。旧证据用生成它的源码版本，或重新分析；不删校验或改摘要来放行不匹配文件。
 
-analyze 的 completed 不是自动验证通过。本次全长公开音乐虽产生 XML/SVG，verify_output 仍检出未配对连音；助手不得把它说成已校验总谱。需要可信的文件一致性结论时，完整环境另运行 `verify_output.py 结果目录`，失败就明确说明。`run_demo.py --with-score` 会对演示短片段执行该检查，失败返回 partial。
+analyze 的 completed 不是自动验证通过。旧版全长公开音乐的未配对连音已在 1.3.1 修复并回归（见 TIE_FIX_ACCEPTANCE.md）；该结果不表示所有输入自动校验通过。需要可信的文件一致性结论时，完整环境另运行 `verify_output.py 结果目录`，失败就明确说明。`run_demo.py --with-score` 会对演示短片段执行该检查，失败返回 partial。
 
 ## 能力与数据流
 
 建议助手分开回答：可引用的候选、歧义或失败、产物位置、无法确定的内容。没有曲名/作者识别、歌词、续写或人工级总谱能力。
 
 本工具不调用云端，但助手若使用云端大模型，其读取的 JSON 可能作为上下文发给服务商。普通聊天网页无法直接执行本地命令时，先由用户运行，再粘贴 JSON。许可与未决冲突继续按 README / LICENSE_STATUS.md；结果可用不代表权重可商用。
+
+Python 排谱调用请使用 `write_score_musicxml(build_score(...), path)`，完整模式不可再用默认 `score.write(...)` 触发一次第三方声部重整。旧结果继续使用生成它的源码副本查询/校验。

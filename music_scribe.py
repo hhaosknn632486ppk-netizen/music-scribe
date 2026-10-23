@@ -42,7 +42,7 @@ if '--semantics' in sys.argv or '--semantics-only' in sys.argv:
 
 import numpy as np
 
-VERSION = "1.3.0"
+VERSION = "1.3.1"
 SCHEMA_VERSION = "music-scribe/1.1"
 TRANSCRIPTION_PARAMETERS = dict(onset_threshold=0.5, frame_threshold=0.3,
     minimum_note_length=90.0, minimum_frequency=27.5, maximum_frequency=4200.0,
@@ -771,6 +771,7 @@ def build_score(qn, bpm, tonic_pc, mode, mode_sel="reduction", ts=(4, 4), segs=N
         groups = ((up_g, clef.TrebleClef()), (lo_g, clef.BassClef()))
 
     sc = stream.Score()
+    sc.editorial['preserve_notation_lanes'] = mode_sel == 'full'
     parts = []
     for grp, c in groups:
         p = stream.PartStaff()
@@ -779,6 +780,9 @@ def build_score(qn, bpm, tonic_pc, mode, mode_sel="reduction", ts=(4, 4), segs=N
                 voice = stream.Voice(id=index + 1)
                 for item in lane:
                     el = note.Note(item['p'])
+                    # makeMeasures renumbers voices and makeTies can flatten a
+                    # singleton voice. Keep the original lane on split copies.
+                    el.editorial['notation_lane'] = index
                     el.duration.quarterLength = item['d']
                     el.volume.velocity = int(min(127, 35 + 90 * item['a']))
                     voice.insert(item['o'], el)
@@ -830,6 +834,54 @@ def build_score(qn, bpm, tonic_pc, mode, mode_sel="reduction", ts=(4, 4), segs=N
         except Exception as exc:
             raise RuntimeError(f"记谱整理失败，不能将未完成的谱面当作成功产物：{exc}") from exc
     return sc
+
+
+def write_score_musicxml(score, path):
+    """Export prepared notation without changing tie-chain voice identities.
+
+    Full-mode lanes are mechanical interval partitions, not inferred musical
+    voices. music21's default PartStaff export can renumber a lower staff in
+    just one measure when the upper staff has a singleton/zero-numbered voice.
+    Restore positive, globally distinct lane IDs after notation and duration
+    splitting, then serialize without another makeNotation pass.
+    """
+    if not score.editorial.get('preserve_notation_lanes', False):
+        return score.write('musicxml', fp=str(path))
+    from music21 import stream, note
+
+    prepared = score.splitAtDurations(recurse=True)[0]
+    next_voice_id = 1
+    for part in prepared.parts:
+        lane_ids = sorted({n.editorial['notation_lane'] for n in part.recurse().notes})
+        voice_ids = {lane: next_voice_id + i for i, lane in enumerate(lane_ids)}
+        next_voice_id += max(1, len(lane_ids))
+        for measure in part.getElementsByClass(stream.Measure):
+            lanes = {}
+            # Collect offsets before detaching voices; ties retain their lane
+            # even when the previous notation pass flattened a singleton.
+            for n in list(measure.recurse().notes):
+                lane = n.editorial['notation_lane']
+                lanes.setdefault(lane, []).append((n.getOffsetInHierarchy(measure), n))
+            for voice in list(measure.voices):
+                measure.remove(voice)
+            for n in list(measure.notesAndRests):
+                measure.remove(n)
+            if not lanes:
+                # An explicit voice also prevents per-measure renumbering of
+                # the other staff when this staff is completely silent.
+                voice = stream.Voice(id=min(voice_ids.values(), default=next_voice_id - 1))
+                voice.insert(0, note.Rest(quarterLength=measure.barDuration.quarterLength))
+                measure.insert(0, voice)
+            for lane, members in sorted(lanes.items()):
+                voice = stream.Voice(id=voice_ids[lane])
+                for offset, n in members:
+                    voice.insert(offset, n)
+                voice.makeRests(refStreamOrTimeRange=[0, measure.barDuration.quarterLength],
+                                fillGaps=True, inPlace=True)
+                measure.insert(0, voice)
+    # Gap-filling rests can themselves have composite durations.
+    prepared = prepared.splitAtDurations(recurse=True)[0]
+    return prepared.write('musicxml', fp=str(path), makeNotation=False)
 
 
 def render_svg(xml_path: Path, out_dir: Path):
@@ -1228,7 +1280,7 @@ def main():
         try:
             sc = build_score(qn, bpm, best[0] if best else None, best[1] if best else None,
                              args.mode, ts, segs=segs, staves=args.staves, origin=args.bar_offset)
-            sc.write('musicxml', fp=str(out / 'score.musicxml'))
+            write_score_musicxml(sc, out / 'score.musicxml')
             artifacts['musicxml'] = {'status': 'written', 'name': 'score.musicxml'}
             try:
                 svgs = render_svg(out / 'score.musicxml', out)

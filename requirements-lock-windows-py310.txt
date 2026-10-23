@@ -1,4 +1,6 @@
 # Resolved fresh Windows x64 CPython 3.10 environment; not a cross-platform lock.
+# Supplement: legacy resampy/pkg_resources compatibility, tested on 3.10.20.
+setuptools==80.9.0
 audioread==3.1.0
 basic-pitch==0.4.0
 certifi==2026.10.19
